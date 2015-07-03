@@ -11,12 +11,12 @@ namespace ContestManagementSystem
     {
         public DataTable LoadTable()
         {
-           throw new NotImplementedException;
+           throw new NotImplementedException();
         }
 
         public bool SaveTable(DataTable table, String tableName)
         {
-            throw new NotImplementedException;
+            throw new NotImplementedException();
         }
     }
 }
