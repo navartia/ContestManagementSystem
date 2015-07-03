@@ -116,7 +116,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 8;
-            this.button8.Text = "sync test";
+            this.button8.Text = "Carlo";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // MainForm
