@@ -60,49 +60,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
-=======
+    </Compile>
     <Compile Include="ContestDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ContestDataSet.xsd</DependentUpon>
->>>>>>> louie
     </Compile>
     <Compile Include="DatabaseManager.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <Compile Include="JudgingForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="JudgingForm.Designer.cs">
       <DependentUpon>JudgingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="JudgingForm.resx">
       <DependentUpon>JudgingForm.cs</DependentUpon>
->>>>>>> carlo
     </EmbeddedResource>
-=======
->>>>>>> louie
-=======
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
->>>>>>> pena
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -112,7 +101,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <None Include="ContestDataSet.xsc">
       <DependentUpon>ContestDataSet.xsd</DependentUpon>
     </None>
@@ -124,11 +112,9 @@
     <None Include="ContestDataSet.xss">
       <DependentUpon>ContestDataSet.xsd</DependentUpon>
     </None>
-=======
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> pena
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

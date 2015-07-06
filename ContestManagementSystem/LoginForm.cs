@@ -19,17 +19,27 @@ namespace ContestManagementSystem
 
         private void buttonRegistration_Click(object sender, EventArgs e)
         {
+            this.Hide();
 
+            RegistrationForm reg = new RegistrationForm();
+            reg.ShowDialog();
+
+            this.Show();
         }
 
         private void buttonJudging_Click(object sender, EventArgs e)
         {
+            this.Hide();
 
+            JudgingForm judge = new JudgingForm();
+            judge.ShowDialog();
+
+            this.Show();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-
+            this.Dispose();
         }
     }
 }
