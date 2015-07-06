@@ -51,7 +51,6 @@
     <Compile Include="JudgingForm.Designer.cs">
       <DependentUpon>JudgingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="JudgingForm.resx">
       <DependentUpon>JudgingForm.cs</DependentUpon>
