@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ContestManagementSystem
 {
-    public partial class MainForm : Form
+    public partial class RegistrationForm : Form
     {
-        public MainForm()
+        public RegistrationForm()
         {
             InitializeComponent();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+            //
         }
     }
 }
