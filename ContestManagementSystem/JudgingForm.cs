@@ -57,7 +57,7 @@ namespace ContestManagementSystem
             }
             else
             {
-                percent1Textbox.Text = "00";
+                percent1Textbox.Text = "0";
             }
             
         }
@@ -85,7 +85,7 @@ namespace ContestManagementSystem
             }
             else
             {
-                percent2Textbox.Text = "00";
+                percent2Textbox.Text = "0";
             }
             
         }
@@ -113,7 +113,7 @@ namespace ContestManagementSystem
             }
             else
             {
-                percent3Textbox.Text = "00";
+                percent3Textbox.Text = "0";
             }
            
         }
@@ -141,7 +141,7 @@ namespace ContestManagementSystem
             }
             else
             {
-                percent4Textbox.Text = "00";
+                percent4Textbox.Text = "0";
             }
             
         }
