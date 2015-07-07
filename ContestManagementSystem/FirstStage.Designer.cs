@@ -33,6 +33,8 @@
             this.proceedButton = new System.Windows.Forms.Button();
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalvalLabel = new System.Windows.Forms.Label();
+            this.contestantsListbox = new System.Windows.Forms.ListBox();
+            this.studentnumberListbox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // contestantsCheckedlistbox
@@ -47,6 +49,7 @@
             this.contestantsCheckedlistbox.Name = "contestantsCheckedlistbox";
             this.contestantsCheckedlistbox.Size = new System.Drawing.Size(255, 349);
             this.contestantsCheckedlistbox.TabIndex = 0;
+            this.contestantsCheckedlistbox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.contestantsCheckedlistbox_ItemCheck);
             this.contestantsCheckedlistbox.Click += new System.EventHandler(this.contestantsCheckedlistbox_Click);
             this.contestantsCheckedlistbox.SelectedIndexChanged += new System.EventHandler(this.contestantsCheckedlistbox_SelectedIndexChanged);
             this.contestantsCheckedlistbox.DoubleClick += new System.EventHandler(this.contestantsCheckedlistbox_DoubleClick);
@@ -88,11 +91,32 @@
             this.totalvalLabel.TabIndex = 4;
             this.totalvalLabel.Text = "0";
             // 
+            // contestantsListbox
+            // 
+            this.contestantsListbox.FormattingEnabled = true;
+            this.contestantsListbox.Location = new System.Drawing.Point(156, 71);
+            this.contestantsListbox.Name = "contestantsListbox";
+            this.contestantsListbox.Size = new System.Drawing.Size(120, 95);
+            this.contestantsListbox.TabIndex = 5;
+            this.contestantsListbox.Visible = false;
+            this.contestantsListbox.SelectedIndexChanged += new System.EventHandler(this.contestantsListbox_SelectedIndexChanged);
+            // 
+            // studentnumberListbox
+            // 
+            this.studentnumberListbox.FormattingEnabled = true;
+            this.studentnumberListbox.Location = new System.Drawing.Point(156, 71);
+            this.studentnumberListbox.Name = "studentnumberListbox";
+            this.studentnumberListbox.Size = new System.Drawing.Size(120, 95);
+            this.studentnumberListbox.TabIndex = 6;
+            this.studentnumberListbox.Visible = false;
+            // 
             // FirstStage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 514);
+            this.Controls.Add(this.studentnumberListbox);
+            this.Controls.Add(this.contestantsListbox);
             this.Controls.Add(this.totalvalLabel);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.proceedButton);
@@ -113,5 +137,7 @@
         private System.Windows.Forms.Button proceedButton;
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Label totalvalLabel;
+        private System.Windows.Forms.ListBox contestantsListbox;
+        private System.Windows.Forms.ListBox studentnumberListbox;
     }
 }

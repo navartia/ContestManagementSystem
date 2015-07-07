@@ -65,11 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContestDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ContestDataSet.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="DatabaseManager.cs" />
     <Compile Include="FirstStage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +91,12 @@
     </Compile>
     <Compile Include="Summary.Designer.cs">
       <DependentUpon>Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestDB.Designer.cs">
+      <DependentUpon>TestDB.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FirstStage.resx">
       <DependentUpon>FirstStage.cs</DependentUpon>
@@ -135,17 +137,9 @@
     <EmbeddedResource Include="Summary.resx">
       <DependentUpon>Summary.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ContestDataSet.xsc">
-      <DependentUpon>ContestDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ContestDataSet.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ContestDataSet.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="ContestDataSet.xss">
-      <DependentUpon>ContestDataSet.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="TestDB.resx">
+      <DependentUpon>TestDB.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
