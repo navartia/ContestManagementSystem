@@ -42,10 +42,21 @@ namespace ContestManagementSystem
             this.Dispose();
         }
 
+<<<<<<< HEAD
         private void linkLabelServer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ServerSettings ss = new ServerSettings();
             ss.ShowDialog();
+=======
+        private void buttonFirststage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FirstStage fs = new FirstStage();
+            fs.ShowDialog();
+
+            this.Show();
+>>>>>>> carlo
         }
     }
 }

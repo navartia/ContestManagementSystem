@@ -65,10 +65,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="ContestDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ContestDataSet.xsd</DependentUpon>
+=======
+    <Compile Include="FirstStage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstStage.Designer.cs">
+      <DependentUpon>FirstStage.cs</DependentUpon>
+>>>>>>> carlo
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +95,7 @@
 <<<<<<< HEAD
 =======
     <Compile Include="DatabaseManager.cs" />
+<<<<<<< HEAD
     <Compile Include="Summary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +103,11 @@
       <DependentUpon>Summary.cs</DependentUpon>
     </Compile>
 >>>>>>> pena
+=======
+    <EmbeddedResource Include="FirstStage.resx">
+      <DependentUpon>FirstStage.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> carlo
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -32,7 +32,11 @@
             this.buttonRegistration = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.linkLabelServer = new System.Windows.Forms.LinkLabel();
+=======
+            this.buttonFirststage = new System.Windows.Forms.Button();
+>>>>>>> carlo
             this.SuspendLayout();
             // 
             // buttonJudging
@@ -76,6 +80,7 @@
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+<<<<<<< HEAD
             // linkLabelServer
             // 
             this.linkLabelServer.AutoSize = true;
@@ -87,14 +92,30 @@
             this.linkLabelServer.TabStop = true;
             this.linkLabelServer.Text = "Server Setting";
             this.linkLabelServer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelServer_LinkClicked);
+=======
+            // buttonFirststage
+            // 
+            this.buttonFirststage.Location = new System.Drawing.Point(122, 152);
+            this.buttonFirststage.Name = "buttonFirststage";
+            this.buttonFirststage.Size = new System.Drawing.Size(75, 24);
+            this.buttonFirststage.TabIndex = 11;
+            this.buttonFirststage.Text = "First Stage";
+            this.buttonFirststage.UseVisualStyleBackColor = true;
+            this.buttonFirststage.Click += new System.EventHandler(this.buttonFirststage_Click);
+>>>>>>> carlo
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(324, 252);
             this.Controls.Add(this.linkLabelServer);
+=======
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.buttonFirststage);
+>>>>>>> carlo
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonRegistration);
@@ -112,7 +133,11 @@
         private System.Windows.Forms.Button buttonRegistration;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonExit;
+<<<<<<< HEAD
         private System.Windows.Forms.LinkLabel linkLabelServer;
+=======
+        private System.Windows.Forms.Button buttonFirststage;
+>>>>>>> carlo
     }
 }
 
