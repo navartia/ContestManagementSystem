@@ -65,10 +65,10 @@ namespace ContestManagementSystem
 
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(connectString);
 
-            builder.["DataSource"] = textBoxServer.Text;
-            builder.["InitialCatalog"] = textBoxDatabase.Text;
-            builder.["UserID"] = textBoxUsername.Text;
-            builder.["Password"] = textBoxPassword.Text;
+            builder["DataSource"] = textBoxServer.Text;
+            builder["InitialCatalog"] = textBoxDatabase.Text;
+            builder["UserID"] = textBoxUsername.Text;
+            builder["Password"] = textBoxPassword.Text;
 
             textBoxConn.Text = connectString;
 
