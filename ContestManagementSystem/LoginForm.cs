@@ -41,5 +41,11 @@ namespace ContestManagementSystem
         {
             this.Dispose();
         }
+
+        private void linkLabelServer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ServerSettings ss = new ServerSettings();
+            ss.ShowDialog();
+        }
     }
 }

@@ -108,10 +108,10 @@
             // 
             this.label35.AutoSize = true;
             this.label35.BackColor = System.Drawing.Color.Transparent;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(31, 505);
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(31, 507);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(454, 25);
+            this.label35.Size = new System.Drawing.Size(410, 24);
             this.label35.TabIndex = 144;
             this.label35.Text = "CONTACT NO. IN CASE OF EMERGENCY";
             // 
@@ -306,13 +306,13 @@
             "Bachelor of Science in Computer Engineer"});
             this.txt_Course.Location = new System.Drawing.Point(458, 284);
             this.txt_Course.Name = "txt_Course";
-            this.txt_Course.Size = new System.Drawing.Size(520, 32);
+            this.txt_Course.Size = new System.Drawing.Size(500, 32);
             this.txt_Course.TabIndex = 122;
             // 
             // txt_Emergency
             // 
             this.txt_Emergency.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Emergency.Location = new System.Drawing.Point(36, 542);
+            this.txt_Emergency.Location = new System.Drawing.Point(36, 544);
             this.txt_Emergency.Name = "txt_Emergency";
             this.txt_Emergency.Size = new System.Drawing.Size(296, 29);
             this.txt_Emergency.TabIndex = 117;
@@ -370,7 +370,7 @@
             this.btn_Del.BackColor = System.Drawing.Color.Transparent;
             this.btn_Del.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Del.Image = ((System.Drawing.Image)(resources.GetObject("btn_Del.Image")));
-            this.btn_Del.Location = new System.Drawing.Point(779, 584);
+            this.btn_Del.Location = new System.Drawing.Point(749, 557);
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.Size = new System.Drawing.Size(62, 60);
             this.btn_Del.TabIndex = 119;
@@ -382,7 +382,7 @@
             this.btn_new.BackColor = System.Drawing.Color.Transparent;
             this.btn_new.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_new.Image = ((System.Drawing.Image)(resources.GetObject("btn_new.Image")));
-            this.btn_new.Location = new System.Drawing.Point(940, 584);
+            this.btn_new.Location = new System.Drawing.Point(912, 557);
             this.btn_new.Name = "btn_new";
             this.btn_new.Size = new System.Drawing.Size(62, 60);
             this.btn_new.TabIndex = 118;
@@ -530,7 +530,7 @@
             this.btn_Update.BackColor = System.Drawing.Color.Transparent;
             this.btn_Update.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Update.Image = ((System.Drawing.Image)(resources.GetObject("btn_Update.Image")));
-            this.btn_Update.Location = new System.Drawing.Point(861, 584);
+            this.btn_Update.Location = new System.Drawing.Point(833, 557);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(62, 60);
             this.btn_Update.TabIndex = 74;
@@ -843,8 +843,9 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(313, 746);
             this.panel1.TabIndex = 24;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // MainForm
+            // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -854,7 +855,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
-            this.Name = "MainForm";
+            this.Name = "RegistrationForm";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
