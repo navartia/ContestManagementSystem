@@ -73,7 +73,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ContestDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseManager.cs" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
