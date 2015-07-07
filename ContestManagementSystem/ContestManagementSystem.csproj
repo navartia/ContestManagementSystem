@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DatabaseManager.Designer.cs">
+      <DependentUpon>DatabaseManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LoginForm.cs">
@@ -73,7 +79,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ContestDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseManager.cs" />
+    <EmbeddedResource Include="DatabaseManager.resx">
+      <DependentUpon>DatabaseManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

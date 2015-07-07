@@ -330,6 +330,27 @@ SELECT contestant_id, contestant_num, contestant_lastname, contestant_firstname,
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ContestantScoreViewTableAdapter" GeneratorDataComponentClassName="ContestantScoreViewTableAdapter" Name="ContestantScoreView" UserDataComponentName="ContestantScoreViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ContestDatabaseConnectionString (Settings)" DbObjectName="dbo.ContestantScoreView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT contest_name, contestant_num, contestant_name, criteria_name, score, judge_name FROM dbo.ContestantScoreView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="contest_name" DataSetColumn="contest_name" />
+              <Mapping SourceColumn="contestant_num" DataSetColumn="contestant_num" />
+              <Mapping SourceColumn="contestant_name" DataSetColumn="contestant_name" />
+              <Mapping SourceColumn="criteria_name" DataSetColumn="criteria_name" />
+              <Mapping SourceColumn="score" DataSetColumn="score" />
+              <Mapping SourceColumn="judge_name" DataSetColumn="judge_name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -338,7 +359,7 @@ SELECT contestant_id, contestant_num, contestant_lastname, contestant_firstname,
   <xs:element name="ContestDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ContestDataSet" msprop:Generator_UserDSName="ContestDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Contest" msprop:Generator_TableClassName="ContestDataTable" msprop:Generator_TableVarName="tableContest" msprop:Generator_RowChangedName="ContestRowChanged" msprop:Generator_TablePropName="Contest" msprop:Generator_RowDeletingName="ContestRowDeleting" msprop:Generator_RowChangingName="ContestRowChanging" msprop:Generator_RowEvHandlerName="ContestRowChangeEventHandler" msprop:Generator_RowDeletedName="ContestRowDeleted" msprop:Generator_RowClassName="ContestRow" msprop:Generator_UserTableName="Contest" msprop:Generator_RowEvArgName="ContestRowChangeEvent">
+        <xs:element name="Contest" msprop:Generator_TableClassName="ContestDataTable" msprop:Generator_TableVarName="tableContest" msprop:Generator_TablePropName="Contest" msprop:Generator_RowDeletingName="ContestRowDeleting" msprop:Generator_RowChangingName="ContestRowChanging" msprop:Generator_RowEvHandlerName="ContestRowChangeEventHandler" msprop:Generator_RowDeletedName="ContestRowDeleted" msprop:Generator_UserTableName="Contest" msprop:Generator_RowChangedName="ContestRowChanged" msprop:Generator_RowEvArgName="ContestRowChangeEvent" msprop:Generator_RowClassName="ContestRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="contest_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncontest_id" msprop:Generator_ColumnPropNameInRow="contest_id" msprop:Generator_ColumnPropNameInTable="contest_idColumn" msprop:Generator_UserColumnName="contest_id" type="xs:int" />
@@ -366,7 +387,7 @@ SELECT contestant_id, contestant_num, contestant_lastname, contestant_firstname,
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Criteria" msprop:Generator_TableClassName="CriteriaDataTable" msprop:Generator_TableVarName="tableCriteria" msprop:Generator_RowChangedName="CriteriaRowChanged" msprop:Generator_TablePropName="Criteria" msprop:Generator_RowDeletingName="CriteriaRowDeleting" msprop:Generator_RowChangingName="CriteriaRowChanging" msprop:Generator_RowEvHandlerName="CriteriaRowChangeEventHandler" msprop:Generator_RowDeletedName="CriteriaRowDeleted" msprop:Generator_RowClassName="CriteriaRow" msprop:Generator_UserTableName="Criteria" msprop:Generator_RowEvArgName="CriteriaRowChangeEvent">
+        <xs:element name="Criteria" msprop:Generator_TableClassName="CriteriaDataTable" msprop:Generator_TableVarName="tableCriteria" msprop:Generator_TablePropName="Criteria" msprop:Generator_RowDeletingName="CriteriaRowDeleting" msprop:Generator_RowChangingName="CriteriaRowChanging" msprop:Generator_RowEvHandlerName="CriteriaRowChangeEventHandler" msprop:Generator_RowDeletedName="CriteriaRowDeleted" msprop:Generator_UserTableName="Criteria" msprop:Generator_RowChangedName="CriteriaRowChanged" msprop:Generator_RowEvArgName="CriteriaRowChangeEvent" msprop:Generator_RowClassName="CriteriaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="criteria_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncriteria_id" msprop:Generator_ColumnPropNameInRow="criteria_id" msprop:Generator_ColumnPropNameInTable="criteria_idColumn" msprop:Generator_UserColumnName="criteria_id" type="xs:int" />
@@ -382,7 +403,7 @@ SELECT contestant_id, contestant_num, contestant_lastname, contestant_firstname,
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Judge" msprop:Generator_TableClassName="JudgeDataTable" msprop:Generator_TableVarName="tableJudge" msprop:Generator_RowChangedName="JudgeRowChanged" msprop:Generator_TablePropName="Judge" msprop:Generator_RowDeletingName="JudgeRowDeleting" msprop:Generator_RowChangingName="JudgeRowChanging" msprop:Generator_RowEvHandlerName="JudgeRowChangeEventHandler" msprop:Generator_RowDeletedName="JudgeRowDeleted" msprop:Generator_RowClassName="JudgeRow" msprop:Generator_UserTableName="Judge" msprop:Generator_RowEvArgName="JudgeRowChangeEvent">
+        <xs:element name="Judge" msprop:Generator_TableClassName="JudgeDataTable" msprop:Generator_TableVarName="tableJudge" msprop:Generator_TablePropName="Judge" msprop:Generator_RowDeletingName="JudgeRowDeleting" msprop:Generator_RowChangingName="JudgeRowChanging" msprop:Generator_RowEvHandlerName="JudgeRowChangeEventHandler" msprop:Generator_RowDeletedName="JudgeRowDeleted" msprop:Generator_UserTableName="Judge" msprop:Generator_RowChangedName="JudgeRowChanged" msprop:Generator_RowEvArgName="JudgeRowChangeEvent" msprop:Generator_RowClassName="JudgeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="judge_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnjudge_id" msprop:Generator_ColumnPropNameInRow="judge_id" msprop:Generator_ColumnPropNameInTable="judge_idColumn" msprop:Generator_UserColumnName="judge_id" type="xs:int" />
@@ -417,7 +438,7 @@ SELECT contestant_id, contestant_num, contestant_lastname, contestant_firstname,
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Score" msprop:Generator_TableClassName="ScoreDataTable" msprop:Generator_TableVarName="tableScore" msprop:Generator_RowChangedName="ScoreRowChanged" msprop:Generator_TablePropName="Score" msprop:Generator_RowDeletingName="ScoreRowDeleting" msprop:Generator_RowChangingName="ScoreRowChanging" msprop:Generator_RowEvHandlerName="ScoreRowChangeEventHandler" msprop:Generator_RowDeletedName="ScoreRowDeleted" msprop:Generator_RowClassName="ScoreRow" msprop:Generator_UserTableName="Score" msprop:Generator_RowEvArgName="ScoreRowChangeEvent">
+        <xs:element name="Score" msprop:Generator_TableClassName="ScoreDataTable" msprop:Generator_TableVarName="tableScore" msprop:Generator_TablePropName="Score" msprop:Generator_RowDeletingName="ScoreRowDeleting" msprop:Generator_RowChangingName="ScoreRowChanging" msprop:Generator_RowEvHandlerName="ScoreRowChangeEventHandler" msprop:Generator_RowDeletedName="ScoreRowDeleted" msprop:Generator_UserTableName="Score" msprop:Generator_RowChangedName="ScoreRowChanged" msprop:Generator_RowEvArgName="ScoreRowChangeEvent" msprop:Generator_RowClassName="ScoreRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="score_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnscore_id" msprop:Generator_ColumnPropNameInRow="score_id" msprop:Generator_ColumnPropNameInTable="score_idColumn" msprop:Generator_UserColumnName="score_id" type="xs:int" />
@@ -428,7 +449,7 @@ SELECT contestant_id, contestant_num, contestant_lastname, contestant_firstname,
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Contestant" msprop:Generator_TableClassName="ContestantDataTable" msprop:Generator_TableVarName="tableContestant" msprop:Generator_TablePropName="Contestant" msprop:Generator_RowDeletingName="ContestantRowDeleting" msprop:Generator_RowChangingName="ContestantRowChanging" msprop:Generator_RowEvHandlerName="ContestantRowChangeEventHandler" msprop:Generator_RowDeletedName="ContestantRowDeleted" msprop:Generator_UserTableName="Contestant" msprop:Generator_RowChangedName="ContestantRowChanged" msprop:Generator_RowEvArgName="ContestantRowChangeEvent" msprop:Generator_RowClassName="ContestantRow">
+        <xs:element name="Contestant" msprop:Generator_TableClassName="ContestantDataTable" msprop:Generator_TableVarName="tableContestant" msprop:Generator_RowChangedName="ContestantRowChanged" msprop:Generator_TablePropName="Contestant" msprop:Generator_RowDeletingName="ContestantRowDeleting" msprop:Generator_RowChangingName="ContestantRowChanging" msprop:Generator_RowEvHandlerName="ContestantRowChangeEventHandler" msprop:Generator_RowDeletedName="ContestantRowDeleted" msprop:Generator_RowClassName="ContestantRow" msprop:Generator_UserTableName="Contestant" msprop:Generator_RowEvArgName="ContestantRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="contestant_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncontestant_id" msprop:Generator_ColumnPropNameInRow="contestant_id" msprop:Generator_ColumnPropNameInTable="contestant_idColumn" msprop:Generator_UserColumnName="contestant_id" type="xs:int" />
@@ -478,6 +499,42 @@ SELECT contestant_id, contestant_num, contestant_lastname, contestant_firstname,
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="ContestantScoreView" msprop:Generator_TableClassName="ContestantScoreViewDataTable" msprop:Generator_TableVarName="tableContestantScoreView" msprop:Generator_TablePropName="ContestantScoreView" msprop:Generator_RowDeletingName="ContestantScoreViewRowDeleting" msprop:Generator_RowChangingName="ContestantScoreViewRowChanging" msprop:Generator_RowEvHandlerName="ContestantScoreViewRowChangeEventHandler" msprop:Generator_RowDeletedName="ContestantScoreViewRowDeleted" msprop:Generator_UserTableName="ContestantScoreView" msprop:Generator_RowChangedName="ContestantScoreViewRowChanged" msprop:Generator_RowEvArgName="ContestantScoreViewRowChangeEvent" msprop:Generator_RowClassName="ContestantScoreViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="contest_name" msprop:Generator_ColumnVarNameInTable="columncontest_name" msprop:Generator_ColumnPropNameInRow="contest_name" msprop:Generator_ColumnPropNameInTable="contest_nameColumn" msprop:Generator_UserColumnName="contest_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="contestant_num" msprop:Generator_ColumnVarNameInTable="columncontestant_num" msprop:Generator_ColumnPropNameInRow="contestant_num" msprop:Generator_ColumnPropNameInTable="contestant_numColumn" msprop:Generator_UserColumnName="contestant_num" type="xs:int" />
+              <xs:element name="contestant_name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columncontestant_name" msprop:Generator_ColumnPropNameInRow="contestant_name" msprop:Generator_ColumnPropNameInTable="contestant_nameColumn" msprop:Generator_UserColumnName="contestant_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="152" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="criteria_name" msprop:Generator_ColumnVarNameInTable="columncriteria_name" msprop:Generator_ColumnPropNameInRow="criteria_name" msprop:Generator_ColumnPropNameInTable="criteria_nameColumn" msprop:Generator_UserColumnName="criteria_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="score" msprop:Generator_ColumnVarNameInTable="columnscore" msprop:Generator_ColumnPropNameInRow="score" msprop:Generator_ColumnPropNameInTable="scoreColumn" msprop:Generator_UserColumnName="score" type="xs:decimal" />
+              <xs:element name="judge_name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnjudge_name" msprop:Generator_ColumnPropNameInRow="judge_name" msprop:Generator_ColumnPropNameInTable="judge_nameColumn" msprop:Generator_UserColumnName="judge_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="152" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -503,10 +560,10 @@ SELECT contestant_id, contestant_num, contestant_lastname, contestant_firstname,
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Criteria_ToContest" msdata:parent="Contest" msdata:child="Criteria" msdata:parentkey="contest_id" msdata:childkey="contest_id" msprop:Generator_UserChildTable="Criteria" msprop:Generator_ChildPropName="GetCriteriaRows" msprop:Generator_UserRelationName="FK_Criteria_ToContest" msprop:Generator_RelationVarName="relationFK_Criteria_ToContest" msprop:Generator_UserParentTable="Contest" msprop:Generator_ParentPropName="ContestRow" />
-      <msdata:Relationship name="FK_Score_ToCriteria" msdata:parent="Criteria" msdata:child="Score" msdata:parentkey="criteria_id" msdata:childkey="criteria_id" msprop:Generator_UserChildTable="Score" msprop:Generator_ChildPropName="GetScoreRows" msprop:Generator_UserRelationName="FK_Score_ToCriteria" msprop:Generator_RelationVarName="relationFK_Score_ToCriteria" msprop:Generator_UserParentTable="Criteria" msprop:Generator_ParentPropName="CriteriaRow" />
-      <msdata:Relationship name="FK_Score_ToJudge" msdata:parent="Judge" msdata:child="Score" msdata:parentkey="judge_id" msdata:childkey="judge_id" msprop:Generator_UserChildTable="Score" msprop:Generator_ChildPropName="GetScoreRows" msprop:Generator_UserRelationName="FK_Score_ToJudge" msprop:Generator_RelationVarName="relationFK_Score_ToJudge" msprop:Generator_UserParentTable="Judge" msprop:Generator_ParentPropName="JudgeRow" />
-      <msdata:Relationship name="FK_Score_ToContestant" msdata:parent="Contestant" msdata:child="Score" msdata:parentkey="contestant_id" msdata:childkey="contestant_id" msprop:Generator_UserChildTable="Score" msprop:Generator_ChildPropName="GetScoreRows" msprop:Generator_UserRelationName="FK_Score_ToContestant" msprop:Generator_RelationVarName="relationFK_Score_ToContestant" msprop:Generator_UserParentTable="Contestant" msprop:Generator_ParentPropName="ContestantRow" />
+      <msdata:Relationship name="FK_Criteria_ToContest" msdata:parent="Contest" msdata:child="Criteria" msdata:parentkey="contest_id" msdata:childkey="contest_id" msprop:Generator_UserChildTable="Criteria" msprop:Generator_ChildPropName="GetCriteriaRows" msprop:Generator_UserRelationName="FK_Criteria_ToContest" msprop:Generator_ParentPropName="ContestRow" msprop:Generator_RelationVarName="relationFK_Criteria_ToContest" msprop:Generator_UserParentTable="Contest" />
+      <msdata:Relationship name="FK_Score_ToCriteria" msdata:parent="Criteria" msdata:child="Score" msdata:parentkey="criteria_id" msdata:childkey="criteria_id" msprop:Generator_UserChildTable="Score" msprop:Generator_ChildPropName="GetScoreRows" msprop:Generator_UserRelationName="FK_Score_ToCriteria" msprop:Generator_ParentPropName="CriteriaRow" msprop:Generator_RelationVarName="relationFK_Score_ToCriteria" msprop:Generator_UserParentTable="Criteria" />
+      <msdata:Relationship name="FK_Score_ToJudge" msdata:parent="Judge" msdata:child="Score" msdata:parentkey="judge_id" msdata:childkey="judge_id" msprop:Generator_UserChildTable="Score" msprop:Generator_ChildPropName="GetScoreRows" msprop:Generator_UserRelationName="FK_Score_ToJudge" msprop:Generator_ParentPropName="JudgeRow" msprop:Generator_RelationVarName="relationFK_Score_ToJudge" msprop:Generator_UserParentTable="Judge" />
+      <msdata:Relationship name="FK_Score_ToContestant" msdata:parent="Contestant" msdata:child="Score" msdata:parentkey="contestant_id" msdata:childkey="contestant_id" msprop:Generator_UserChildTable="Score" msprop:Generator_ChildPropName="GetScoreRows" msprop:Generator_UserRelationName="FK_Score_ToContestant" msprop:Generator_ParentPropName="ContestantRow" msprop:Generator_RelationVarName="relationFK_Score_ToContestant" msprop:Generator_UserParentTable="Contestant" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

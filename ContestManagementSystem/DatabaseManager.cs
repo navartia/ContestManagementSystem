@@ -1,34 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ContestManagementSystem
 {
-    using ContestantTable = ContestDataSet.ContestantDataTable;
-    using ScoreTable = ContestDataSet.ScoreDataTable;
-
-    public class DatabaseManager
+    public partial class DatabaseManager : Component
     {
-        private ContestantTable tableContestant;
-        private ScoreTable tableScore;
-
         public DatabaseManager()
         {
-            tableContestant = new ContestantTable();
-            tableScore = new ScoreTable();
+            InitializeComponent();
         }
 
-        public DataTable LoadTable()
+        public DatabaseManager(IContainer container)
         {
-           throw new NotImplementedException();
-        }
+            container.Add(this);
 
-        public bool SaveTable(DataTable table, String tableName)
-        {
-            throw new NotImplementedException();
+            InitializeComponent();
         }
     }
 }
