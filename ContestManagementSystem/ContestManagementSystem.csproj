@@ -84,6 +84,16 @@
     <Compile Include="ServerSettings.Designer.cs">
       <DependentUpon>ServerSettings.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="DatabaseManager.cs" />
+    <Compile Include="Summary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Summary.Designer.cs">
+      <DependentUpon>Summary.cs</DependentUpon>
+    </Compile>
+>>>>>>> pena
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,11 +121,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ServerSettings.resx">
       <DependentUpon>ServerSettings.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Summary.resx">
+      <DependentUpon>Summary.cs</DependentUpon>
+>>>>>>> pena
     </EmbeddedResource>
     <None Include="ContestDataSet.xsc">
       <DependentUpon>ContestDataSet.xsd</DependentUpon>
