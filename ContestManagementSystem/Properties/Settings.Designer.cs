@@ -26,11 +26,10 @@ namespace ContestManagementSystem.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\ContestDatabase.mdf;" +
-            "Integrated Security=True")]
-        public string ContestDatabaseConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=contest_db")]
+        public string contest_dbConnectionString {
             get {
-                return ((string)(this["ContestDatabaseConnectionString"]));
+                return ((string)(this["contest_dbConnectionString"]));
             }
         }
     }
