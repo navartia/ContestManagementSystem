@@ -84,6 +84,7 @@
             this.lbl_Sy = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_Contestant = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -92,64 +93,6 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-<<<<<<< HEAD
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.Color.Transparent;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(31, 507);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(410, 24);
-            this.label35.TabIndex = 144;
-            this.label35.Text = "CONTACT NO. IN CASE OF EMERGENCY";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(533, 438);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(156, 25);
-            this.label33.TabIndex = 141;
-            this.label33.Text = "Email Address:";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(558, 401);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(125, 25);
-            this.label34.TabIndex = 142;
-            this.label34.Text = "Contact No:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(31, 388);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(136, 25);
-            this.label10.TabIndex = 137;
-            this.label10.Text = "School Year:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(70, 438);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(97, 25);
-            this.label13.TabIndex = 138;
-            this.label13.Text = "Birthday:";
-            // 
-=======
->>>>>>> pena
             // label9
             // 
             this.label9.AutoSize = true;
@@ -261,46 +204,6 @@
             this.label31.Size = new System.Drawing.Size(0, 20);
             this.label31.TabIndex = 123;
             // 
-<<<<<<< HEAD
-            // txt_Course
-            // 
-            this.txt_Course.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Course.FormattingEnabled = true;
-            this.txt_Course.Items.AddRange(new object[] {
-            "Bachelor of Science in Computer Science",
-            "Bachelor of Science in Information Technology",
-            "Bachelor of Science in Computer Engineer"});
-            this.txt_Course.Location = new System.Drawing.Point(458, 284);
-            this.txt_Course.Name = "txt_Course";
-            this.txt_Course.Size = new System.Drawing.Size(500, 32);
-            this.txt_Course.TabIndex = 122;
-            // 
-            // txt_Emergency
-            // 
-            this.txt_Emergency.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Emergency.Location = new System.Drawing.Point(36, 544);
-            this.txt_Emergency.Name = "txt_Emergency";
-            this.txt_Emergency.Size = new System.Drawing.Size(296, 29);
-            this.txt_Emergency.TabIndex = 117;
-            // 
-            // txt_Number
-            // 
-            this.txt_Number.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Number.Location = new System.Drawing.Point(693, 397);
-            this.txt_Number.Name = "txt_Number";
-            this.txt_Number.Size = new System.Drawing.Size(296, 29);
-            this.txt_Number.TabIndex = 116;
-            // 
-            // txt_EmailAddress
-            // 
-            this.txt_EmailAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_EmailAddress.Location = new System.Drawing.Point(695, 438);
-            this.txt_EmailAddress.Name = "txt_EmailAddress";
-            this.txt_EmailAddress.Size = new System.Drawing.Size(296, 29);
-            this.txt_EmailAddress.TabIndex = 114;
-            // 
-=======
->>>>>>> pena
             // txt_Lname
             // 
             this.txt_Lname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -345,48 +248,6 @@
             this.btn_Del.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Del.UseVisualStyleBackColor = false;
             // 
-<<<<<<< HEAD
-            // btn_new
-            // 
-            this.btn_new.BackColor = System.Drawing.Color.Transparent;
-            this.btn_new.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_new.Image = ((System.Drawing.Image)(resources.GetObject("btn_new.Image")));
-            this.btn_new.Location = new System.Drawing.Point(912, 557);
-            this.btn_new.Name = "btn_new";
-            this.btn_new.Size = new System.Drawing.Size(62, 60);
-            this.btn_new.TabIndex = 118;
-            this.btn_new.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_new.UseVisualStyleBackColor = false;
-            // 
-            // lbl_Emergency
-            // 
-            this.lbl_Emergency.AutoSize = true;
-            this.lbl_Emergency.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Emergency.Location = new System.Drawing.Point(595, 529);
-            this.lbl_Emergency.Name = "lbl_Emergency";
-            this.lbl_Emergency.Size = new System.Drawing.Size(0, 20);
-            this.lbl_Emergency.TabIndex = 90;
-            // 
-            // lbl_Province
-            // 
-            this.lbl_Province.AutoSize = true;
-            this.lbl_Province.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Province.Location = new System.Drawing.Point(689, 426);
-            this.lbl_Province.Name = "lbl_Province";
-            this.lbl_Province.Size = new System.Drawing.Size(0, 20);
-            this.lbl_Province.TabIndex = 89;
-            // 
-            // lbl_EmailAddress
-            // 
-            this.lbl_EmailAddress.AutoSize = true;
-            this.lbl_EmailAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EmailAddress.Location = new System.Drawing.Point(689, 382);
-            this.lbl_EmailAddress.Name = "lbl_EmailAddress";
-            this.lbl_EmailAddress.Size = new System.Drawing.Size(0, 20);
-            this.lbl_EmailAddress.TabIndex = 88;
-            // 
-=======
->>>>>>> pena
             // lbl_Number
             // 
             this.lbl_Number.AutoSize = true;
@@ -669,6 +530,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.Controls.Add(this.txt_Contestant);
             this.tabPage1.Controls.Add(this.txt_Course);
             this.tabPage1.Controls.Add(this.label34);
             this.tabPage1.Controls.Add(this.label10);
@@ -729,6 +591,9 @@
             this.txt_Course.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Course.FormattingEnabled = true;
             this.txt_Course.Items.AddRange(new object[] {
+            "Bachelor of Science in Computer Science",
+            "Bachelor of Science in Information Technology",
+            "Bachelor of Science in Computer Engineer",
             "Bachelor of Science in Computer Science",
             "Bachelor of Science in Information Technology",
             "Bachelor of Science in Information Technology Major Digital Arts"});
@@ -850,6 +715,14 @@
             this.panel1.TabIndex = 24;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txt_Contestant
+            // 
+            this.txt_Contestant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Contestant.Location = new System.Drawing.Point(458, 325);
+            this.txt_Contestant.Name = "txt_Contestant";
+            this.txt_Contestant.Size = new System.Drawing.Size(296, 29);
+            this.txt_Contestant.TabIndex = 152;
+            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -932,6 +805,7 @@
         private System.Windows.Forms.Label lbl_Nation;
         private System.Windows.Forms.Label lbl_DOB;
         private System.Windows.Forms.Label lbl_Sy;
+        private System.Windows.Forms.TextBox txt_Contestant;
 
     }
 }

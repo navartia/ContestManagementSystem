@@ -13,6 +13,8 @@ namespace ContestManagementSystem
 {
     public partial class RegistrationForm : Form
     {
+        public String Photo;
+
         public RegistrationForm()
         {
             InitializeComponent();
@@ -23,11 +25,9 @@ namespace ContestManagementSystem
             //
         }
 
-<<<<<<< HEAD
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
-=======
+        }
         private void btn_importpic_Click(object sender, EventArgs e)
         {
             try
@@ -41,34 +41,6 @@ namespace ContestManagementSystem
 
                     pictureBox1.ImageLocation = fileName;
                     Photo = fileName;
-
-
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error" + ex);
-
-            }
-        }
-
-        private void btn_Update_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-
-                OpenFileDialog ofd = new OpenFileDialog();
-                if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    String fileName = ofd.FileName;
-
-                    pictureBox1.ImageLocation = fileName;
-                    Photo = fileName;
-
-
 
                 }
 
@@ -108,13 +80,14 @@ namespace ContestManagementSystem
                 }
                 try
                 {
+                    /*
                     myConn.Open();
                     myReader = slctCom.ExecuteReader();
                     MessageBox.Show("Saved!");
 
 
 
-                    myConn.Close();
+                    myConn.Close(); */
                 }
                 catch (Exception ex)
                 {
@@ -134,7 +107,6 @@ namespace ContestManagementSystem
             Summary sc = new Summary();
             sc.Show();
             this.Hide();
->>>>>>> pena
         }
     }
 }

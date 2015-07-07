@@ -65,18 +65,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="ContestDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ContestDataSet.xsd</DependentUpon>
-=======
+    </Compile>
     <Compile Include="FirstStage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FirstStage.Designer.cs">
       <DependentUpon>FirstStage.cs</DependentUpon>
->>>>>>> carlo
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,22 +90,15 @@
     <Compile Include="ServerSettings.Designer.cs">
       <DependentUpon>ServerSettings.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
-    <Compile Include="DatabaseManager.cs" />
-<<<<<<< HEAD
     <Compile Include="Summary.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Summary.Designer.cs">
       <DependentUpon>Summary.cs</DependentUpon>
     </Compile>
->>>>>>> pena
-=======
     <EmbeddedResource Include="FirstStage.resx">
       <DependentUpon>FirstStage.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> carlo
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,16 +126,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ServerSettings.resx">
       <DependentUpon>ServerSettings.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="Summary.resx">
       <DependentUpon>Summary.cs</DependentUpon>
->>>>>>> pena
     </EmbeddedResource>
     <None Include="ContestDataSet.xsc">
       <DependentUpon>ContestDataSet.xsd</DependentUpon>
