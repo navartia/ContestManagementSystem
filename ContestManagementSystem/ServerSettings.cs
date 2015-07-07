@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using System.Data.SqlClient;
 
 namespace ContestManagementSystem
 {
@@ -17,7 +18,7 @@ namespace ContestManagementSystem
         {
             InitializeComponent();
         }
-
+        /*
         private void buildConString()
         {
             textBoxConn.Text = "server=" + textBoxServer.Text + ";port=" + textBoxDatabase.Text + ";username=" + textBoxUsername.Text + ";password=" + textBoxPassword.Text;
@@ -42,7 +43,7 @@ namespace ContestManagementSystem
         {
             buildConString();
         }
-
+        */
         private void buttonUpdate_Click(object sender, EventArgs e)
         {/*
             var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
@@ -55,23 +56,29 @@ namespace ContestManagementSystem
             ConfigurationManager.RefreshSection("connectionStrings");
             MyGlobals.sqlConnect = ConfigurationManager.ConnectionStrings["MySql1"].ConnectionString;
             MessageBox.Show("Connection String Updated", "Update Success!"); */
-            Properties.Settings.Default.contest_dbConnectionString = 
+            //Properties.Settings.Default.contest_dbConnectionString = textBoxConn.Text;
+
+            ConnectionStringSettings settings =
+            ConfigurationManager.ConnectionStrings["ContestManagementSystem.Properties.Settings.contest_dbConnectionString"];
+
+            string connectString = settings.ConnectionString;
+
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(connectString);
+
+            builder.DataSource = textBoxServer.Text;
+            builder.InitialCatalog = textBoxDatabase.Text;
+            builder.UserID = textBoxUsername.Text;
+            builder.Password = textBoxPassword.Text;
+
+            textBoxConn.Text = connectString;
+
+            MessageBox.Show("Connection String Updated", "Update Success!");
         }
 
         private void buttonDone_Click(object sender, EventArgs e)
         {
             this.Close();
             this.Dispose();
-        }
-
-        private void ServerSettings_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Port_TextChanged_1(object sender, EventArgs e)
-        {
-
         }
     }
 }
