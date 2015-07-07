@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 
-namespace Grading_System
+namespace ContestManagementSystem
 {
     public partial class ServerSettings : Form
     {
@@ -20,7 +20,7 @@ namespace Grading_System
 
         private void buildConString()
         {
-            conStringtxt.Text = "datasource=" + datasource.Text + ";port=" + Port.Text + ";username=" + Username.Text + ";password=" + Password.Text;
+            textBoxConn.Text = "server=" + textBoxServer.Text + ";port=" + textBoxDatabase.Text + ";username=" + textBoxUsername.Text + ";password=" + textBoxPassword.Text;
         }
 
         private void datasource_TextChanged(object sender, EventArgs e)
@@ -43,8 +43,8 @@ namespace Grading_System
             buildConString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {/*
             var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             var connectionStringSection = (ConnectionStringsSection)config.GetSection("connectionStrings");
             connectionStringSection.ConnectionStrings["MySql1"].ConnectionString = conStringtxt.Text;
@@ -54,13 +54,24 @@ namespace Grading_System
 
             ConfigurationManager.RefreshSection("connectionStrings");
             MyGlobals.sqlConnect = ConfigurationManager.ConnectionStrings["MySql1"].ConnectionString;
-            MessageBox.Show("Connection String Updated", "Update Success!");
+            MessageBox.Show("Connection String Updated", "Update Success!"); */
+            Properties.Settings.Default.contest_dbConnectionString = 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonDone_Click(object sender, EventArgs e)
         {
             this.Close();
             this.Dispose();
+        }
+
+        private void ServerSettings_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Port_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
