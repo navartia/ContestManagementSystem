@@ -32,6 +32,7 @@
             this.buttonRegistration = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonFirststage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonJudging
@@ -73,11 +74,22 @@
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // buttonFirststage
+            // 
+            this.buttonFirststage.Location = new System.Drawing.Point(122, 152);
+            this.buttonFirststage.Name = "buttonFirststage";
+            this.buttonFirststage.Size = new System.Drawing.Size(75, 24);
+            this.buttonFirststage.TabIndex = 11;
+            this.buttonFirststage.Text = "First Stage";
+            this.buttonFirststage.UseVisualStyleBackColor = true;
+            this.buttonFirststage.Click += new System.EventHandler(this.buttonFirststage_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.buttonFirststage);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonRegistration);
@@ -95,6 +107,7 @@
         private System.Windows.Forms.Button buttonRegistration;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonFirststage;
     }
 }
 

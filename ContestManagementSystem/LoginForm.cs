@@ -41,5 +41,15 @@ namespace ContestManagementSystem
         {
             this.Dispose();
         }
+
+        private void buttonFirststage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FirstStage fs = new FirstStage();
+            fs.ShowDialog();
+
+            this.Show();
+        }
     }
 }
