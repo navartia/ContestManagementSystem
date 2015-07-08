@@ -73,6 +73,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txt_Contestant = new System.Windows.Forms.TextBox();
             this.txt_Course = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -84,7 +85,7 @@
             this.lbl_Sy = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_Contestant = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -530,6 +531,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.txt_Contestant);
             this.tabPage1.Controls.Add(this.txt_Course);
             this.tabPage1.Controls.Add(this.label34);
@@ -585,6 +587,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Student Information";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // txt_Contestant
+            // 
+            this.txt_Contestant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Contestant.Location = new System.Drawing.Point(458, 325);
+            this.txt_Contestant.Name = "txt_Contestant";
+            this.txt_Contestant.Size = new System.Drawing.Size(296, 29);
+            this.txt_Contestant.TabIndex = 152;
             // 
             // txt_Course
             // 
@@ -715,13 +725,16 @@
             this.panel1.TabIndex = 24;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // txt_Contestant
+            // label12
             // 
-            this.txt_Contestant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Contestant.Location = new System.Drawing.Point(458, 325);
-            this.txt_Contestant.Name = "txt_Contestant";
-            this.txt_Contestant.Size = new System.Drawing.Size(296, 29);
-            this.txt_Contestant.TabIndex = 152;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(243, 327);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(203, 25);
+            this.label12.TabIndex = 153;
+            this.label12.Text = "Contestant Number:";
             // 
             // RegistrationForm
             // 
@@ -806,6 +819,7 @@
         private System.Windows.Forms.Label lbl_DOB;
         private System.Windows.Forms.Label lbl_Sy;
         private System.Windows.Forms.TextBox txt_Contestant;
+        private System.Windows.Forms.Label label12;
 
     }
 }
