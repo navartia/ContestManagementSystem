@@ -123,5 +123,12 @@ namespace ContestManagementSystem
                 MessageBox.Show("ERROR on" + ex);
             }
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Summary sc = new Summary();
+            sc.Show();
+            this.Hide();
+        }
     }
 }

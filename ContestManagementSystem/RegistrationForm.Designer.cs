@@ -73,8 +73,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_Course = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_Sy = new System.Windows.Forms.ComboBox();
@@ -83,7 +82,8 @@
             this.lbl_Nation = new System.Windows.Forms.Label();
             this.lbl_DOB = new System.Windows.Forms.Label();
             this.lbl_Sy = new System.Windows.Forms.Label();
-            this.txt_Course = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -478,10 +478,11 @@
             this.linkLabel2.LinkColor = System.Drawing.Color.White;
             this.linkLabel2.Location = new System.Drawing.Point(22, 273);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(91, 29);
+            this.linkLabel2.Size = new System.Drawing.Size(193, 29);
             this.linkLabel2.TabIndex = 24;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Update";
+            this.linkLabel2.Text = "Summary Report";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -583,29 +584,19 @@
             this.tabPage1.Text = "Student Information";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // label3
+            // txt_Course
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(7, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 26);
-            this.label3.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Controls.Add(this.linkLabel2);
-            this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(6, 17);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(313, 746);
-            this.panel1.TabIndex = 24;
+            this.txt_Course.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Course.FormattingEnabled = true;
+            this.txt_Course.Items.AddRange(new object[] {
+            "Bachelor of Science in Computer Science",
+            "Bachelor of Science in Information Technology",
+            "Bachelor of Science in Information Technology Major Digital Arts"});
+            this.txt_Course.Location = new System.Drawing.Point(458, 287);
+            this.txt_Course.Name = "txt_Course";
+            this.txt_Course.Size = new System.Drawing.Size(520, 32);
+            this.txt_Course.TabIndex = 151;
+            this.txt_Course.Text = "Bachelor of Science in Information Technology";
             // 
             // label34
             // 
@@ -694,19 +685,29 @@
             this.lbl_Sy.Size = new System.Drawing.Size(0, 20);
             this.lbl_Sy.TabIndex = 143;
             // 
-            // txt_Course
+            // label3
             // 
-            this.txt_Course.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Course.FormattingEnabled = true;
-            this.txt_Course.Items.AddRange(new object[] {
-            "Bachelor of Science in Computer Science",
-            "Bachelor of Science in Information Technology",
-            "Bachelor of Science in Information Technology Major Digital Arts"});
-            this.txt_Course.Location = new System.Drawing.Point(458, 287);
-            this.txt_Course.Name = "txt_Course";
-            this.txt_Course.Size = new System.Drawing.Size(520, 32);
-            this.txt_Course.TabIndex = 151;
-            this.txt_Course.Text = "Bachelor of Science in Information Technology";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(7, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 26);
+            this.label3.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.linkLabel2);
+            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(6, 17);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(313, 746);
+            this.panel1.TabIndex = 24;
             // 
             // RegistrationForm
             // 
