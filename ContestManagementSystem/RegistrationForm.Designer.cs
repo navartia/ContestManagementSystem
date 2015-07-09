@@ -248,7 +248,6 @@
             this.btn_Del.TabIndex = 119;
             this.btn_Del.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Del.UseVisualStyleBackColor = false;
-            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // lbl_Number
             // 
