@@ -38,7 +38,7 @@
             // 
             // buttonJudging
             // 
-            this.buttonJudging.Location = new System.Drawing.Point(119, 119);
+            this.buttonJudging.Location = new System.Drawing.Point(145, 114);
             this.buttonJudging.Name = "buttonJudging";
             this.buttonJudging.Size = new System.Drawing.Size(85, 29);
             this.buttonJudging.TabIndex = 5;
@@ -49,7 +49,7 @@
             // buttonRegistration
             // 
             this.buttonRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegistration.Location = new System.Drawing.Point(119, 79);
+            this.buttonRegistration.Location = new System.Drawing.Point(145, 74);
             this.buttonRegistration.Name = "buttonRegistration";
             this.buttonRegistration.Size = new System.Drawing.Size(85, 29);
             this.buttonRegistration.TabIndex = 8;
@@ -61,7 +61,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(76, 20);
+            this.label1.Location = new System.Drawing.Point(105, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(172, 16);
             this.label1.TabIndex = 9;
@@ -69,7 +69,7 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(119, 159);
+            this.buttonExit.Location = new System.Drawing.Point(145, 154);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(85, 29);
             this.buttonExit.TabIndex = 10;
@@ -91,7 +91,7 @@
             // 
             // buttonFirststage
             // 
-            this.buttonFirststage.Location = new System.Drawing.Point(119, 194);
+            this.buttonFirststage.Location = new System.Drawing.Point(145, 189);
             this.buttonFirststage.Name = "buttonFirststage";
             this.buttonFirststage.Size = new System.Drawing.Size(85, 24);
             this.buttonFirststage.TabIndex = 11;
@@ -104,7 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(384, 261);
             this.Controls.Add(this.linkLabelServer);
             this.Controls.Add(this.buttonFirststage);
             this.Controls.Add(this.buttonExit);
