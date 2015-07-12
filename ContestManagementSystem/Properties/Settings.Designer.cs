@@ -22,15 +22,5 @@ namespace ContestManagementSystem.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=contest_db")]
-        public string contest_dbConnectionString {
-            get {
-                return ((string)(this["contest_dbConnectionString"]));
-            }
-        }
     }
 }
