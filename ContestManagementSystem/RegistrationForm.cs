@@ -14,6 +14,7 @@ namespace ContestManagementSystem
     {
         public String Photo;
         private OleDbConnection connection = new OleDbConnection();
+        private OleDbCommand command = new OleDbCommand();
         public RegistrationForm()
         {
             InitializeComponent();
@@ -57,10 +58,8 @@ namespace ContestManagementSystem
             try
             {
                 connection.Open();
-                OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "insert into contestant (firstName,middleName,LastName,gender,studentNumber,course,ContestantNumber,SchoolYear,phone) values('" + txt_fname.Text + "','" + txt_Mname.Text + "','" + txt_Lname.Text + "','" + txt_IDNumber + "','" + txt_Course.Text + "','" + txt_Sy.Text + "','" + txt_Number.Text + "')";
-                command.ExecuteNonQuery();
+                command.CommandText = "insert into contestant (firstName,middleName,LastName,gender,studentNumbers,course,ContestantNumber,SchoolYear,phone,Photo) values('" + txt_fname.Text + "','" + txt_Mname.Text + "','" + txt_Lname.Text + "','" + txt_Gender.Text + "','" + txt_IDNumber.Text + "','" + txt_Course.Text + "','" + txt_Contestant.Text + "','" + txt_Sy.Text + "','" + txt_Number.Text + "','" + Photo + "')"; command.ExecuteNonQuery();
                 MessageBox.Show("Data has been Saved!");
                 connection.Close();
 
@@ -86,6 +85,17 @@ namespace ContestManagementSystem
         private void RegistrationForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Del_Click(object sender, EventArgs e)
+        {
+            txt_fname.Text = "";
+            txt_Lname.Text = "";
+            txt_Mname.Text = "";
+            txt_Contestant.Text = "";
+            txt_IDNumber.Text = "";
+            txt_Sy.Text = "";
+            txt_Number.Text = "";
         }
     }
 }

@@ -49,6 +49,7 @@
             this.contestantsCheckedlistbox.Name = "contestantsCheckedlistbox";
             this.contestantsCheckedlistbox.Size = new System.Drawing.Size(255, 349);
             this.contestantsCheckedlistbox.TabIndex = 0;
+            this.contestantsCheckedlistbox.Visible = false;
             this.contestantsCheckedlistbox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.contestantsCheckedlistbox_ItemCheck);
             this.contestantsCheckedlistbox.Click += new System.EventHandler(this.contestantsCheckedlistbox_Click);
             this.contestantsCheckedlistbox.SelectedIndexChanged += new System.EventHandler(this.contestantsCheckedlistbox_SelectedIndexChanged);
@@ -94,11 +95,10 @@
             // contestantsListbox
             // 
             this.contestantsListbox.FormattingEnabled = true;
-            this.contestantsListbox.Location = new System.Drawing.Point(156, 71);
+            this.contestantsListbox.Location = new System.Drawing.Point(156, 72);
             this.contestantsListbox.Name = "contestantsListbox";
             this.contestantsListbox.Size = new System.Drawing.Size(120, 95);
             this.contestantsListbox.TabIndex = 5;
-            this.contestantsListbox.Visible = false;
             this.contestantsListbox.SelectedIndexChanged += new System.EventHandler(this.contestantsListbox_SelectedIndexChanged);
             // 
             // studentnumberListbox
@@ -109,18 +109,19 @@
             this.studentnumberListbox.Size = new System.Drawing.Size(120, 95);
             this.studentnumberListbox.TabIndex = 6;
             this.studentnumberListbox.Visible = false;
+            this.studentnumberListbox.SelectedIndexChanged += new System.EventHandler(this.studentnumberListbox_SelectedIndexChanged);
             // 
             // FirstStage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 514);
-            this.Controls.Add(this.studentnumberListbox);
-            this.Controls.Add(this.contestantsListbox);
             this.Controls.Add(this.totalvalLabel);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.proceedButton);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.contestantsListbox);
+            this.Controls.Add(this.studentnumberListbox);
             this.Controls.Add(this.contestantsCheckedlistbox);
             this.Name = "FirstStage";
             this.Text = "First Stage";
