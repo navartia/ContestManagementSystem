@@ -44,8 +44,12 @@ namespace ContestManagementSystem
 
         private void linkLabelServer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
+
             ServerSettings ss = new ServerSettings();
             ss.ShowDialog();
+
+            this.Show();
         }
 
         private void buttonFirststage_Click(object sender, EventArgs e)
