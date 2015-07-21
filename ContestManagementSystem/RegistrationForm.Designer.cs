@@ -39,8 +39,8 @@
             this.btn_importpic = new System.Windows.Forms.Button();
             this.txt_Gender = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.txt_Lname = new System.Windows.Forms.TextBox();
-            this.txt_Mname = new System.Windows.Forms.TextBox();
+            this.txt_lname = new System.Windows.Forms.TextBox();
+            this.txt_mname = new System.Windows.Forms.TextBox();
             this.txt_IDNumber = new System.Windows.Forms.TextBox();
             this.txt_fname = new System.Windows.Forms.TextBox();
             this.btn_Del = new System.Windows.Forms.Button();
@@ -203,21 +203,21 @@
             this.label31.Size = new System.Drawing.Size(0, 20);
             this.label31.TabIndex = 123;
             // 
-            // txt_Lname
+            // txt_lname
             // 
-            this.txt_Lname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Lname.Location = new System.Drawing.Point(458, 182);
-            this.txt_Lname.Name = "txt_Lname";
-            this.txt_Lname.Size = new System.Drawing.Size(296, 29);
-            this.txt_Lname.TabIndex = 108;
+            this.txt_lname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_lname.Location = new System.Drawing.Point(458, 182);
+            this.txt_lname.Name = "txt_lname";
+            this.txt_lname.Size = new System.Drawing.Size(296, 29);
+            this.txt_lname.TabIndex = 108;
             // 
-            // txt_Mname
+            // txt_mname
             // 
-            this.txt_Mname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Mname.Location = new System.Drawing.Point(458, 147);
-            this.txt_Mname.Name = "txt_Mname";
-            this.txt_Mname.Size = new System.Drawing.Size(296, 29);
-            this.txt_Mname.TabIndex = 107;
+            this.txt_mname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mname.Location = new System.Drawing.Point(458, 147);
+            this.txt_mname.Name = "txt_mname";
+            this.txt_mname.Size = new System.Drawing.Size(296, 29);
+            this.txt_mname.TabIndex = 107;
             // 
             // txt_IDNumber
             // 
@@ -474,12 +474,12 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.ForeColor = System.Drawing.Color.White;
             this.linkLabel2.LinkColor = System.Drawing.Color.White;
-            this.linkLabel2.Location = new System.Drawing.Point(22, 273);
+            this.linkLabel2.Location = new System.Drawing.Point(22, 279);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(193, 29);
+            this.linkLabel2.Size = new System.Drawing.Size(158, 25);
             this.linkLabel2.TabIndex = 24;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Summary Report";
@@ -488,12 +488,12 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.ForeColor = System.Drawing.Color.White;
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(22, 217);
+            this.linkLabel1.Location = new System.Drawing.Point(22, 223);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(251, 29);
+            this.linkLabel1.Size = new System.Drawing.Size(204, 25);
             this.linkLabel1.TabIndex = 23;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Participant Information";
@@ -509,11 +509,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(52, 137);
+            this.label4.Location = new System.Drawing.Point(47, 141);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 25);
+            this.label4.Size = new System.Drawing.Size(199, 37);
             this.label4.TabIndex = 20;
             this.label4.Text = "Registration";
             // 
@@ -549,8 +549,8 @@
             this.tabPage1.Controls.Add(this.btn_importpic);
             this.tabPage1.Controls.Add(this.txt_Gender);
             this.tabPage1.Controls.Add(this.label31);
-            this.tabPage1.Controls.Add(this.txt_Lname);
-            this.tabPage1.Controls.Add(this.txt_Mname);
+            this.tabPage1.Controls.Add(this.txt_lname);
+            this.tabPage1.Controls.Add(this.txt_mname);
             this.tabPage1.Controls.Add(this.txt_IDNumber);
             this.tabPage1.Controls.Add(this.txt_fname);
             this.tabPage1.Controls.Add(this.btn_Del);
@@ -736,8 +736,8 @@
         private System.Windows.Forms.Button btn_importpic;
         private System.Windows.Forms.ComboBox txt_Gender;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox txt_Lname;
-        private System.Windows.Forms.TextBox txt_Mname;
+        private System.Windows.Forms.TextBox txt_lname;
+        private System.Windows.Forms.TextBox txt_mname;
         private System.Windows.Forms.TextBox txt_IDNumber;
         private System.Windows.Forms.TextBox txt_fname;
         private System.Windows.Forms.Button btn_Del;
