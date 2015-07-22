@@ -71,6 +71,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_Contestant = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txt_Course = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
             this.txt_Number = new System.Windows.Forms.TextBox();
@@ -80,10 +84,6 @@
             this.lbl_Sy = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txt_Contestant = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -191,7 +191,7 @@
             this.txt_Gender.Location = new System.Drawing.Point(458, 310);
             this.txt_Gender.Name = "txt_Gender";
             this.txt_Gender.Size = new System.Drawing.Size(132, 32);
-            this.txt_Gender.TabIndex = 126;
+            this.txt_Gender.TabIndex = 161;
             // 
             // label31
             // 
@@ -208,7 +208,7 @@
             this.txt_lname.Location = new System.Drawing.Point(458, 242);
             this.txt_lname.Name = "txt_lname";
             this.txt_lname.Size = new System.Drawing.Size(296, 29);
-            this.txt_lname.TabIndex = 108;
+            this.txt_lname.TabIndex = 160;
             // 
             // txt_mname
             // 
@@ -216,7 +216,7 @@
             this.txt_mname.Location = new System.Drawing.Point(458, 207);
             this.txt_mname.Name = "txt_mname";
             this.txt_mname.Size = new System.Drawing.Size(296, 29);
-            this.txt_mname.TabIndex = 107;
+            this.txt_mname.TabIndex = 159;
             // 
             // txt_IDNumber
             // 
@@ -224,7 +224,7 @@
             this.txt_IDNumber.Location = new System.Drawing.Point(458, 348);
             this.txt_IDNumber.Name = "txt_IDNumber";
             this.txt_IDNumber.Size = new System.Drawing.Size(296, 29);
-            this.txt_IDNumber.TabIndex = 105;
+            this.txt_IDNumber.TabIndex = 162;
             // 
             // txt_fname
             // 
@@ -232,7 +232,7 @@
             this.txt_fname.Location = new System.Drawing.Point(458, 172);
             this.txt_fname.Name = "txt_fname";
             this.txt_fname.Size = new System.Drawing.Size(296, 29);
-            this.txt_fname.TabIndex = 104;
+            this.txt_fname.TabIndex = 158;
             // 
             // btn_Del
             // 
@@ -557,6 +557,49 @@
             this.tabPage1.Size = new System.Drawing.Size(1069, 664);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Information";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(347, 101);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(93, 25);
+            this.label12.TabIndex = 158;
+            this.label12.Text = "Number:";
+            // 
+            // txt_Contestant
+            // 
+            this.txt_Contestant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Contestant.Location = new System.Drawing.Point(458, 99);
+            this.txt_Contestant.Name = "txt_Contestant";
+            this.txt_Contestant.Size = new System.Drawing.Size(80, 29);
+            this.txt_Contestant.TabIndex = 157;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Mr. and Ms. STI",
+            "STI Singing Idol"});
+            this.comboBox1.Location = new System.Drawing.Point(458, 61);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(296, 32);
+            this.comboBox1.TabIndex = 156;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(348, 63);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(92, 25);
+            this.label10.TabIndex = 155;
+            this.label10.Text = "Contest:";
             // 
             // txt_Course
             // 
@@ -570,7 +613,7 @@
             this.txt_Course.Location = new System.Drawing.Point(458, 383);
             this.txt_Course.Name = "txt_Course";
             this.txt_Course.Size = new System.Drawing.Size(520, 32);
-            this.txt_Course.TabIndex = 151;
+            this.txt_Course.TabIndex = 163;
             // 
             // label34
             // 
@@ -589,7 +632,7 @@
             this.txt_Number.Location = new System.Drawing.Point(458, 421);
             this.txt_Number.Name = "txt_Number";
             this.txt_Number.Size = new System.Drawing.Size(296, 29);
-            this.txt_Number.TabIndex = 147;
+            this.txt_Number.TabIndex = 164;
             // 
             // label5
             // 
@@ -648,48 +691,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(282, 746);
             this.panel1.TabIndex = 24;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(348, 63);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 25);
-            this.label10.TabIndex = 155;
-            this.label10.Text = "Contest:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Mr. and Ms. STI",
-            "STI Singing Idol"});
-            this.comboBox1.Location = new System.Drawing.Point(458, 61);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(296, 32);
-            this.comboBox1.TabIndex = 156;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(347, 101);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 25);
-            this.label12.TabIndex = 158;
-            this.label12.Text = "Number:";
-            // 
-            // txt_Contestant
-            // 
-            this.txt_Contestant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Contestant.Location = new System.Drawing.Point(458, 99);
-            this.txt_Contestant.Name = "txt_Contestant";
-            this.txt_Contestant.Size = new System.Drawing.Size(80, 29);
-            this.txt_Contestant.TabIndex = 157;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // RegistrationForm
             // 
@@ -704,6 +706,7 @@
             this.Name = "RegistrationForm";
             this.Text = "Registration";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.RegistrationForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

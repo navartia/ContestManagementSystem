@@ -32,6 +32,7 @@ namespace ContestManagementSystem
         private void buttonOK_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.ConnectionString = filepath;
+            Properties.Settings.Default.JudgeID = Convert.ToInt32(textBoxJudge.Text);
             this.Dispose();
         }
 
