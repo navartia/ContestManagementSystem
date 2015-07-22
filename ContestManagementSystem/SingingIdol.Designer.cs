@@ -47,8 +47,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelNumber = new System.Windows.Forms.Label();
+            this.comboBoxContestant = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -272,6 +273,7 @@
             this.panel1.Size = new System.Drawing.Size(806, 103);
             this.panel1.TabIndex = 15;
             // 
+<<<<<<< HEAD
             // label7
             // 
             this.label7.AutoSize = true;
@@ -294,15 +296,54 @@
             this.label8.Size = new System.Drawing.Size(155, 25);
             this.label8.TabIndex = 17;
             this.label8.Text = "Contestant No:";
+=======
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(45, 121);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(154, 20);
+            this.labelName.TabIndex = 16;
+            this.labelName.Text = "Contestant Name:";
+            // 
+            // labelNumber
+            // 
+            this.labelNumber.AutoSize = true;
+            this.labelNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNumber.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelNumber.Location = new System.Drawing.Point(45, 141);
+            this.labelNumber.Name = "labelNumber";
+            this.labelNumber.Size = new System.Drawing.Size(130, 20);
+            this.labelNumber.TabIndex = 17;
+            this.labelNumber.Text = "Contestant No:";
+            // 
+            // comboBoxContestant
+            // 
+            this.comboBoxContestant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxContestant.FormattingEnabled = true;
+            this.comboBoxContestant.Location = new System.Drawing.Point(49, 85);
+            this.comboBoxContestant.Name = "comboBoxContestant";
+            this.comboBoxContestant.Size = new System.Drawing.Size(300, 28);
+            this.comboBoxContestant.TabIndex = 18;
+            this.comboBoxContestant.SelectedIndexChanged += new System.EventHandler(this.comboBoxContestant_SelectedIndexChanged);
+>>>>>>> louie
             // 
             // SingingIdol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(806, 445);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
+=======
+            this.ClientSize = new System.Drawing.Size(784, 411);
+            this.Controls.Add(this.comboBoxContestant);
+            this.Controls.Add(this.labelNumber);
+            this.Controls.Add(this.labelName);
+>>>>>>> louie
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonSubmit);
@@ -314,7 +355,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "STI Global City - Singing Idol Contest";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SingingIdol_FormClosing);
+            this.Load += new System.EventHandler(this.SingingIdol_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -344,8 +385,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelNumber;
+        private System.Windows.Forms.ComboBox comboBoxContestant;
 
     }
 }

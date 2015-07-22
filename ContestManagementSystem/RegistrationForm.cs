@@ -33,7 +33,7 @@ namespace ContestManagementSystem
         private void btn_Update_Click(object sender, EventArgs e)
         {
             //String command = "insert into contestant (firstName,middleName,LastName,gender,studentNumber,course,ContestantNumber,SchoolYear,phone) values('" + txt_fname.Text + "','" + txt_mname.Text + "','" + txt_lname.Text + "','" + txt_IDNumber + "','" + txt_Course.Text + "','" + txt_Number.Text + "')";
-            String command2 = "insert into contestant (contest_id, firstname, middlename, lastname, contestant_number) values(1, '" + txt_fname.Text + "', '" + txt_mname.Text + "', '" + txt_lname.Text + "', " + Convert.ToInt32(txt_Contestant.Text) + ")";
+            String command2 = "INSERT INTO contestant (contest_id, firstname, middlename, lastname, contestant_number) values(1, '" + txt_fname.Text + "', '" + txt_mname.Text + "', '" + txt_lname.Text + "', " + Convert.ToInt32(txt_Contestant.Text) + ")";
             
             dm.Insert(command2);
         }
