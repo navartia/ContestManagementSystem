@@ -23,7 +23,7 @@ namespace ContestManagementSystem
             fm = new FileManager();
 
             textBoxConn.Text = Properties.Settings.Default.ConnectionString;
-            textBoxConn.Text = Convert.ToString(Properties.Settings.Default.JudgeID);
+            textBoxJudge.Text = Convert.ToString(Properties.Settings.Default.JudgeID);
         }
 
         private void buttonBrowse_Click(object sender, EventArgs e)

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ContestManagementSystem
 {
-    public partial class MrandMsSTISummary : Form
+    public partial class MrMsSTISummary : Form
     {
-        public MrandMsSTISummary()
+        public MrMsSTISummary()
         {
             InitializeComponent();
         }

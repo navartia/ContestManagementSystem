@@ -43,14 +43,19 @@ namespace ContestManagementSystem
 
         private void buttonSingingIdol_Click(object sender, EventArgs e)
         {
+            this.Hide();
 
+            SingingIdolSummary si = new SingingIdolSummary();
+            si.ShowDialog();
+
+            this.Show();
         }
 
         private void buttonMrSTI_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            MrMsSTI mr = new MrMsSTI();
+            MrMsSTISummary mr = new MrMsSTISummary();
             mr.ShowDialog();
 
             this.Show();
