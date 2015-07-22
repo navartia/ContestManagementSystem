@@ -28,15 +28,19 @@ namespace ContestManagementSystem
             connection.Open();
 
             command.Connection = connection;
-            string query = "select ID from Table1";
+            string query = "select ID,firstName,LastName from contestant";
             command.CommandText = query;
             OleDbDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
             {
-                string fname = reader[""].ToString();
-                string lname = reader[""].ToString();
-                contestantsListbox.Items.Add(fname + " " + lname);
+                string studentNumbers = reader["studentNumbers"].ToString();
+                string fname = reader["firstName"].ToString();
+                string lname = reader["LastName"].ToString();
+               
+                //contestantsListbox.Items.Add(studentNumbers);
+                
+                //studentnumberListbox.Items.Add(studentNumbers);
             }
 
             connection.Close();
@@ -111,6 +115,11 @@ namespace ContestManagementSystem
         }
 
         private void contestantsListbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void studentnumberListbox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

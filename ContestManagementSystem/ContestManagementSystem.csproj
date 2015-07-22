@@ -83,13 +83,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contestant.cs" />
     <Compile Include="DatabaseManager.cs" />
+    <Compile Include="FileManager.cs" />
     <Compile Include="FirstStage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FirstStage.Designer.cs">
       <DependentUpon>FirstStage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MrMsSTI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MrMsSTI.Designer.cs">
+      <DependentUpon>MrMsSTI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetworkManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LoginForm.cs">
@@ -103,6 +112,12 @@
     </Compile>
     <Compile Include="ServerSettings.Designer.cs">
       <DependentUpon>ServerSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SingingIdol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SingingIdol.Designer.cs">
+      <DependentUpon>SingingIdol.cs</DependentUpon>
     </Compile>
     <Compile Include="Summary.cs">
       <SubType>Form</SubType>
@@ -137,6 +152,9 @@
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MrMsSTI.resx">
+      <DependentUpon>MrMsSTI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -151,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ServerSettings.resx">
       <DependentUpon>ServerSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SingingIdol.resx">
+      <DependentUpon>SingingIdol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Summary.resx">
       <DependentUpon>Summary.cs</DependentUpon>

@@ -8,30 +8,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Data.OleDb;
 namespace ContestManagementSystem
 {
     public partial class Summary : Form
     {
+        private OleDbConnection con = new OleDbConnection();
+        private OleDbCommand command = new OleDbCommand();
         public Summary()
         {
             InitializeComponent();
+            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source = \\HANZ21\Joel Arbole\contest_db.accdb";
         }
 
         private void Summary_Load(object sender, EventArgs e)
         {
             try
             {
-                string myConnection = "datasource=localhost;port=3306;username=root;password=1234";
-                MySqlConnection myConn = new MySqlConnection(myConnection);
-                myConn.Open();
-                string query = "select StudentNumber, FirstName, MiddleName, SurName, Course from database.student ";
-                MySqlCommand slctCom = new MySqlCommand(query, myConn);
-
-                MySqlDataAdapter da = new MySqlDataAdapter(slctCom);
+                con.Open();
+                command.Connection = con;
+                string query = "select firstName,middleName,LastName,studentNumber,ContestantNumber from contestant";
+                command.CommandText = query;
+                OleDbDataAdapter da = new OleDbDataAdapter(command);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
-                myConn.Close();
+                con.Close();
 
             }
             catch (Exception ex)

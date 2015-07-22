@@ -17,22 +17,22 @@ namespace ContestManagementSystem
             InitializeComponent();
         }
 
-        private void buttonRegistration_Click(object sender, EventArgs e)
+        private void buttonSingingIdol_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            RegistrationForm reg = new RegistrationForm();
-            reg.ShowDialog();
+            SingingIdol si = new SingingIdol();
+            si.ShowDialog();
 
             this.Show();
         }
 
-        private void buttonJudging_Click(object sender, EventArgs e)
+        private void buttonMrSTI_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            JudgingForm judge = new JudgingForm();
-            judge.ShowDialog();
+            MrMsSTI mr = new MrMsSTI();
+            mr.ShowDialog();
 
             this.Show();
         }
@@ -44,16 +44,20 @@ namespace ContestManagementSystem
 
         private void linkLabelServer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
+
             ServerSettings ss = new ServerSettings();
             ss.ShowDialog();
+
+            this.Show();
         }
 
-        private void buttonFirststage_Click(object sender, EventArgs e)
+        private void buttonRegistration_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            FirstStage fs = new FirstStage();
-            fs.ShowDialog();
+            RegistrationForm rf = new RegistrationForm();
+            rf.ShowDialog();
 
             this.Show();
         }
