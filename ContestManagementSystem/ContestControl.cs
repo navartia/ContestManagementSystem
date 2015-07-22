@@ -17,7 +17,8 @@ namespace ContestManagementSystem
             InitializeComponent();
         }
 
-        private void buttonRegistration_Click(object sender, EventArgs e)
+
+        private void buttonRegistration_Click_1(object sender, EventArgs e)
         {
             this.Hide();
 
@@ -27,7 +28,7 @@ namespace ContestManagementSystem
             this.Show();
         }
 
-        private void buttonMasterList_Click(object sender, EventArgs e)
+        private void buttonMasterList_Click_1(object sender, EventArgs e)
         {
             this.Hide();
 
@@ -35,6 +36,36 @@ namespace ContestManagementSystem
             ml.ShowDialog();
 
             this.Show();
+
+        }
+
+
+
+        private void buttonSingingIdol_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            SingingIdol si = new SingingIdol();
+            si.ShowDialog();
+
+            this.Show();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void buttonMrSTI_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            MrMsSTI mr = new MrMsSTI();
+            mr.ShowDialog();
+
+            this.Show();
+
         }
     }
 }
