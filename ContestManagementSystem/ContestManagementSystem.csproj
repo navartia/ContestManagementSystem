@@ -131,6 +131,12 @@
     <Compile Include="MasterList.Designer.cs">
       <DependentUpon>MasterList.cs</DependentUpon>
     </Compile>
+    <Compile Include="SingingIdolSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SingingIdolSummary.Designer.cs">
+      <DependentUpon>SingingIdolSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestDB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MasterList.resx">
       <DependentUpon>MasterList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SingingIdolSummary.resx">
+      <DependentUpon>SingingIdolSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestDB.resx">
       <DependentUpon>TestDB.cs</DependentUpon>

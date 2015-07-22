@@ -185,5 +185,10 @@ namespace ContestManagementSystem
             hScrollBarSQ.Value = Convert.ToInt32(score[2] / 10f * 91f);
             hScrollBarSP.Value = Convert.ToInt32(score[3] / 10f * 91f);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
