@@ -98,6 +98,12 @@
     <Compile Include="FirstStage.Designer.cs">
       <DependentUpon>FirstStage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MrandMsSTISummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MrandMsSTISummary.Designer.cs">
+      <DependentUpon>MrandMsSTISummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="MrMsSTI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MrandMsSTISummary.resx">
+      <DependentUpon>MrandMsSTISummary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MrMsSTI.resx">
       <DependentUpon>MrMsSTI.cs</DependentUpon>
     </EmbeddedResource>
