@@ -16,5 +16,20 @@ namespace ContestManagementSystem
         {
             InitializeComponent();
         }
+
+        private void hScrollBarVQ_Scroll(object sender, ScrollEventArgs e)
+        {
+            int value = hScrollBarVQ.Value;
+            float adjustedValue = value / 91f * 10f;
+            textBoxVQ.Text = Convert.ToInt32(adjustedValue).ToString();
+        }
+
+        private void hScrollBarOrg_Scroll(object sender, ScrollEventArgs e)
+        {
+            int value = hScrollBarOrg.Value;
+            float adjustedValue = value / 91f * 10;
+
+            textBoxOrg.Text = Convert.ToInt32(adjustedValue).ToString();
+        }
     }
 }
