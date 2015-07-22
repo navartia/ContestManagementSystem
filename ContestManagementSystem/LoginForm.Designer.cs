@@ -37,8 +37,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonContestControl = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonRegistration = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -127,7 +127,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.buttonRegistration);
+            this.panel2.Controls.Add(this.buttonContestControl);
             this.panel2.Controls.Add(this.buttonSingingIdol);
             this.panel2.Controls.Add(this.buttonExit);
             this.panel2.Controls.Add(this.buttonMrSTI);
@@ -137,6 +137,18 @@
             this.panel2.Size = new System.Drawing.Size(400, 210);
             this.panel2.TabIndex = 13;
             // 
+            // buttonContestControl
+            // 
+            this.buttonContestControl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonContestControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonContestControl.Location = new System.Drawing.Point(138, 6);
+            this.buttonContestControl.Name = "buttonContestControl";
+            this.buttonContestControl.Size = new System.Drawing.Size(120, 30);
+            this.buttonContestControl.TabIndex = 12;
+            this.buttonContestControl.Text = "Contest Control";
+            this.buttonContestControl.UseVisualStyleBackColor = true;
+            this.buttonContestControl.Click += new System.EventHandler(this.buttonContestControl_Click);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.linkLabelServer);
@@ -145,18 +157,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(400, 50);
             this.panel3.TabIndex = 14;
-            // 
-            // buttonRegistration
-            // 
-            this.buttonRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegistration.Location = new System.Drawing.Point(138, 6);
-            this.buttonRegistration.Name = "buttonRegistration";
-            this.buttonRegistration.Size = new System.Drawing.Size(120, 30);
-            this.buttonRegistration.TabIndex = 12;
-            this.buttonRegistration.Text = "Registration";
-            this.buttonRegistration.UseVisualStyleBackColor = true;
-            this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
             // 
             // LoginForm
             // 
@@ -192,7 +192,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button buttonRegistration;
+        private System.Windows.Forms.Button buttonContestControl;
     }
 }
 

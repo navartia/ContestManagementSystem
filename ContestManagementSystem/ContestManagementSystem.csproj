@@ -84,6 +84,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contestant.cs" />
+    <Compile Include="ContestControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContestControl.Designer.cs">
+      <DependentUpon>ContestControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseManager.cs" />
     <Compile Include="FileManager.cs" />
     <Compile Include="FirstStage.cs">
@@ -119,11 +125,11 @@
     <Compile Include="SingingIdol.Designer.cs">
       <DependentUpon>SingingIdol.cs</DependentUpon>
     </Compile>
-    <Compile Include="Summary.cs">
+    <Compile Include="MasterList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Summary.Designer.cs">
-      <DependentUpon>Summary.cs</DependentUpon>
+    <Compile Include="MasterList.Designer.cs">
+      <DependentUpon>MasterList.cs</DependentUpon>
     </Compile>
     <Compile Include="TestDB.cs">
       <SubType>Form</SubType>
@@ -131,6 +137,9 @@
     <Compile Include="TestDB.Designer.cs">
       <DependentUpon>TestDB.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ContestControl.resx">
+      <DependentUpon>ContestControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FirstStage.resx">
       <DependentUpon>FirstStage.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,8 +182,8 @@
     <EmbeddedResource Include="SingingIdol.resx">
       <DependentUpon>SingingIdol.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Summary.resx">
-      <DependentUpon>Summary.cs</DependentUpon>
+    <EmbeddedResource Include="MasterList.resx">
+      <DependentUpon>MasterList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestDB.resx">
       <DependentUpon>TestDB.cs</DependentUpon>
