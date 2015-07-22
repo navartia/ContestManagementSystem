@@ -12,9 +12,14 @@ namespace ContestManagementSystem
 {
     public partial class SingingIdol : Form
     {
+        Contestant contestant;
+
         public SingingIdol()
         {
             InitializeComponent();
+
+            contestant = new Contestant();
+            //cm = new ClientManager();
         }
 
         private void hScrollBarVQ_Scroll(object sender, ScrollEventArgs e)
@@ -60,6 +65,21 @@ namespace ContestManagementSystem
             textBoxOrg.Text = "0";
             textBoxSQ.Text = "0";
             textBoxSP.Text = "0";
+        }
+
+        private void buttonSubmit_Click(object sender, EventArgs e)
+        {
+            int[] score = new int[4];
+            score[0] = Convert.ToInt32(textBoxVQ.Text);
+            score[1] = Convert.ToInt32(textBoxOrg.Text);
+            score[2] = Convert.ToInt32(textBoxSQ.Text);
+            score[3] = Convert.ToInt32(textBoxSP.Text);
+
+            contestant.score = score;
+        }
+
+        private void SingingIdol_FormClosing(object sender, FormClosingEventArgs e)
+        {
         }
     }
 }
