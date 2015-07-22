@@ -36,6 +36,8 @@ namespace ContestManagementSystem
             String command2 = "INSERT INTO contestant (contest_id, firstname, middlename, lastname, contestant_number) values(1, '" + txt_fname.Text + "', '" + txt_mname.Text + "', '" + txt_lname.Text + "', " + Convert.ToInt32(txt_Contestant.Text) + ")";
             
             dm.Insert(command2);
+
+            MessageBox.Show("Data has been Saved!");
         }
 
         private void btn_Del_Click(object sender, EventArgs e)

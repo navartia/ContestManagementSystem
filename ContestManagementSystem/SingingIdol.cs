@@ -107,10 +107,24 @@ namespace ContestManagementSystem
 
                 scoreInsertQuery = "INSERT INTO score (criteria_id, contestant_id, judge_id, score) VALUES (4, " + selected.contestant_id + ", " + selected.judge_id + ", " + score[3] + ")";
                 dm.Insert(scoreInsertQuery);
+
+                MessageBox.Show("Data has been Saved!");
             }
             else
             {
+                String scoreInsertQuery = "UPDATE score SET score = " + score[0] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 1";
+                dm.Insert(scoreInsertQuery);
 
+                scoreInsertQuery = "UPDATE score SET score = " + score[1] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 2";
+                dm.Insert(scoreInsertQuery);
+
+                scoreInsertQuery = "UPDATE score SET score = " + score[2] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 3";
+                dm.Insert(scoreInsertQuery);
+
+                scoreInsertQuery = "UPDATE score SET score = " + score[3] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 4";
+                dm.Insert(scoreInsertQuery);
+
+                MessageBox.Show("Data has been Updated!");
             }
         }
 
@@ -134,10 +148,17 @@ namespace ContestManagementSystem
 
                 contestant.judge_id = Properties.Settings.Default.JudgeID;
 
-                String scoreQuery = "SELECT * FROM score WHERE score.contestant_id = " + contestant.contestant_id;
+                String scoreQuery = "SELECT * FROM score WHERE score.contestant_id = " + contestant.contestant_id + " AND score.judge_id = " + contestant.judge_id;
                 DataTable scoreTable = dm.Select(scoreQuery);
-
+                
                 int[] score = new int[4];
+                int index = 0;
+                foreach (DataRow scoreRow in scoreTable.Rows)
+                {
+                    score[index] = Convert.ToInt32(scoreRow["score"]);
+                    index++;
+                }
+
                 contestant.score = score;
 
                 contestantList.Add(contestant);
@@ -160,6 +181,9 @@ namespace ContestManagementSystem
             textBoxSP.Text = Convert.ToString(score[3]);
 
             hScrollBarVQ.Value = Convert.ToInt32(score[0] / 50f * 91f);
+            hScrollBarOrg.Value = Convert.ToInt32(score[1] / 30f * 91f);
+            hScrollBarSQ.Value = Convert.ToInt32(score[2] / 10f * 91f);
+            hScrollBarSP.Value = Convert.ToInt32(score[3] / 10f * 91f);
         }
     }
 }

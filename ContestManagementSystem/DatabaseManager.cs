@@ -35,7 +35,6 @@ namespace ContestManagementSystem
                 command.CommandText = query;
                 command.ExecuteNonQuery();
 
-                MessageBox.Show("Data has been Saved!");
                 connection.Close();
             }
             catch (Exception ex)

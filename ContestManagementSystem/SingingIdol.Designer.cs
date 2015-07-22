@@ -273,30 +273,6 @@
             this.panel1.Size = new System.Drawing.Size(806, 103);
             this.panel1.TabIndex = 15;
             // 
-<<<<<<< HEAD
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(44, 121);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(184, 25);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Contestant Name:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(48, 157);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(155, 25);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Contestant No:";
-=======
             // labelName
             // 
             this.labelName.AutoSize = true;
@@ -327,23 +303,16 @@
             this.comboBoxContestant.Size = new System.Drawing.Size(300, 28);
             this.comboBoxContestant.TabIndex = 18;
             this.comboBoxContestant.SelectedIndexChanged += new System.EventHandler(this.comboBoxContestant_SelectedIndexChanged);
->>>>>>> louie
             // 
             // SingingIdol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(806, 445);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-=======
-            this.ClientSize = new System.Drawing.Size(784, 411);
             this.Controls.Add(this.comboBoxContestant);
             this.Controls.Add(this.labelNumber);
             this.Controls.Add(this.labelName);
->>>>>>> louie
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonSubmit);
