@@ -130,7 +130,9 @@ namespace ContestManagementSystem
 
         private void SingingIdol_Load(object sender, EventArgs e)
         {
-            String contestantQuery = "SELECT * FROM contestant";
+            comboBoxContestant.SelectedIndex = 0;
+            String contestID = "1";
+            String contestantQuery = "SELECT * FROM contestant WHERE contest_id = " + contestID + "";
             DataTable contestTable = dm.Select(contestantQuery);
 
             foreach (DataRow row in contestTable.Rows)
@@ -184,6 +186,11 @@ namespace ContestManagementSystem
             hScrollBarOrg.Value = Convert.ToInt32(score[1] / 30f * 91f);
             hScrollBarSQ.Value = Convert.ToInt32(score[2] / 10f * 91f);
             hScrollBarSP.Value = Convert.ToInt32(score[3] / 10f * 91f);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
