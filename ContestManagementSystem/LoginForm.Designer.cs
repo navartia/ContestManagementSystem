@@ -38,6 +38,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonRegistration = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -48,7 +49,7 @@
             // 
             this.buttonSingingIdol.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonSingingIdol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSingingIdol.Location = new System.Drawing.Point(137, 25);
+            this.buttonSingingIdol.Location = new System.Drawing.Point(138, 42);
             this.buttonSingingIdol.Name = "buttonSingingIdol";
             this.buttonSingingIdol.Size = new System.Drawing.Size(120, 30);
             this.buttonSingingIdol.TabIndex = 5;
@@ -71,7 +72,7 @@
             // 
             this.buttonExit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(137, 97);
+            this.buttonExit.Location = new System.Drawing.Point(138, 114);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(120, 30);
             this.buttonExit.TabIndex = 10;
@@ -95,7 +96,7 @@
             // 
             this.buttonMrSTI.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonMrSTI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMrSTI.Location = new System.Drawing.Point(137, 61);
+            this.buttonMrSTI.Location = new System.Drawing.Point(138, 78);
             this.buttonMrSTI.Name = "buttonMrSTI";
             this.buttonMrSTI.Size = new System.Drawing.Size(120, 30);
             this.buttonMrSTI.TabIndex = 11;
@@ -126,6 +127,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.buttonRegistration);
             this.panel2.Controls.Add(this.buttonSingingIdol);
             this.panel2.Controls.Add(this.buttonExit);
             this.panel2.Controls.Add(this.buttonMrSTI);
@@ -143,6 +145,18 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(400, 50);
             this.panel3.TabIndex = 14;
+            // 
+            // buttonRegistration
+            // 
+            this.buttonRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegistration.Location = new System.Drawing.Point(138, 6);
+            this.buttonRegistration.Name = "buttonRegistration";
+            this.buttonRegistration.Size = new System.Drawing.Size(120, 30);
+            this.buttonRegistration.TabIndex = 12;
+            this.buttonRegistration.Text = "Registration";
+            this.buttonRegistration.UseVisualStyleBackColor = true;
+            this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
             // 
             // LoginForm
             // 
@@ -178,6 +192,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button buttonRegistration;
     }
 }
 

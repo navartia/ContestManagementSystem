@@ -51,5 +51,15 @@ namespace ContestManagementSystem
 
             this.Show();
         }
+
+        private void buttonRegistration_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            RegistrationForm rf = new RegistrationForm();
+            rf.ShowDialog();
+
+            this.Show();
+        }
     }
 }

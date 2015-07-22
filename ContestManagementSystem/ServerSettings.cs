@@ -15,15 +15,17 @@ namespace ContestManagementSystem
     public partial class ServerSettings : Form
     {
         private String filepath = "";
+        private FileManager fm;
 
         public ServerSettings()
         {
             InitializeComponent();
+            fm = new FileManager();
         }
 
         private void buttonBrowse_Click(object sender, EventArgs e)
         {
-            filepath = OpenFile();
+            filepath = fm.OpenFile();
             textBoxConn.Text = filepath;
         }
 
@@ -37,27 +39,5 @@ namespace ContestManagementSystem
         {
             this.Dispose();
         }
-
-        //Helper methods
-        private String OpenFile()
-        {
-            String filename = "";
-            try
-            {
-                OpenFileDialog ofd = new OpenFileDialog();
-                if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    filename = ofd.FileName;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error" + ex);
-            }
-
-            return filename;
-        }
-
     }
 }

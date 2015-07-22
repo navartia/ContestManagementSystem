@@ -10,8 +10,6 @@ namespace ContestManagementSystem
 {
     public class NetworkManager
     {
-        NetworkStream stream;
-
         public NetworkManager()
         {
             StartListening();
