@@ -34,12 +34,7 @@ namespace ContestManagementSystem
         {
             int contestID = (comboBox1.SelectedIndex + 1);
             //String command = "insert into contestant (firstName,middleName,LastName,gender,studentNumber,course,ContestantNumber,SchoolYear,phone) values('" + txt_fname.Text + "','" + txt_mname.Text + "','" + txt_lname.Text + "','" + txt_IDNumber + "','" + txt_Course.Text + "','" + txt_Number.Text + "')";
-<<<<<<< HEAD
-            String command2 = "INSERT INTO contestant (contest_id, firstname, middlename, lastname, contestant_number) values(1, '" + txt_fname.Text + "', '" + txt_mname.Text + "', '" + txt_lname.Text + "', " + Convert.ToInt32(txt_Contestant.Text) + ")";
-=======
-            String command2 = "insert into contestant (contest_id, firstname, middlename, lastname, contestant_number, gender,  id_number, course, contact_number) values(" + Convert.ToString(contestID) + ", '" + txt_fname.Text + "', '" + txt_mname.Text + "', '" + txt_lname.Text + "', " + Convert.ToInt32(txt_Contestant.Text) + ", '" + txt_Gender.Text + "', '" + txt_IDNumber.Text + "', '" + txt_Course.Text + "', '" + txt_Number.Text + "')";
->>>>>>> pena
-            
+            String command2 = "insert into contestant (contest_id, firstname, middlename, lastname, contestant_number, gender,  id_number, course, contact_number) values(" + Convert.ToString(contestID) + ", '" + txt_fname.Text + "', '" + txt_mname.Text + "', '" + txt_lname.Text + "', " + Convert.ToInt32(txt_Contestant.Text) + ", '" + txt_Gender.Text + "', '" + txt_IDNumber.Text + "', '" + txt_Course.Text + "', '" + txt_Number.Text + "')"; 
             dm.Insert(command2);
 
             MessageBox.Show("Data has been Saved!");
