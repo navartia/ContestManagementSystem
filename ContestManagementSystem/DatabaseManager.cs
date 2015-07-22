@@ -44,6 +44,29 @@ namespace ContestManagementSystem
             }
         }
 
+        public void Insert(DataTable dt, String tableName)
+        {
+            using (connection = new OleDbConnection(connString))
+            {
+                connection.Open();
+                String query = "SELECT * FROM " + tableName;
+                
+                using(OleDbCommand command = new OleDbCommand(query, connection))
+                {
+                    using (OleDbDataAdapter adapter = new OleDbDataAdapter(command))
+                    {
+                        using (OleDbCommandBuilder commandBuilder = new OleDbCommandBuilder(adapter))
+                        {
+                            adapter.DeleteCommand = commandBuilder.GetDeleteCommand();
+                            adapter.InsertCommand = commandBuilder.GetInsertCommand();
+                            adapter.UpdateCommand = commandBuilder.GetUpdateCommand();
+                        }
+                    }
+                }
+
+            }
+        }
+
         public DataTable Select(String query)
         {
             DataTable dt = new DataTable();
@@ -66,6 +89,26 @@ namespace ContestManagementSystem
             }
 
             return dt;
+        }
+
+        public void Update(String query)
+        {
+            try
+            {
+                connection.Open();
+
+                command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = query;
+                command.ExecuteNonQuery();
+
+                MessageBox.Show("Data has been Updated!");
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex);
+            }
         }
     }
 }
