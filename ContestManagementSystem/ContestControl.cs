@@ -43,18 +43,7 @@ namespace ContestManagementSystem
 
         private void buttonSingingIdol_Click(object sender, EventArgs e)
         {
-            this.Hide();
 
-            SingingIdol si = new SingingIdol();
-            si.ShowDialog();
-
-            this.Show();
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
         }
 
         private void buttonMrSTI_Click(object sender, EventArgs e)
@@ -66,6 +55,11 @@ namespace ContestManagementSystem
 
             this.Show();
 
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

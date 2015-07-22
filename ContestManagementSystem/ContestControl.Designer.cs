@@ -35,10 +35,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonMrSTI = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.buttonRegistration = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonBack = new System.Windows.Forms.Button();
-            this.buttonMrSTI = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -113,6 +113,30 @@
             this.panel2.Size = new System.Drawing.Size(384, 357);
             this.panel2.TabIndex = 16;
             // 
+            // buttonMrSTI
+            // 
+            this.buttonMrSTI.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonMrSTI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMrSTI.Location = new System.Drawing.Point(126, 264);
+            this.buttonMrSTI.Name = "buttonMrSTI";
+            this.buttonMrSTI.Size = new System.Drawing.Size(120, 30);
+            this.buttonMrSTI.TabIndex = 14;
+            this.buttonMrSTI.Text = "Mr and Ms STI";
+            this.buttonMrSTI.UseVisualStyleBackColor = true;
+            this.buttonMrSTI.Click += new System.EventHandler(this.buttonMrSTI_Click);
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBack.Location = new System.Drawing.Point(126, 300);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(120, 30);
+            this.buttonBack.TabIndex = 13;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
             // buttonRegistration
             // 
             this.buttonRegistration.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -132,30 +156,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(384, 50);
             this.panel3.TabIndex = 17;
-            // 
-            // buttonBack
-            // 
-            this.buttonBack.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBack.Location = new System.Drawing.Point(126, 300);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(120, 30);
-            this.buttonBack.TabIndex = 13;
-            this.buttonBack.Text = "Back";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // buttonMrSTI
-            // 
-            this.buttonMrSTI.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonMrSTI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMrSTI.Location = new System.Drawing.Point(126, 264);
-            this.buttonMrSTI.Name = "buttonMrSTI";
-            this.buttonMrSTI.Size = new System.Drawing.Size(120, 30);
-            this.buttonMrSTI.TabIndex = 14;
-            this.buttonMrSTI.Text = "Mr and Ms STI";
-            this.buttonMrSTI.UseVisualStyleBackColor = true;
-            this.buttonMrSTI.Click += new System.EventHandler(this.buttonMrSTI_Click);
             // 
             // ContestControl
             // 

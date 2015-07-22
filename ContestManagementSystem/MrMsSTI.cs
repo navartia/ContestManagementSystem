@@ -86,7 +86,6 @@ namespace ContestManagementSystem
 
         private void MrMsSTI_Load(object sender, EventArgs e)
         {
-          //  comboBoxContestant.SelectedIndex = 0;
             String contestID = "2";
             String contestantQuery = "SELECT * FROM contestant WHERE contest_id = " + contestID + "";
             DataTable contestTable = dm.Select(contestantQuery);
@@ -121,6 +120,8 @@ namespace ContestManagementSystem
 
                 contestantList.Add(contestant);
                 comboBoxContestant.Items.Add(contestant.contestant_number + " " + contestant.name);
+
+                comboBoxContestant.SelectedIndex = 0;
             }
         }
 

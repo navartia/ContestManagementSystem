@@ -130,9 +130,8 @@ namespace ContestManagementSystem
 
         private void SingingIdol_Load(object sender, EventArgs e)
         {
-            comboBoxContestant.SelectedIndex = 0;
             String contestID = "1";
-            String contestantQuery = "SELECT * FROM contestant WHERE contest_id = " + contestID + "";
+            String contestantQuery = "SELECT * FROM contestant WHERE contest_id = " + contestID;
             DataTable contestTable = dm.Select(contestantQuery);
 
             foreach (DataRow row in contestTable.Rows)
@@ -165,6 +164,8 @@ namespace ContestManagementSystem
 
                 contestantList.Add(contestant);
                 comboBoxContestant.Items.Add(contestant.contestant_number + " " + contestant.name);
+
+                comboBoxContestant.SelectedIndex = 0;
             }
         }
 
