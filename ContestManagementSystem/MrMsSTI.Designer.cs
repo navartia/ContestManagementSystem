@@ -43,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.hScrollBarVQ = new System.Windows.Forms.HScrollBar();
+            this.comboBoxContestant = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -118,6 +119,7 @@
             this.buttonSubmit.Size = new System.Drawing.Size(73, 54);
             this.buttonSubmit.TabIndex = 20;
             this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
             // buttonClear
             // 
@@ -130,6 +132,7 @@
             this.buttonClear.Size = new System.Drawing.Size(73, 54);
             this.buttonClear.TabIndex = 19;
             this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -156,6 +159,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(680, 151);
             this.tableLayoutPanel1.TabIndex = 18;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // textBoxOrg
             // 
@@ -220,6 +224,16 @@
             this.hScrollBarVQ.TabIndex = 2;
             this.hScrollBarVQ.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarVQ_Scroll);
             // 
+            // comboBoxContestant
+            // 
+            this.comboBoxContestant.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxContestant.FormattingEnabled = true;
+            this.comboBoxContestant.Location = new System.Drawing.Point(619, 134);
+            this.comboBoxContestant.Name = "comboBoxContestant";
+            this.comboBoxContestant.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxContestant.TabIndex = 25;
+            this.comboBoxContestant.SelectedIndexChanged += new System.EventHandler(this.comboBoxContestant_SelectedIndexChanged);
+            // 
             // MrMsSTI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,6 +241,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(806, 445);
+            this.Controls.Add(this.comboBoxContestant);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label7);
@@ -238,6 +253,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mr. & Ms. STI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MrMsSTI_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -263,5 +279,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.HScrollBar hScrollBarVQ;
+        private System.Windows.Forms.ComboBox comboBoxContestant;
     }
 }
