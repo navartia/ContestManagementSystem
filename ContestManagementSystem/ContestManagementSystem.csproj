@@ -12,6 +12,22 @@
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\RonaldLouie\Desktop\Tapos na\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,9 +48,27 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4D7D47E0E658CC7618FB2B4DC8591837BBCB44AD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,16 +79,95 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Contestant.cs" />
+    <Compile Include="ContestControl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="ContestControl.Designer.cs">
+      <DependentUpon>ContestControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseManager.cs" />
+    <Compile Include="FileManager.cs" />
+    <Compile Include="FirstStage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstStage.Designer.cs">
+      <DependentUpon>FirstStage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MrMsSTISummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MrMsSTISummary.Designer.cs">
+      <DependentUpon>MrMsSTISummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MrMsSTI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MrMsSTI.Designer.cs">
+      <DependentUpon>MrMsSTI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetworkManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerSettings.Designer.cs">
+      <DependentUpon>ServerSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SingingIdol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SingingIdol.Designer.cs">
+      <DependentUpon>SingingIdol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterList.Designer.cs">
+      <DependentUpon>MasterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SingingIdolSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SingingIdolSummary.Designer.cs">
+      <DependentUpon>SingingIdolSummary.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ContestControl.resx">
+      <DependentUpon>ContestControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstStage.resx">
+      <DependentUpon>FirstStage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="JudgingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JudgingForm.Designer.cs">
+      <DependentUpon>JudgingForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="JudgingForm.resx">
+      <DependentUpon>JudgingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MrMsSTISummary.resx">
+      <DependentUpon>MrMsSTISummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MrMsSTI.resx">
+      <DependentUpon>MrMsSTI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,6 +178,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerSettings.resx">
+      <DependentUpon>ServerSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SingingIdol.resx">
+      <DependentUpon>SingingIdol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterList.resx">
+      <DependentUpon>MasterList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SingingIdolSummary.resx">
+      <DependentUpon>SingingIdolSummary.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -77,6 +205,23 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

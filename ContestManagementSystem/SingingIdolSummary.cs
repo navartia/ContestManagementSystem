@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace ContestManagementSystem
 {
-    public partial class MainForm : Form
+    public partial class SingingIdolSummary : Form
     {
-        public MainForm()
+        public SingingIdolSummary()
         {
             InitializeComponent();
         }
+
     }
 }
