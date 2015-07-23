@@ -174,12 +174,37 @@ namespace ContestManagementSystem
             int index = comboBoxContestant.SelectedIndex;
             Contestant selected = contestantList[index] as Contestant;
 
+            LoadContestant(selected);
+        }
+
+        private void buttonNext_Click(object sender, EventArgs e)
+        {
+            int index = (comboBoxContestant.SelectedIndex + 1) % comboBoxContestant.Items.Count;
+            comboBoxContestant.SelectedIndex = index;
+        }
+
+        private void buttonPrev_Click(object sender, EventArgs e)
+        {
+            if (comboBoxContestant.SelectedIndex != 0)
+            {
+                int index = (comboBoxContestant.SelectedIndex - 1);
+                comboBoxContestant.SelectedIndex = index;
+            }
+
+            else
+            {
+                comboBoxContestant.SelectedIndex = comboBoxContestant.Items.Count - 1;
+            }
+        }
+
+        private void LoadContestant(Contestant selected)
+        {
             labelName.Text = selected.name;
             labelNumber.Text = Convert.ToString(selected.contestant_number);
 
             int[] score = selected.score;
             textBoxVQ.Text = Convert.ToString(score[0]);
-            textBoxOrg.Text = Convert.ToString(score[1]); 
+            textBoxOrg.Text = Convert.ToString(score[1]);
             textBoxSQ.Text = Convert.ToString(score[2]);
             textBoxSP.Text = Convert.ToString(score[3]);
 
@@ -187,11 +212,6 @@ namespace ContestManagementSystem
             hScrollBarOrg.Value = Convert.ToInt32(score[1] / 30f * 91f);
             hScrollBarSQ.Value = Convert.ToInt32(score[2] / 10f * 91f);
             hScrollBarSP.Value = Convert.ToInt32(score[3] / 10f * 91f);
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

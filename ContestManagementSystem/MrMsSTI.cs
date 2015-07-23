@@ -130,6 +130,34 @@ namespace ContestManagementSystem
             int index = comboBoxContestant.SelectedIndex;
             Contestant selected = contestantList[index] as Contestant;
 
+            LoadContestant(selected);
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            hScrollBarVQ.Value = 0;
+            hScrollBarOrg.Value = 0;
+
+            textBoxVQ.Text = "0";
+            textBoxOrg.Text = "0";
+
+            int[] score = new int[2];
+            score[0] = Convert.ToInt32(textBoxVQ.Text);
+            score[1] = Convert.ToInt32(textBoxOrg.Text);
+
+            int index = comboBoxContestant.SelectedIndex;
+            Contestant selected = contestantList[index] as Contestant;
+            selected.score = score;
+        }
+
+        private void buttonNext_Click(object sender, EventArgs e)
+        {
+            int index = (comboBoxContestant.SelectedIndex + 1) % comboBoxContestant.Items.Count;
+            comboBoxContestant.SelectedIndex = index;
+        }
+
+        private void LoadContestant(Contestant selected)
+        {
             label7.Text = selected.name;
             label8.Text = Convert.ToString(selected.contestant_number);
 
@@ -141,21 +169,18 @@ namespace ContestManagementSystem
             hScrollBarOrg.Value = Convert.ToInt32(score[1] / 30f * 91f);
         }
 
-        private void buttonClear_Click(object sender, EventArgs e)
+        private void buttonPrev_Click(object sender, EventArgs e)
         {
-            hScrollBarVQ.Value = 0;
-            hScrollBarOrg.Value = 0;
+            if (comboBoxContestant.SelectedIndex != 0)
+            {
+                int index = (comboBoxContestant.SelectedIndex - 1);
+                comboBoxContestant.SelectedIndex = index;
+            }
 
-            textBoxVQ.Text = "0";
-            textBoxOrg.Text = "0";
-
-            int[] score = new int[4];
-            score[0] = Convert.ToInt32(textBoxVQ.Text);
-            score[1] = Convert.ToInt32(textBoxOrg.Text);
-
-            int index = comboBoxContestant.SelectedIndex;
-            Contestant selected = contestantList[index] as Contestant;
-            selected.score = score;
+            else
+            {
+                comboBoxContestant.SelectedIndex = comboBoxContestant.Items.Count - 1;
+            }
         }
     }
 }

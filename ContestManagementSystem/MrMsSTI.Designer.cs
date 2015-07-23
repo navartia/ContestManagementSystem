@@ -44,19 +44,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.hScrollBarVQ = new System.Windows.Forms.HScrollBar();
             this.comboBoxContestant = new System.Windows.Forms.ComboBox();
+            this.buttonNext = new System.Windows.Forms.Button();
+            this.buttonPrev = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(44, 170);
+            this.label8.Location = new System.Drawing.Point(94, 170);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(155, 25);
+            this.label8.Size = new System.Drawing.Size(161, 26);
             this.label8.TabIndex = 24;
             this.label8.Text = "Contestant No:";
             // 
@@ -68,7 +71,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(806, 103);
+            this.panel1.Size = new System.Drawing.Size(884, 103);
             this.panel1.TabIndex = 22;
             // 
             // label6
@@ -77,7 +80,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(156, 28);
+            this.label6.Location = new System.Drawing.Point(195, 28);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(439, 32);
@@ -86,12 +89,13 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(40, 134);
+            this.label7.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(94, 134);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(184, 25);
+            this.label7.Size = new System.Drawing.Size(192, 26);
             this.label7.TabIndex = 23;
             this.label7.Text = "Contestant Name:";
             // 
@@ -101,7 +105,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(299, 203);
+            this.label5.Location = new System.Drawing.Point(338, 261);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(227, 23);
@@ -113,7 +117,7 @@
             this.buttonSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSubmit.Image = ((System.Drawing.Image)(resources.GetObject("buttonSubmit.Image")));
-            this.buttonSubmit.Location = new System.Drawing.Point(585, 390);
+            this.buttonSubmit.Location = new System.Drawing.Point(623, 492);
             this.buttonSubmit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(73, 54);
@@ -126,7 +130,7 @@
             this.buttonClear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClear.Image = ((System.Drawing.Image)(resources.GetObject("buttonClear.Image")));
-            this.buttonClear.Location = new System.Drawing.Point(661, 390);
+            this.buttonClear.Location = new System.Drawing.Point(706, 492);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(73, 54);
@@ -137,7 +141,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
@@ -149,7 +153,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.hScrollBarVQ, 1, 0);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(60, 232);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(99, 290);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -157,7 +161,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(680, 151);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(680, 100);
             this.tableLayoutPanel1.TabIndex = 18;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -165,7 +169,7 @@
             // 
             this.textBoxOrg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxOrg.BackColor = System.Drawing.Color.White;
-            this.textBoxOrg.Location = new System.Drawing.Point(582, 101);
+            this.textBoxOrg.Location = new System.Drawing.Point(583, 63);
             this.textBoxOrg.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.textBoxOrg.Name = "textBoxOrg";
             this.textBoxOrg.ReadOnly = true;
@@ -176,7 +180,7 @@
             // 
             this.textBoxVQ.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxVQ.BackColor = System.Drawing.Color.White;
-            this.textBoxVQ.Location = new System.Drawing.Point(582, 26);
+            this.textBoxVQ.Location = new System.Drawing.Point(583, 13);
             this.textBoxVQ.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.textBoxVQ.Name = "textBoxVQ";
             this.textBoxVQ.ReadOnly = true;
@@ -186,7 +190,7 @@
             // hScrollBarOrg
             // 
             this.hScrollBarOrg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.hScrollBarOrg.Location = new System.Drawing.Point(103, 103);
+            this.hScrollBarOrg.Location = new System.Drawing.Point(103, 65);
             this.hScrollBarOrg.Name = "hScrollBarOrg";
             this.hScrollBarOrg.Size = new System.Drawing.Size(473, 20);
             this.hScrollBarOrg.TabIndex = 3;
@@ -196,7 +200,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 96);
+            this.label2.Location = new System.Drawing.Point(14, 58);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 34);
@@ -207,7 +211,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 29);
+            this.label1.Location = new System.Drawing.Point(8, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 17);
@@ -218,7 +222,7 @@
             // hScrollBarVQ
             // 
             this.hScrollBarVQ.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.hScrollBarVQ.Location = new System.Drawing.Point(103, 28);
+            this.hScrollBarVQ.Location = new System.Drawing.Point(103, 15);
             this.hScrollBarVQ.Name = "hScrollBarVQ";
             this.hScrollBarVQ.Size = new System.Drawing.Size(473, 20);
             this.hScrollBarVQ.TabIndex = 2;
@@ -226,13 +230,38 @@
             // 
             // comboBoxContestant
             // 
+            this.comboBoxContestant.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxContestant.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxContestant.FormattingEnabled = true;
-            this.comboBoxContestant.Location = new System.Drawing.Point(619, 134);
+            this.comboBoxContestant.Location = new System.Drawing.Point(479, 136);
             this.comboBoxContestant.Name = "comboBoxContestant";
-            this.comboBoxContestant.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxContestant.Size = new System.Drawing.Size(300, 27);
             this.comboBoxContestant.TabIndex = 25;
             this.comboBoxContestant.SelectedIndexChanged += new System.EventHandler(this.comboBoxContestant_SelectedIndexChanged);
+            // 
+            // buttonNext
+            // 
+            this.buttonNext.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNext.Location = new System.Drawing.Point(822, 250);
+            this.buttonNext.Name = "buttonNext";
+            this.buttonNext.Size = new System.Drawing.Size(50, 50);
+            this.buttonNext.TabIndex = 26;
+            this.buttonNext.Text = ">";
+            this.buttonNext.UseVisualStyleBackColor = true;
+            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
+            // 
+            // buttonPrev
+            // 
+            this.buttonPrev.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrev.Location = new System.Drawing.Point(12, 249);
+            this.buttonPrev.Name = "buttonPrev";
+            this.buttonPrev.Size = new System.Drawing.Size(50, 50);
+            this.buttonPrev.TabIndex = 27;
+            this.buttonPrev.Text = "<";
+            this.buttonPrev.UseVisualStyleBackColor = true;
+            this.buttonPrev.Click += new System.EventHandler(this.buttonPrev_Click);
             // 
             // MrMsSTI
             // 
@@ -240,7 +269,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(806, 445);
+            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.buttonPrev);
+            this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.comboBoxContestant);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
@@ -280,5 +311,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.HScrollBar hScrollBarVQ;
         private System.Windows.Forms.ComboBox comboBoxContestant;
+        private System.Windows.Forms.Button buttonNext;
+        private System.Windows.Forms.Button buttonPrev;
     }
 }
