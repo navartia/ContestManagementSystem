@@ -300,12 +300,13 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(514, 361);
+            this.label8.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(514, 357);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 19);
+            this.label8.Size = new System.Drawing.Size(42, 23);
             this.label8.TabIndex = 51;
-            this.label8.Text = "10%";
+            this.label8.Text = "1-10";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label6
             // 

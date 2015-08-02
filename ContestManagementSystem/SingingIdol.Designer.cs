@@ -52,6 +52,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonSubmit = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -351,12 +352,26 @@
             this.buttonSubmit.Text = "UPDATE";
             this.buttonSubmit.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(575, 352);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 23);
+            this.label8.TabIndex = 52;
+            this.label8.Text = "1-10";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // SingingIdol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(884, 629);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.buttonClear);
@@ -412,5 +427,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button buttonSubmit;
+        private System.Windows.Forms.Label label8;
     }
 }
