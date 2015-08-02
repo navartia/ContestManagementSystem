@@ -144,5 +144,20 @@ namespace ContestManagementSystem
 
             int[] score = selected.score;
         }
+
+        private void labelNumber_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
