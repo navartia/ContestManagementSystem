@@ -52,6 +52,7 @@
             this.comboBoxContestant = new System.Windows.Forms.ComboBox();
             this.buttonNext = new System.Windows.Forms.Button();
             this.buttonPrev = new System.Windows.Forms.Button();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -336,12 +337,24 @@
             this.buttonPrev.UseVisualStyleBackColor = true;
             this.buttonPrev.Click += new System.EventHandler(this.buttonPrev_Click);
             // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(706, 156);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(75, 26);
+            this.buttonRefresh.TabIndex = 29;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            // 
             // SingingIdol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonPrev);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.comboBoxContestant);
@@ -393,6 +406,7 @@
         private System.Windows.Forms.ComboBox comboBoxContestant;
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Button buttonPrev;
+        private System.Windows.Forms.Button buttonRefresh;
 
     }
 }
