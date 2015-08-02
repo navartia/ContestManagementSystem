@@ -37,11 +37,11 @@
             this.buttonPrev = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxName = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCourse = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxContestant = new System.Windows.Forms.ComboBox();
+            this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.labelNumber = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -147,15 +147,15 @@
             this.dataGridView1.TabIndex = 29;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // comboBox2
+            // comboBoxName
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(403, 191);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(378, 26);
-            this.comboBox2.TabIndex = 41;
+            this.comboBoxName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxName.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxName.FormattingEnabled = true;
+            this.comboBoxName.Location = new System.Drawing.Point(403, 191);
+            this.comboBoxName.Name = "comboBoxName";
+            this.comboBoxName.Size = new System.Drawing.Size(378, 26);
+            this.comboBoxName.TabIndex = 41;
             // 
             // label2
             // 
@@ -170,15 +170,15 @@
             this.label2.TabIndex = 40;
             this.label2.Text = "Contestant Course:";
             // 
-            // comboBox1
+            // comboBoxCourse
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(403, 127);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(378, 26);
-            this.comboBox1.TabIndex = 39;
+            this.comboBoxCourse.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxCourse.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCourse.FormattingEnabled = true;
+            this.comboBoxCourse.Location = new System.Drawing.Point(403, 127);
+            this.comboBoxCourse.Name = "comboBoxCourse";
+            this.comboBoxCourse.Size = new System.Drawing.Size(378, 26);
+            this.comboBoxCourse.TabIndex = 39;
             // 
             // label1
             // 
@@ -193,15 +193,15 @@
             this.label1.TabIndex = 38;
             this.label1.Text = "Contestant Gender:";
             // 
-            // comboBoxContestant
+            // comboBoxGender
             // 
-            this.comboBoxContestant.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBoxContestant.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxContestant.FormattingEnabled = true;
-            this.comboBoxContestant.Location = new System.Drawing.Point(403, 159);
-            this.comboBoxContestant.Name = "comboBoxContestant";
-            this.comboBoxContestant.Size = new System.Drawing.Size(378, 26);
-            this.comboBoxContestant.TabIndex = 37;
+            this.comboBoxGender.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxGender.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.Location = new System.Drawing.Point(403, 159);
+            this.comboBoxGender.Name = "comboBoxGender";
+            this.comboBoxGender.Size = new System.Drawing.Size(378, 26);
+            this.comboBoxGender.TabIndex = 37;
             // 
             // labelNumber
             // 
@@ -235,11 +235,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(884, 606);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBoxName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxCourse);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBoxContestant);
+            this.Controls.Add(this.comboBoxGender);
             this.Controls.Add(this.labelNumber);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.dataGridView1);
@@ -271,11 +271,11 @@
         private System.Windows.Forms.Button buttonPrev;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxCourse;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBoxContestant;
+        private System.Windows.Forms.ComboBox comboBoxGender;
         private System.Windows.Forms.Label labelNumber;
         private System.Windows.Forms.Label labelName;
     }

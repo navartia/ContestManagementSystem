@@ -27,7 +27,7 @@ namespace ContestManagementSystem
         {
             int[] score = new int[4];
 
-            int index = comboBoxContestant.SelectedIndex;
+            int index = comboBoxGender.SelectedIndex;
             Contestant selected = contestantList[index] as Contestant;
             selected.score = score;
 
@@ -103,15 +103,15 @@ namespace ContestManagementSystem
                 contestant.score = score;
 
                 contestantList.Add(contestant);
-                comboBoxContestant.Items.Add(contestant.contestant_number + " " + contestant.name);
+                comboBoxGender.Items.Add(contestant.contestant_number + " " + contestant.name);
 
-                comboBoxContestant.SelectedIndex = 0;
+                comboBoxGender.SelectedIndex = 0;
             }
         }
 
         private void comboBoxContestant_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = comboBoxContestant.SelectedIndex;
+            int index = comboBoxGender.SelectedIndex;
             Contestant selected = contestantList[index] as Contestant;
 
             LoadContestant(selected);
@@ -119,21 +119,21 @@ namespace ContestManagementSystem
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            int index = (comboBoxContestant.SelectedIndex + 1) % comboBoxContestant.Items.Count;
-            comboBoxContestant.SelectedIndex = index;
+            int index = (comboBoxGender.SelectedIndex + 1) % comboBoxGender.Items.Count;
+            comboBoxGender.SelectedIndex = index;
         }
 
         private void buttonPrev_Click(object sender, EventArgs e)
         {
-            if (comboBoxContestant.SelectedIndex != 0)
+            if (comboBoxGender.SelectedIndex != 0)
             {
-                int index = (comboBoxContestant.SelectedIndex - 1);
-                comboBoxContestant.SelectedIndex = index;
+                int index = (comboBoxGender.SelectedIndex - 1);
+                comboBoxGender.SelectedIndex = index;
             }
 
             else
             {
-                comboBoxContestant.SelectedIndex = comboBoxContestant.Items.Count - 1;
+                comboBoxGender.SelectedIndex = comboBoxGender.Items.Count - 1;
             }
         }
 
@@ -145,12 +145,7 @@ namespace ContestManagementSystem
             int[] score = selected.score;
         }
 
-        private void labelNumber_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelName_Click(object sender, EventArgs e)
+        private void buttonRefresh_Click(object sender, EventArgs e)
         {
 
         }

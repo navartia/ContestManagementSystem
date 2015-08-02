@@ -33,15 +33,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelName = new System.Windows.Forms.Label();
             this.labelNumber = new System.Windows.Forms.Label();
-            this.comboBoxContestant = new System.Windows.Forms.ComboBox();
+            this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.buttonNext = new System.Windows.Forms.Button();
             this.buttonPrev = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCourse = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxName = new System.Windows.Forms.ComboBox();
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -83,7 +83,6 @@
             this.labelName.Size = new System.Drawing.Size(189, 26);
             this.labelName.TabIndex = 16;
             this.labelName.Text = "Contestant Name:";
-            this.labelName.Click += new System.EventHandler(this.labelName_Click);
             // 
             // labelNumber
             // 
@@ -97,18 +96,17 @@
             this.labelNumber.Size = new System.Drawing.Size(160, 26);
             this.labelNumber.TabIndex = 17;
             this.labelNumber.Text = "Contestant No:";
-            this.labelNumber.Click += new System.EventHandler(this.labelNumber_Click);
             // 
-            // comboBoxContestant
+            // comboBoxGender
             // 
-            this.comboBoxContestant.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBoxContestant.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxContestant.FormattingEnabled = true;
-            this.comboBoxContestant.Location = new System.Drawing.Point(423, 178);
-            this.comboBoxContestant.Name = "comboBoxContestant";
-            this.comboBoxContestant.Size = new System.Drawing.Size(377, 26);
-            this.comboBoxContestant.TabIndex = 18;
-            this.comboBoxContestant.SelectedIndexChanged += new System.EventHandler(this.comboBoxContestant_SelectedIndexChanged);
+            this.comboBoxGender.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxGender.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.Location = new System.Drawing.Point(423, 178);
+            this.comboBoxGender.Name = "comboBoxGender";
+            this.comboBoxGender.Size = new System.Drawing.Size(377, 26);
+            this.comboBoxGender.TabIndex = 18;
+            this.comboBoxGender.SelectedIndexChanged += new System.EventHandler(this.comboBoxContestant_SelectedIndexChanged);
             // 
             // buttonNext
             // 
@@ -143,16 +141,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(699, 205);
             this.dataGridView1.TabIndex = 29;
             // 
-            // button1
+            // buttonRefresh
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(710, 242);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 31);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Refresh\r\n";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(710, 242);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(90, 31);
+            this.buttonRefresh.TabIndex = 30;
+            this.buttonRefresh.Text = "Refresh\r\n";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // label1
             // 
@@ -167,15 +166,15 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Contestant Gender:";
             // 
-            // comboBox1
+            // comboBoxCourse
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(423, 146);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(378, 26);
-            this.comboBox1.TabIndex = 32;
+            this.comboBoxCourse.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxCourse.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCourse.FormattingEnabled = true;
+            this.comboBoxCourse.Location = new System.Drawing.Point(423, 146);
+            this.comboBoxCourse.Name = "comboBoxCourse";
+            this.comboBoxCourse.Size = new System.Drawing.Size(378, 26);
+            this.comboBoxCourse.TabIndex = 32;
             // 
             // label2
             // 
@@ -190,15 +189,15 @@
             this.label2.TabIndex = 33;
             this.label2.Text = "Contestant Course:";
             // 
-            // comboBox2
+            // comboBoxName
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(423, 210);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(377, 26);
-            this.comboBox2.TabIndex = 34;
+            this.comboBoxName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxName.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxName.FormattingEnabled = true;
+            this.comboBoxName.Location = new System.Drawing.Point(423, 210);
+            this.comboBoxName.Name = "comboBoxName";
+            this.comboBoxName.Size = new System.Drawing.Size(377, 26);
+            this.comboBoxName.TabIndex = 34;
             // 
             // buttonSubmit
             // 
@@ -240,15 +239,15 @@
             this.ClientSize = new System.Drawing.Size(888, 595);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.buttonClear);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBoxName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxCourse);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonPrev);
             this.Controls.Add(this.buttonNext);
-            this.Controls.Add(this.comboBoxContestant);
+            this.Controls.Add(this.comboBoxGender);
             this.Controls.Add(this.labelNumber);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.panel1);
@@ -273,15 +272,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelNumber;
-        private System.Windows.Forms.ComboBox comboBoxContestant;
+        private System.Windows.Forms.ComboBox comboBoxGender;
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Button buttonPrev;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxCourse;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxName;
         private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.Button buttonClear;
 
