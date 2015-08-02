@@ -130,43 +130,7 @@ namespace ContestManagementSystem
 
         private void SingingIdol_Load(object sender, EventArgs e)
         {
-            String contestID = "1";
-            String contestantQuery = "SELECT * FROM contestant WHERE contest_id = " + contestID;
-            DataTable contestTable = dm.Select(contestantQuery);
-
-            foreach (DataRow row in contestTable.Rows)
-            {
-                Contestant contestant = new Contestant();
-                contestant.name = row["firstname"] + " " + row["middlename"] + " " + row["lastname"];
-                contestant.gender = row["gender"].ToString();
-                contestant.id_number = row["id_number"].ToString();
-                contestant.course = row["course"].ToString();
-                contestant.contact_number = row["contact_number"].ToString();
-
-                contestant.contest_id = Convert.ToInt32(row["contest_id"]);
-                contestant.contestant_id = Convert.ToInt32(row["contestant_id"]);
-                contestant.contestant_number = Convert.ToInt32(row["contestant_number"]);
-
-                contestant.judge_id = Properties.Settings.Default.JudgeID;
-
-                String scoreQuery = "SELECT * FROM score WHERE score.contestant_id = " + contestant.contestant_id + " AND score.judge_id = " + contestant.judge_id;
-                DataTable scoreTable = dm.Select(scoreQuery);
-                
-                int[] score = new int[4];
-                int index = 0;
-                foreach (DataRow scoreRow in scoreTable.Rows)
-                {
-                    score[index] = Convert.ToInt32(scoreRow["score"]);
-                    index++;
-                }
-
-                contestant.score = score;
-
-                contestantList.Add(contestant);
-                comboBoxContestant.Items.Add(contestant.contestant_number + " " + contestant.name);
-
-                comboBoxContestant.SelectedIndex = 0;
-            }
+            FormLoad();
         }
 
         private void comboBoxContestant_SelectedIndexChanged(object sender, EventArgs e)
@@ -212,6 +176,52 @@ namespace ContestManagementSystem
             hScrollBarOrg.Value = Convert.ToInt32(score[1] / 30f * 91f);
             hScrollBarSQ.Value = Convert.ToInt32(score[2] / 10f * 91f);
             hScrollBarSP.Value = Convert.ToInt32(score[3] / 10f * 91f);
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            FormLoad();
+        }
+
+        private void FormLoad()
+        {
+            String contestID = "1";
+            String contestantQuery = "SELECT * FROM contestant WHERE contest_id = " + contestID;
+            DataTable contestTable = dm.Select(contestantQuery);
+
+            foreach (DataRow row in contestTable.Rows)
+            {
+                Contestant contestant = new Contestant();
+                contestant.name = row["firstname"] + " " + row["middlename"] + " " + row["lastname"];
+                contestant.gender = row["gender"].ToString();
+                contestant.id_number = row["id_number"].ToString();
+                contestant.course = row["course"].ToString();
+                contestant.contact_number = row["contact_number"].ToString();
+
+                contestant.contest_id = Convert.ToInt32(row["contest_id"]);
+                contestant.contestant_id = Convert.ToInt32(row["contestant_id"]);
+                contestant.contestant_number = Convert.ToInt32(row["contestant_number"]);
+
+                contestant.judge_id = Properties.Settings.Default.JudgeID;
+
+                String scoreQuery = "SELECT * FROM score WHERE score.contestant_id = " + contestant.contestant_id + " AND score.judge_id = " + contestant.judge_id;
+                DataTable scoreTable = dm.Select(scoreQuery);
+
+                int[] score = new int[4];
+                int index = 0;
+                foreach (DataRow scoreRow in scoreTable.Rows)
+                {
+                    score[index] = Convert.ToInt32(scoreRow["score"]);
+                    index++;
+                }
+
+                contestant.score = score;
+
+                contestantList.Add(contestant);
+                comboBoxContestant.Items.Add(contestant.contestant_number + " " + contestant.name);
+
+                comboBoxContestant.SelectedIndex = 0;
+            }
         }
     }
 }

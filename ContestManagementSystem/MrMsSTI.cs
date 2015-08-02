@@ -39,11 +39,6 @@ namespace ContestManagementSystem
             textBoxOrg.Text = Convert.ToInt32(adjustedValue).ToString();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             Contestant contestant = new Contestant();

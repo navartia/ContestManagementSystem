@@ -347,6 +347,7 @@
             this.buttonRefresh.TabIndex = 29;
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // SingingIdol
             // 
