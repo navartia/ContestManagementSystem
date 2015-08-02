@@ -149,5 +149,10 @@ namespace ContestManagementSystem
         {
 
         }
+
+        private void textBoxSQ_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

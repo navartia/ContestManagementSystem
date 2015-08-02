@@ -36,7 +36,6 @@
             this.buttonNext = new System.Windows.Forms.Button();
             this.buttonPrev = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBoxName = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxCourse = new System.Windows.Forms.ComboBox();
@@ -44,8 +43,18 @@
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.labelNumber = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
+            this.textBoxCW = new System.Windows.Forms.TextBox();
+            this.textBoxSW = new System.Windows.Forms.TextBox();
+            this.textBoxFW = new System.Windows.Forms.TextBox();
+            this.textQA = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,13 +84,13 @@
             // buttonSubmit
             // 
             this.buttonSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSubmit.Image = ((System.Drawing.Image)(resources.GetObject("buttonSubmit.Image")));
             this.buttonSubmit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonSubmit.Location = new System.Drawing.Point(605, 528);
+            this.buttonSubmit.Location = new System.Drawing.Point(609, 560);
             this.buttonSubmit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonSubmit.Name = "buttonSubmit";
-            this.buttonSubmit.Size = new System.Drawing.Size(85, 72);
+            this.buttonSubmit.Size = new System.Drawing.Size(85, 64);
             this.buttonSubmit.TabIndex = 20;
             this.buttonSubmit.Text = "UPDATE";
             this.buttonSubmit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -91,14 +100,14 @@
             // 
             this.buttonClear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClear.Image = ((System.Drawing.Image)(resources.GetObject("buttonClear.Image")));
             this.buttonClear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonClear.Location = new System.Drawing.Point(700, 528);
+            this.buttonClear.Location = new System.Drawing.Point(704, 560);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.buttonClear.Size = new System.Drawing.Size(81, 72);
+            this.buttonClear.Size = new System.Drawing.Size(81, 64);
             this.buttonClear.TabIndex = 19;
             this.buttonClear.Text = "CLEAR";
             this.buttonClear.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -108,7 +117,7 @@
             // 
             this.buttonNext.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNext.Location = new System.Drawing.Point(787, 276);
+            this.buttonNext.Location = new System.Drawing.Point(686, 323);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(50, 36);
             this.buttonNext.TabIndex = 26;
@@ -119,7 +128,7 @@
             // 
             this.buttonPrev.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrev.Location = new System.Drawing.Point(32, 276);
+            this.buttonPrev.Location = new System.Drawing.Point(133, 323);
             this.buttonPrev.Name = "buttonPrev";
             this.buttonPrev.Size = new System.Drawing.Size(50, 36);
             this.buttonPrev.TabIndex = 27;
@@ -129,30 +138,20 @@
             // buttonRefresh
             // 
             this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRefresh.Location = new System.Drawing.Point(691, 225);
+            this.buttonRefresh.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(646, 248);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(90, 31);
             this.buttonRefresh.TabIndex = 28;
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(88, 276);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(693, 243);
-            this.dataGridView1.TabIndex = 29;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // comboBoxName
             // 
             this.comboBoxName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxName.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxName.FormattingEnabled = true;
-            this.comboBoxName.Location = new System.Drawing.Point(403, 191);
+            this.comboBoxName.Location = new System.Drawing.Point(358, 202);
             this.comboBoxName.Name = "comboBoxName";
             this.comboBoxName.Size = new System.Drawing.Size(378, 26);
             this.comboBoxName.TabIndex = 41;
@@ -162,11 +161,11 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(83, 124);
+            this.label2.Location = new System.Drawing.Point(129, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 26);
+            this.label2.Size = new System.Drawing.Size(181, 23);
             this.label2.TabIndex = 40;
             this.label2.Text = "Contestant Course:";
             // 
@@ -175,7 +174,7 @@
             this.comboBoxCourse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxCourse.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCourse.FormattingEnabled = true;
-            this.comboBoxCourse.Location = new System.Drawing.Point(403, 127);
+            this.comboBoxCourse.Location = new System.Drawing.Point(358, 138);
             this.comboBoxCourse.Name = "comboBoxCourse";
             this.comboBoxCourse.Size = new System.Drawing.Size(378, 26);
             this.comboBoxCourse.TabIndex = 39;
@@ -185,11 +184,11 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(83, 159);
+            this.label1.Location = new System.Drawing.Point(129, 172);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 26);
+            this.label1.Size = new System.Drawing.Size(184, 23);
             this.label1.TabIndex = 38;
             this.label1.Text = "Contestant Gender:";
             // 
@@ -198,7 +197,7 @@
             this.comboBoxGender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxGender.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxGender.FormattingEnabled = true;
-            this.comboBoxGender.Location = new System.Drawing.Point(403, 159);
+            this.comboBoxGender.Location = new System.Drawing.Point(358, 170);
             this.comboBoxGender.Name = "comboBoxGender";
             this.comboBoxGender.Size = new System.Drawing.Size(378, 26);
             this.comboBoxGender.TabIndex = 37;
@@ -208,11 +207,11 @@
             this.labelNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelNumber.AutoSize = true;
             this.labelNumber.BackColor = System.Drawing.Color.Transparent;
-            this.labelNumber.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNumber.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNumber.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelNumber.Location = new System.Drawing.Point(83, 226);
+            this.labelNumber.Location = new System.Drawing.Point(129, 239);
             this.labelNumber.Name = "labelNumber";
-            this.labelNumber.Size = new System.Drawing.Size(160, 26);
+            this.labelNumber.Size = new System.Drawing.Size(143, 23);
             this.labelNumber.TabIndex = 36;
             this.labelNumber.Text = "Contestant No:";
             // 
@@ -221,12 +220,153 @@
             this.labelName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelName.AutoSize = true;
             this.labelName.BackColor = System.Drawing.Color.Transparent;
-            this.labelName.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(83, 191);
+            this.labelName.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(129, 204);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(189, 26);
+            this.labelName.Size = new System.Drawing.Size(170, 23);
             this.labelName.TabIndex = 35;
             this.labelName.Text = "Contestant Name:";
+            // 
+            // textBoxCW
+            // 
+            this.textBoxCW.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxCW.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCW.Location = new System.Drawing.Point(224, 3);
+            this.textBoxCW.Name = "textBoxCW";
+            this.textBoxCW.Size = new System.Drawing.Size(285, 31);
+            this.textBoxCW.TabIndex = 42;
+            this.textBoxCW.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textBoxSW
+            // 
+            this.textBoxSW.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxSW.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSW.Location = new System.Drawing.Point(224, 40);
+            this.textBoxSW.Name = "textBoxSW";
+            this.textBoxSW.Size = new System.Drawing.Size(285, 31);
+            this.textBoxSW.TabIndex = 43;
+            this.textBoxSW.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textBoxFW
+            // 
+            this.textBoxFW.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxFW.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFW.Location = new System.Drawing.Point(224, 77);
+            this.textBoxFW.Name = "textBoxFW";
+            this.textBoxFW.Size = new System.Drawing.Size(285, 31);
+            this.textBoxFW.TabIndex = 44;
+            this.textBoxFW.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // textQA
+            // 
+            this.textQA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textQA.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textQA.Location = new System.Drawing.Point(224, 117);
+            this.textQA.Name = "textQA";
+            this.textQA.Size = new System.Drawing.Size(285, 31);
+            this.textQA.TabIndex = 45;
+            this.textQA.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(50, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 23);
+            this.label3.TabIndex = 46;
+            this.label3.Text = "Casual Wear";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(51, 44);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 23);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Sports Wear";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(48, 81);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(124, 23);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "Formal Wear";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label7.Location = new System.Drawing.Point(8, 121);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(204, 23);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "Question and Answer";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.16406F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.83594F));
+            this.tableLayoutPanel1.Controls.Add(this.textBoxCW, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.textQA, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxFW, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxSW, 1, 4);
+            this.tableLayoutPanel1.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(172, 383);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(512, 155);
+            this.tableLayoutPanel1.TabIndex = 50;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(514, 361);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 19);
+            this.label8.TabIndex = 51;
+            this.label8.Text = "10%";
             // 
             // MrMsSTI
             // 
@@ -234,7 +374,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(884, 606);
+            this.ClientSize = new System.Drawing.Size(884, 629);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.comboBoxName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxCourse);
@@ -242,7 +384,6 @@
             this.Controls.Add(this.comboBoxGender);
             this.Controls.Add(this.labelNumber);
             this.Controls.Add(this.labelName);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonPrev);
             this.Controls.Add(this.buttonNext);
@@ -253,9 +394,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mr. & Ms. STI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MrMsSTI_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,7 +413,6 @@
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Button buttonPrev;
         private System.Windows.Forms.Button buttonRefresh;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBoxName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxCourse;
@@ -278,5 +420,15 @@
         private System.Windows.Forms.ComboBox comboBoxGender;
         private System.Windows.Forms.Label labelNumber;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.TextBox textBoxCW;
+        private System.Windows.Forms.TextBox textBoxSW;
+        private System.Windows.Forms.TextBox textBoxFW;
+        private System.Windows.Forms.TextBox textQA;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label8;
     }
 }
