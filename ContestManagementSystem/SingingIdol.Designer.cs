@@ -122,7 +122,7 @@
             // 
             this.buttonNext.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonNext.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNext.Location = new System.Drawing.Point(687, 326);
+            this.buttonNext.Location = new System.Drawing.Point(684, 326);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(50, 33);
             this.buttonNext.TabIndex = 27;
@@ -134,7 +134,7 @@
             // 
             this.buttonPrev.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonPrev.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrev.Location = new System.Drawing.Point(154, 326);
+            this.buttonPrev.Location = new System.Drawing.Point(140, 326);
             this.buttonPrev.Name = "buttonPrev";
             this.buttonPrev.Size = new System.Drawing.Size(50, 33);
             this.buttonPrev.TabIndex = 28;
@@ -208,8 +208,8 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.12399F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.87601F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.tableLayoutPanel1.Controls.Add(this.textBoxVQ, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
@@ -219,7 +219,7 @@
             this.tableLayoutPanel1.Controls.Add(this.textBoxSQ, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(172, 378);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(140, 378);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -229,14 +229,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(562, 155);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(594, 155);
             this.tableLayoutPanel1.TabIndex = 51;
             // 
             // textBoxVQ
             // 
             this.textBoxVQ.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxVQ.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxVQ.Location = new System.Drawing.Point(301, 3);
+            this.textBoxVQ.Location = new System.Drawing.Point(271, 3);
             this.textBoxVQ.Name = "textBoxVQ";
             this.textBoxVQ.Size = new System.Drawing.Size(258, 31);
             this.textBoxVQ.TabIndex = 42;
@@ -248,7 +248,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(91, 81);
+            this.label5.Location = new System.Drawing.Point(45, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 23);
             this.label5.TabIndex = 48;
@@ -262,7 +262,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(95, 44);
+            this.label4.Location = new System.Drawing.Point(50, 44);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 23);
             this.label4.TabIndex = 47;
@@ -273,7 +273,7 @@
             // 
             this.textBoxOrig.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxOrig.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxOrig.Location = new System.Drawing.Point(301, 40);
+            this.textBoxOrig.Location = new System.Drawing.Point(271, 40);
             this.textBoxOrig.Name = "textBoxOrig";
             this.textBoxOrig.Size = new System.Drawing.Size(258, 31);
             this.textBoxOrig.TabIndex = 43;
@@ -285,7 +285,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(78, 121);
+            this.label7.Location = new System.Drawing.Point(32, 121);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(142, 23);
             this.label7.TabIndex = 49;
@@ -296,7 +296,7 @@
             // 
             this.textBoxSP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxSP.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSP.Location = new System.Drawing.Point(301, 117);
+            this.textBoxSP.Location = new System.Drawing.Point(271, 117);
             this.textBoxSP.Name = "textBoxSP";
             this.textBoxSP.Size = new System.Drawing.Size(258, 31);
             this.textBoxSP.TabIndex = 45;
@@ -305,7 +305,7 @@
             // 
             this.textBoxSQ.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxSQ.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSQ.Location = new System.Drawing.Point(301, 77);
+            this.textBoxSQ.Location = new System.Drawing.Point(271, 77);
             this.textBoxSQ.Name = "textBoxSQ";
             this.textBoxSQ.Size = new System.Drawing.Size(258, 31);
             this.textBoxSQ.TabIndex = 44;
@@ -317,7 +317,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(84, 7);
+            this.label3.Location = new System.Drawing.Point(38, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 23);
             this.label3.TabIndex = 46;

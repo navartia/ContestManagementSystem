@@ -177,7 +177,7 @@
             // 
             this.textBoxCW.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxCW.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCW.Location = new System.Drawing.Point(223, 3);
+            this.textBoxCW.Location = new System.Drawing.Point(264, 3);
             this.textBoxCW.Name = "textBoxCW";
             this.textBoxCW.Size = new System.Drawing.Size(285, 31);
             this.textBoxCW.TabIndex = 42;
@@ -186,7 +186,7 @@
             // 
             this.textBoxSW.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxSW.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSW.Location = new System.Drawing.Point(223, 40);
+            this.textBoxSW.Location = new System.Drawing.Point(264, 40);
             this.textBoxSW.Name = "textBoxSW";
             this.textBoxSW.Size = new System.Drawing.Size(285, 31);
             this.textBoxSW.TabIndex = 43;
@@ -195,7 +195,7 @@
             // 
             this.textBoxFW.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFW.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFW.Location = new System.Drawing.Point(223, 77);
+            this.textBoxFW.Location = new System.Drawing.Point(264, 77);
             this.textBoxFW.Name = "textBoxFW";
             this.textBoxFW.Size = new System.Drawing.Size(285, 31);
             this.textBoxFW.TabIndex = 44;
@@ -204,7 +204,7 @@
             // 
             this.textBoxQA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxQA.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxQA.Location = new System.Drawing.Point(223, 117);
+            this.textBoxQA.Location = new System.Drawing.Point(264, 117);
             this.textBoxQA.Name = "textBoxQA";
             this.textBoxQA.Size = new System.Drawing.Size(285, 31);
             this.textBoxQA.TabIndex = 45;
@@ -216,7 +216,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(49, 7);
+            this.label3.Location = new System.Drawing.Point(45, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 23);
             this.label3.TabIndex = 46;
@@ -230,7 +230,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(51, 44);
+            this.label4.Location = new System.Drawing.Point(46, 44);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 23);
             this.label4.TabIndex = 47;
@@ -244,7 +244,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(48, 81);
+            this.label5.Location = new System.Drawing.Point(43, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 23);
             this.label5.TabIndex = 48;
@@ -258,7 +258,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(8, 121);
+            this.label7.Location = new System.Drawing.Point(3, 121);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(204, 23);
             this.label7.TabIndex = 49;
@@ -271,8 +271,8 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.16406F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.83594F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.tableLayoutPanel1.Controls.Add(this.textBoxCW, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
@@ -282,7 +282,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBoxSW, 1, 4);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(172, 383);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(133, 383);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -292,7 +292,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(512, 155);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(603, 155);
             this.tableLayoutPanel1.TabIndex = 50;
             // 
             // label8
@@ -346,7 +346,7 @@
             this.buttonUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonUpdate.Location = new System.Drawing.Point(554, 577);
+            this.buttonUpdate.Location = new System.Drawing.Point(560, 577);
             this.buttonUpdate.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(85, 28);
@@ -360,7 +360,7 @@
             this.buttonClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonClear.Location = new System.Drawing.Point(649, 577);
+            this.buttonClear.Location = new System.Drawing.Point(655, 577);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.RightToLeft = System.Windows.Forms.RightToLeft.No;
