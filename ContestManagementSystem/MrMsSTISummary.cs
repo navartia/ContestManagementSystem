@@ -16,5 +16,10 @@ namespace ContestManagementSystem
         {
             InitializeComponent();
         }
+
+        private void MrMsSTISummary_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

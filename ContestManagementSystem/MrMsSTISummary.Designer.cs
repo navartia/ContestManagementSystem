@@ -68,14 +68,15 @@
             this.panel1.Size = new System.Drawing.Size(816, 416);
             this.panel1.TabIndex = 17;
             // 
-            // MrandMsSTISummary
+            // MrMsSTISummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 411);
             this.Controls.Add(this.panel1);
-            this.Name = "MrandMsSTISummary";
+            this.Name = "MrMsSTISummary";
             this.Text = "MrandMsSTISummary";
+            this.Load += new System.EventHandler(this.MrMsSTISummary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
