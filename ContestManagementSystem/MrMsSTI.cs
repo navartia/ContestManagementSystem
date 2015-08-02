@@ -92,34 +92,13 @@ namespace ContestManagementSystem
             selected.score = score;
         }
 
-        private void buttonNext_Click(object sender, EventArgs e)
-        {
-            int index = (comboBoxName.SelectedIndex + 1) % comboBoxName.Items.Count;
-            comboBoxName.SelectedIndex = index;
-        }
-
         private void LoadContestant(Contestant selected)
         {
-            label7.Text = selected.name;
-            label8.Text = Convert.ToString(selected.contestant_number);
+            labelNumber.Text = Convert.ToString(selected.contestant_number);
 
             int[] score = selected.score;
             textBoxCW.Text = Convert.ToString(score[0]);
             textBoxQA.Text = Convert.ToString(score[1]);
-        }
-
-        private void buttonPrev_Click(object sender, EventArgs e)
-        {
-            if (comboBoxName.SelectedIndex != 0)
-            {
-                int index = (comboBoxName.SelectedIndex - 1);
-                comboBoxName.SelectedIndex = index;
-            }
-
-            else
-            {
-                comboBoxName.SelectedIndex = comboBoxName.Items.Count - 1;
-            }
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
