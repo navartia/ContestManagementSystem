@@ -54,15 +54,15 @@
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -209,6 +209,7 @@
             this.comboBoxName.Name = "comboBoxName";
             this.comboBoxName.Size = new System.Drawing.Size(381, 26);
             this.comboBoxName.TabIndex = 34;
+            this.comboBoxName.SelectedIndexChanged += new System.EventHandler(this.comboBoxName_SelectedIndexChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -387,6 +388,18 @@
             this.panel2.Size = new System.Drawing.Size(884, 661);
             this.panel2.TabIndex = 53;
             // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel4.Controls.Add(this.buttonPrev);
+            this.panel4.Controls.Add(this.buttonNext);
+            this.panel4.Controls.Add(this.labelName);
+            this.panel4.Controls.Add(this.labelNumber);
+            this.panel4.Location = new System.Drawing.Point(150, 293);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(600, 150);
+            this.panel4.TabIndex = 55;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -421,18 +434,6 @@
             this.panel3.Size = new System.Drawing.Size(600, 200);
             this.panel3.TabIndex = 54;
             // 
-            // panel4
-            // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel4.Controls.Add(this.buttonPrev);
-            this.panel4.Controls.Add(this.buttonNext);
-            this.panel4.Controls.Add(this.labelName);
-            this.panel4.Controls.Add(this.labelNumber);
-            this.panel4.Location = new System.Drawing.Point(150, 293);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(600, 150);
-            this.panel4.TabIndex = 55;
-            // 
             // SingingIdol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -453,11 +454,11 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }

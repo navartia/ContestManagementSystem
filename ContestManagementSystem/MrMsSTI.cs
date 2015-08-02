@@ -19,21 +19,26 @@ namespace ContestManagementSystem
         public MrMsSTI()
         {
             InitializeComponent();
-            dm = new DatabaseManager();
-            contestantList = new ArrayList();
 
+            dm = new DatabaseManager();
+        }
+
+        private void MrMsSTI_Load(object sender, EventArgs e)
+        {
+            FormLoad();
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             Contestant contestant = new Contestant();
 
-            int[] score = new int[2];
+            int[] score = new int[4];
             score[0] = Convert.ToInt32(textBoxCW.Text);
-            score[1] = Convert.ToInt32(textBoxQA.Text);
+            score[1] = Convert.ToInt32(textBoxSW.Text);
+            score[2] = Convert.ToInt32(textBoxFW.Text);
+            score[3] = Convert.ToInt32(textBoxQA.Text);
             
             contestant.score = score;
-
             
             int index = comboBoxName.SelectedIndex;
             Contestant selected = contestantList[index] as Contestant;
@@ -51,6 +56,12 @@ namespace ContestManagementSystem
                 scoreInsertQuery = "INSERT INTO score (criteria_id, contestant_id, judge_id, score) VALUES (6, " + selected.contestant_id + ", " + selected.judge_id + ", " + score[1] + ")";
                 dm.Insert(scoreInsertQuery);
 
+                scoreInsertQuery = "INSERT INTO score (criteria_id, contestant_id, judge_id, score) VALUES (7, " + selected.contestant_id + ", " + selected.judge_id + ", " + score[2] + ")";
+                dm.Insert(scoreInsertQuery);
+
+                scoreInsertQuery = "INSERT INTO score (criteria_id, contestant_id, judge_id, score) VALUES (8, " + selected.contestant_id + ", " + selected.judge_id + ", " + score[3] + ")";
+                dm.Insert(scoreInsertQuery);
+
                 MessageBox.Show("Data has been Saved!");
             }
             else
@@ -61,49 +72,66 @@ namespace ContestManagementSystem
                 scoreInsertQuery = "UPDATE score SET score = " + score[1] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 6";
                 dm.Insert(scoreInsertQuery);
 
+                scoreInsertQuery = "UPDATE score SET score = " + score[2] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 7";
+                dm.Insert(scoreInsertQuery);
+
+                scoreInsertQuery = "UPDATE score SET score = " + score[3] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 8";
+                dm.Insert(scoreInsertQuery);
+
                 MessageBox.Show("Data has been Updated!");
             }
-        }
-
-        private void MrMsSTI_Load(object sender, EventArgs e)
-        {
-            FormLoad();
-        }
-
-        private void comboBoxContestant_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int index = comboBoxName.SelectedIndex;
-            Contestant selected = contestantList[index] as Contestant;
-
-            LoadContestant(selected);
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textBoxCW.Text = "0";
+            textBoxSW.Text = "0";
+            textBoxFW.Text = "0";
             textBoxQA.Text = "0";
 
-            int[] score = new int[2];
+            int[] score = new int[4];
             score[0] = Convert.ToInt32(textBoxCW.Text);
-            score[1] = Convert.ToInt32(textBoxQA.Text);
+            score[1] = Convert.ToInt32(textBoxSW.Text);
+            score[2] = Convert.ToInt32(textBoxFW.Text);
+            score[3] = Convert.ToInt32(textBoxQA.Text);
 
             int index = comboBoxName.SelectedIndex;
             Contestant selected = contestantList[index] as Contestant;
             selected.score = score;
         }
 
-        private void LoadContestant(Contestant selected)
-        {
-            labelNumber.Text = Convert.ToString(selected.contestant_number);
-
-            int[] score = selected.score;
-            textBoxCW.Text = Convert.ToString(score[0]);
-            textBoxQA.Text = Convert.ToString(score[1]);
-        }
-
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             FormLoad();
+        }
+
+        private void buttonNext_Click(object sender, EventArgs e)
+        {
+            int index = (comboBoxName.SelectedIndex + 1) % comboBoxName.Items.Count;
+            comboBoxName.SelectedIndex = index;
+            LoadContestant(index);
+        }
+
+        private void buttonPrev_Click(object sender, EventArgs e)
+        {
+            int index = comboBoxName.SelectedIndex - 1;
+
+            if (index > 0)
+            {
+                comboBoxName.SelectedIndex = index;
+                LoadContestant(index);
+            }
+            else
+            {
+                comboBoxName.SelectedIndex = comboBoxName.Items.Count - 1;
+                LoadContestant(comboBoxName.Items.Count - 1);
+            }
+        }
+
+        private void comboBoxName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = comboBoxName.SelectedIndex;
+            LoadContestant(index);
         }
 
         private void FormLoad()
@@ -133,7 +161,7 @@ namespace ContestManagementSystem
                 String scoreQuery = "SELECT * FROM score WHERE score.contestant_id = " + contestant.contestant_id + " AND score.judge_id = " + contestant.judge_id;
                 DataTable scoreTable = dm.Select(scoreQuery);
 
-                int[] score = new int[2];
+                int[] score = new int[4];
                 int index = 0;
                 foreach (DataRow scoreRow in scoreTable.Rows)
                 {
@@ -146,12 +174,23 @@ namespace ContestManagementSystem
                 contestantList.Add(contestant);
                 comboBoxName.Items.Add(contestant.contestant_number + " " + contestant.name);
                 comboBoxName.SelectedIndex = 0;
+
+                LoadContestant(0);
             }
         }
 
-        private void hScrollBarOrg_Scroll(object sender, ScrollEventArgs e)
+        private void LoadContestant(int index)
         {
+            Contestant selected = contestantList[index] as Contestant;
 
+            labelName.Text = selected.name;
+            labelNumber.Text = Convert.ToString(selected.contestant_number);
+
+            int[] score = selected.score;
+            textBoxCW.Text = Convert.ToString(score[0]);
+            textBoxSW.Text = Convert.ToString(score[1]);
+            textBoxFW.Text = Convert.ToString(score[2]);
+            textBoxQA.Text = Convert.ToString(score[3]);
         }
     }
 }
