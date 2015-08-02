@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SingingIdol));
-            this.SuspendLayout();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelName = new System.Windows.Forms.Label();
@@ -42,8 +41,6 @@
             this.comboBoxCourse = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxName = new System.Windows.Forms.ComboBox();
-            this.buttonSubmit = new System.Windows.Forms.Button();
-            this.buttonClear = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxVQ = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,6 +50,8 @@
             this.textBoxSP = new System.Windows.Forms.TextBox();
             this.textBoxSQ = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonSubmit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -202,38 +201,6 @@
             this.comboBoxName.Size = new System.Drawing.Size(379, 29);
             this.comboBoxName.TabIndex = 34;
             // 
-            // buttonSubmit
-            // 
-            this.buttonSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSubmit.Image = ((System.Drawing.Image)(resources.GetObject("buttonSubmit.Image")));
-            this.buttonSubmit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonSubmit.Location = new System.Drawing.Point(632, 558);
-            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.buttonSubmit.Name = "buttonSubmit";
-            this.buttonSubmit.Size = new System.Drawing.Size(85, 72);
-            this.buttonSubmit.TabIndex = 36;
-            this.buttonSubmit.Text = "UPDATE";
-            this.buttonSubmit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonSubmit.UseVisualStyleBackColor = true;
-            // 
-            // buttonClear
-            // 
-            this.buttonClear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClear.Image = ((System.Drawing.Image)(resources.GetObject("buttonClear.Image")));
-            this.buttonClear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonClear.Location = new System.Drawing.Point(727, 558);
-            this.buttonClear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.buttonClear.Size = new System.Drawing.Size(81, 72);
-            this.buttonClear.TabIndex = 35;
-            this.buttonClear.Text = "CLEAR";
-            this.buttonClear.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonClear.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -356,6 +323,34 @@
             this.label3.Text = "Voice Quality";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // buttonClear
+            // 
+            this.buttonClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonClear.Location = new System.Drawing.Point(653, 570);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buttonClear.Size = new System.Drawing.Size(81, 30);
+            this.buttonClear.TabIndex = 35;
+            this.buttonClear.Text = "CLEAR";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            // 
+            // buttonSubmit
+            // 
+            this.buttonSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSubmit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonSubmit.Location = new System.Drawing.Point(558, 570);
+            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.buttonSubmit.Name = "buttonSubmit";
+            this.buttonSubmit.Size = new System.Drawing.Size(85, 30);
+            this.buttonSubmit.TabIndex = 36;
+            this.buttonSubmit.Text = "UPDATE";
+            this.buttonSubmit.UseVisualStyleBackColor = true;
+            // 
             // SingingIdol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -376,7 +371,6 @@
             this.Controls.Add(this.labelNumber);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.panel1);
-
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "SingingIdol";
@@ -384,12 +378,13 @@
             this.Text = "STI Global City - Singing Idol Contest";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.SingingIdol_Load);
-
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -406,8 +401,6 @@
         private System.Windows.Forms.ComboBox comboBoxCourse;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxName;
-        private System.Windows.Forms.Button buttonSubmit;
-        private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox textBoxVQ;
         private System.Windows.Forms.Label label5;
@@ -417,5 +410,7 @@
         private System.Windows.Forms.TextBox textBoxSP;
         private System.Windows.Forms.TextBox textBoxSQ;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonSubmit;
     }
 }
