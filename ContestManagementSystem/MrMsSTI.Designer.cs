@@ -78,7 +78,7 @@
             this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSubmit.Image = ((System.Drawing.Image)(resources.GetObject("buttonSubmit.Image")));
             this.buttonSubmit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonSubmit.Location = new System.Drawing.Point(611, 528);
+            this.buttonSubmit.Location = new System.Drawing.Point(605, 528);
             this.buttonSubmit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(85, 72);
@@ -93,7 +93,8 @@
             this.buttonClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClear.Image = ((System.Drawing.Image)(resources.GetObject("buttonClear.Image")));
-            this.buttonClear.Location = new System.Drawing.Point(703, 528);
+            this.buttonClear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonClear.Location = new System.Drawing.Point(700, 528);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -107,7 +108,7 @@
             // 
             this.buttonNext.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNext.Location = new System.Drawing.Point(799, 272);
+            this.buttonNext.Location = new System.Drawing.Point(787, 276);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(50, 36);
             this.buttonNext.TabIndex = 26;
@@ -118,7 +119,7 @@
             // 
             this.buttonPrev.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrev.Location = new System.Drawing.Point(26, 272);
+            this.buttonPrev.Location = new System.Drawing.Point(32, 276);
             this.buttonPrev.Name = "buttonPrev";
             this.buttonPrev.Size = new System.Drawing.Size(50, 36);
             this.buttonPrev.TabIndex = 27;
@@ -128,9 +129,10 @@
             // buttonRefresh
             // 
             this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonRefresh.Location = new System.Drawing.Point(706, 241);
+            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(691, 225);
             this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(75, 29);
+            this.buttonRefresh.Size = new System.Drawing.Size(90, 31);
             this.buttonRefresh.TabIndex = 28;
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = true;
@@ -150,9 +152,9 @@
             this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox2.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(394, 188);
+            this.comboBox2.Location = new System.Drawing.Point(403, 191);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(380, 26);
+            this.comboBox2.Size = new System.Drawing.Size(378, 26);
             this.comboBox2.TabIndex = 41;
             // 
             // label2
@@ -173,7 +175,7 @@
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(394, 121);
+            this.comboBox1.Location = new System.Drawing.Point(403, 127);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(378, 26);
             this.comboBox1.TabIndex = 39;
@@ -185,7 +187,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(83, 154);
+            this.label1.Location = new System.Drawing.Point(83, 159);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 26);
             this.label1.TabIndex = 38;
@@ -196,9 +198,9 @@
             this.comboBoxContestant.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxContestant.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxContestant.FormattingEnabled = true;
-            this.comboBoxContestant.Location = new System.Drawing.Point(394, 154);
+            this.comboBoxContestant.Location = new System.Drawing.Point(403, 159);
             this.comboBoxContestant.Name = "comboBoxContestant";
-            this.comboBoxContestant.Size = new System.Drawing.Size(380, 26);
+            this.comboBoxContestant.Size = new System.Drawing.Size(378, 26);
             this.comboBoxContestant.TabIndex = 37;
             // 
             // labelNumber
@@ -208,7 +210,7 @@
             this.labelNumber.BackColor = System.Drawing.Color.Transparent;
             this.labelNumber.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNumber.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelNumber.Location = new System.Drawing.Point(83, 211);
+            this.labelNumber.Location = new System.Drawing.Point(83, 226);
             this.labelNumber.Name = "labelNumber";
             this.labelNumber.Size = new System.Drawing.Size(160, 26);
             this.labelNumber.TabIndex = 36;
@@ -220,7 +222,7 @@
             this.labelName.AutoSize = true;
             this.labelName.BackColor = System.Drawing.Color.Transparent;
             this.labelName.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(83, 183);
+            this.labelName.Location = new System.Drawing.Point(83, 191);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(189, 26);
             this.labelName.TabIndex = 35;
