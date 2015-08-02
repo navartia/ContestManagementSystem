@@ -116,7 +116,6 @@
             this.comboBoxGender.Name = "comboBoxGender";
             this.comboBoxGender.Size = new System.Drawing.Size(379, 29);
             this.comboBoxGender.TabIndex = 18;
-            this.comboBoxGender.SelectedIndexChanged += new System.EventHandler(this.comboBoxContestant_SelectedIndexChanged);
             // 
             // buttonNext
             // 
@@ -341,7 +340,6 @@
             this.textBoxSQ.Name = "textBoxSQ";
             this.textBoxSQ.Size = new System.Drawing.Size(258, 31);
             this.textBoxSQ.TabIndex = 44;
-            this.textBoxSQ.TextChanged += new System.EventHandler(this.textBoxSQ_TextChanged);
             // 
             // label3
             // 

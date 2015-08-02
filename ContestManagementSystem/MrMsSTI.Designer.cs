@@ -235,7 +235,6 @@
             this.textBoxCW.Name = "textBoxCW";
             this.textBoxCW.Size = new System.Drawing.Size(285, 31);
             this.textBoxCW.TabIndex = 42;
-            this.textBoxCW.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBoxSW
             // 
@@ -245,7 +244,6 @@
             this.textBoxSW.Name = "textBoxSW";
             this.textBoxSW.Size = new System.Drawing.Size(285, 31);
             this.textBoxSW.TabIndex = 43;
-            this.textBoxSW.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBoxFW
             // 
@@ -255,7 +253,6 @@
             this.textBoxFW.Name = "textBoxFW";
             this.textBoxFW.Size = new System.Drawing.Size(285, 31);
             this.textBoxFW.TabIndex = 44;
-            this.textBoxFW.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textQA
             // 
@@ -265,7 +262,6 @@
             this.textQA.Name = "textQA";
             this.textQA.Size = new System.Drawing.Size(285, 31);
             this.textQA.TabIndex = 45;
-            this.textQA.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label3
             // 
@@ -280,7 +276,6 @@
             this.label3.TabIndex = 46;
             this.label3.Text = "Casual Wear";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -295,7 +290,6 @@
             this.label4.TabIndex = 47;
             this.label4.Text = "Sports Wear";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -310,7 +304,6 @@
             this.label5.TabIndex = 48;
             this.label5.Text = "Formal Wear";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label7
             // 
@@ -394,7 +387,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mr. & Ms. STI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.MrMsSTI_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
