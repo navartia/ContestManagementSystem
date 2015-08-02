@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\hanzpena\Desktop\</PublishUrl>
+    <PublishUrl>C:\Users\RonaldLouie\Desktop\Installer\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -63,10 +63,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
@@ -84,6 +80,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contestant.cs" />
+    <Compile Include="ContestControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContestControl.Designer.cs">
+      <DependentUpon>ContestControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseManager.cs" />
     <Compile Include="FileManager.cs" />
     <Compile Include="FirstStage.cs">
@@ -91,6 +93,12 @@
     </Compile>
     <Compile Include="FirstStage.Designer.cs">
       <DependentUpon>FirstStage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MrMsSTISummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MrMsSTISummary.Designer.cs">
+      <DependentUpon>MrMsSTISummary.cs</DependentUpon>
     </Compile>
     <Compile Include="MrMsSTI.cs">
       <SubType>Form</SubType>
@@ -119,18 +127,21 @@
     <Compile Include="SingingIdol.Designer.cs">
       <DependentUpon>SingingIdol.cs</DependentUpon>
     </Compile>
-    <Compile Include="Summary.cs">
+    <Compile Include="MasterList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Summary.Designer.cs">
-      <DependentUpon>Summary.cs</DependentUpon>
+    <Compile Include="MasterList.Designer.cs">
+      <DependentUpon>MasterList.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestDB.cs">
+    <Compile Include="SingingIdolSummary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestDB.Designer.cs">
-      <DependentUpon>TestDB.cs</DependentUpon>
+    <Compile Include="SingingIdolSummary.Designer.cs">
+      <DependentUpon>SingingIdolSummary.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ContestControl.resx">
+      <DependentUpon>ContestControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FirstStage.resx">
       <DependentUpon>FirstStage.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +163,9 @@
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MrMsSTISummary.resx">
+      <DependentUpon>MrMsSTISummary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MrMsSTI.resx">
       <DependentUpon>MrMsSTI.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,11 +187,11 @@
     <EmbeddedResource Include="SingingIdol.resx">
       <DependentUpon>SingingIdol.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Summary.resx">
-      <DependentUpon>Summary.cs</DependentUpon>
+    <EmbeddedResource Include="MasterList.resx">
+      <DependentUpon>MasterList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestDB.resx">
-      <DependentUpon>TestDB.cs</DependentUpon>
+    <EmbeddedResource Include="SingingIdolSummary.resx">
+      <DependentUpon>SingingIdolSummary.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

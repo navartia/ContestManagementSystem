@@ -52,12 +52,12 @@ namespace ContestManagementSystem
             this.Show();
         }
 
-        private void buttonRegistration_Click(object sender, EventArgs e)
+        private void buttonContestControl_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            RegistrationForm rf = new RegistrationForm();
-            rf.ShowDialog();
+            ContestControl cs = new ContestControl();
+            cs.ShowDialog();
 
             this.Show();
         }
