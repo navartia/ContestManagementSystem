@@ -24,28 +24,13 @@ namespace ContestManagementSystem
 
         }
 
-        private void hScrollBarVQ_Scroll(object sender, ScrollEventArgs e)
-        {
-            int value = hScrollBarVQ.Value;
-            float adjustedValue = value / 91f * 10f;
-            textBoxVQ.Text = Convert.ToInt32(adjustedValue).ToString();
-        }
-
-        private void hScrollBarOrg_Scroll(object sender, ScrollEventArgs e)
-        {
-            int value = hScrollBarOrg.Value;
-            float adjustedValue = value / 91f * 10;
-
-            textBoxOrg.Text = Convert.ToInt32(adjustedValue).ToString();
-        }
-
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             Contestant contestant = new Contestant();
 
             int[] score = new int[2];
-            score[0] = Convert.ToInt32(textBoxVQ.Text);
-            score[1] = Convert.ToInt32(textBoxOrg.Text);
+            score[0] = Convert.ToInt32(textBoxCW.Text);
+            score[1] = Convert.ToInt32(textBoxQA.Text);
             
             contestant.score = score;
 
@@ -95,15 +80,12 @@ namespace ContestManagementSystem
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            hScrollBarVQ.Value = 0;
-            hScrollBarOrg.Value = 0;
-
-            textBoxVQ.Text = "0";
-            textBoxOrg.Text = "0";
+            textBoxCW.Text = "0";
+            textBoxQA.Text = "0";
 
             int[] score = new int[2];
-            score[0] = Convert.ToInt32(textBoxVQ.Text);
-            score[1] = Convert.ToInt32(textBoxOrg.Text);
+            score[0] = Convert.ToInt32(textBoxCW.Text);
+            score[1] = Convert.ToInt32(textBoxQA.Text);
 
             int index = comboBoxContestant.SelectedIndex;
             Contestant selected = contestantList[index] as Contestant;
@@ -122,11 +104,8 @@ namespace ContestManagementSystem
             label8.Text = Convert.ToString(selected.contestant_number);
 
             int[] score = selected.score;
-            textBoxVQ.Text = Convert.ToString(score[0]);
-            textBoxOrg.Text = Convert.ToString(score[1]);
-
-            hScrollBarVQ.Value = Convert.ToInt32(score[0] / 50f * 91f);
-            hScrollBarOrg.Value = Convert.ToInt32(score[1] / 30f * 91f);
+            textBoxCW.Text = Convert.ToString(score[0]);
+            textBoxQA.Text = Convert.ToString(score[1]);
         }
 
         private void buttonPrev_Click(object sender, EventArgs e)
@@ -190,6 +169,11 @@ namespace ContestManagementSystem
 
                 comboBoxContestant.SelectedIndex = 0;
             }
+        }
+
+        private void hScrollBarOrg_Scroll(object sender, ScrollEventArgs e)
+        {
+
         }
     }
 }

@@ -29,13 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SingingIdol));
-            this.hScrollBarVQ = new System.Windows.Forms.HScrollBar();
-            this.hScrollBarOrg = new System.Windows.Forms.HScrollBar();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.hScrollBarSQ = new System.Windows.Forms.HScrollBar();
             this.label3 = new System.Windows.Forms.Label();
-            this.hScrollBarSP = new System.Windows.Forms.HScrollBar();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxSP = new System.Windows.Forms.TextBox();
@@ -56,24 +52,6 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // hScrollBarVQ
-            // 
-            this.hScrollBarVQ.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.hScrollBarVQ.Location = new System.Drawing.Point(102, 8);
-            this.hScrollBarVQ.Name = "hScrollBarVQ";
-            this.hScrollBarVQ.Size = new System.Drawing.Size(476, 20);
-            this.hScrollBarVQ.TabIndex = 2;
-            this.hScrollBarVQ.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarVQ_Scroll);
-            // 
-            // hScrollBarOrg
-            // 
-            this.hScrollBarOrg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.hScrollBarOrg.Location = new System.Drawing.Point(102, 45);
-            this.hScrollBarOrg.Name = "hScrollBarOrg";
-            this.hScrollBarOrg.Size = new System.Drawing.Size(476, 20);
-            this.hScrollBarOrg.TabIndex = 3;
-            this.hScrollBarOrg.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarOrg_Scroll);
             // 
             // label1
             // 
@@ -98,15 +76,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Originality";
             // 
-            // hScrollBarSQ
-            // 
-            this.hScrollBarSQ.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.hScrollBarSQ.Location = new System.Drawing.Point(102, 82);
-            this.hScrollBarSQ.Name = "hScrollBarSQ";
-            this.hScrollBarSQ.Size = new System.Drawing.Size(476, 20);
-            this.hScrollBarSQ.TabIndex = 6;
-            this.hScrollBarSQ.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarSQ_Scroll);
-            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -117,15 +86,6 @@
             this.label3.Size = new System.Drawing.Size(82, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "Star Quality";
-            // 
-            // hScrollBarSP
-            // 
-            this.hScrollBarSP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.hScrollBarSP.Location = new System.Drawing.Point(102, 121);
-            this.hScrollBarSP.Name = "hScrollBarSP";
-            this.hScrollBarSP.Size = new System.Drawing.Size(476, 20);
-            this.hScrollBarSP.TabIndex = 8;
-            this.hScrollBarSP.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarSP_Scroll);
             // 
             // label4
             // 
@@ -151,14 +111,10 @@
             this.tableLayoutPanel1.Controls.Add(this.textBoxSQ, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.textBoxOrg, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBoxVQ, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.hScrollBarSP, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.hScrollBarOrg, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.hScrollBarSQ, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.hScrollBarVQ, 1, 0);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(99, 283);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -384,13 +340,9 @@
 
         #endregion
 
-        private System.Windows.Forms.HScrollBar hScrollBarVQ;
-        private System.Windows.Forms.HScrollBar hScrollBarOrg;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.HScrollBar hScrollBarSQ;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.HScrollBar hScrollBarSP;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox textBoxSP;

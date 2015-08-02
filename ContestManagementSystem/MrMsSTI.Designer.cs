@@ -37,16 +37,14 @@
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBoxOrg = new System.Windows.Forms.TextBox();
-            this.textBoxVQ = new System.Windows.Forms.TextBox();
-            this.hScrollBarOrg = new System.Windows.Forms.HScrollBar();
+            this.textBoxCW = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.hScrollBarVQ = new System.Windows.Forms.HScrollBar();
             this.comboBoxContestant = new System.Windows.Forms.ComboBox();
             this.buttonNext = new System.Windows.Forms.Button();
             this.buttonPrev = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
+            this.textBoxQA = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -147,12 +145,10 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.Controls.Add(this.textBoxOrg, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBoxVQ, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.hScrollBarOrg, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxCW, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.hScrollBarVQ, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxQA, 2, 1);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(99, 290);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -165,36 +161,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(680, 100);
             this.tableLayoutPanel1.TabIndex = 18;
             // 
-            // textBoxOrg
+            // textBoxCW
             // 
-            this.textBoxOrg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxOrg.BackColor = System.Drawing.Color.White;
-            this.textBoxOrg.Location = new System.Drawing.Point(583, 63);
-            this.textBoxOrg.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.textBoxOrg.Name = "textBoxOrg";
-            this.textBoxOrg.ReadOnly = true;
-            this.textBoxOrg.Size = new System.Drawing.Size(92, 23);
-            this.textBoxOrg.TabIndex = 12;
-            // 
-            // textBoxVQ
-            // 
-            this.textBoxVQ.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxVQ.BackColor = System.Drawing.Color.White;
-            this.textBoxVQ.Location = new System.Drawing.Point(583, 13);
-            this.textBoxVQ.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.textBoxVQ.Name = "textBoxVQ";
-            this.textBoxVQ.ReadOnly = true;
-            this.textBoxVQ.Size = new System.Drawing.Size(92, 23);
-            this.textBoxVQ.TabIndex = 11;
-            // 
-            // hScrollBarOrg
-            // 
-            this.hScrollBarOrg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.hScrollBarOrg.Location = new System.Drawing.Point(103, 65);
-            this.hScrollBarOrg.Name = "hScrollBarOrg";
-            this.hScrollBarOrg.Size = new System.Drawing.Size(473, 20);
-            this.hScrollBarOrg.TabIndex = 3;
-            this.hScrollBarOrg.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarOrg_Scroll);
+            this.textBoxCW.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxCW.BackColor = System.Drawing.Color.White;
+            this.textBoxCW.Location = new System.Drawing.Point(583, 13);
+            this.textBoxCW.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.textBoxCW.Name = "textBoxCW";
+            this.textBoxCW.ReadOnly = true;
+            this.textBoxCW.Size = new System.Drawing.Size(92, 23);
+            this.textBoxCW.TabIndex = 11;
             // 
             // label2
             // 
@@ -218,15 +194,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Casual Wear";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // hScrollBarVQ
-            // 
-            this.hScrollBarVQ.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.hScrollBarVQ.Location = new System.Drawing.Point(103, 15);
-            this.hScrollBarVQ.Name = "hScrollBarVQ";
-            this.hScrollBarVQ.Size = new System.Drawing.Size(473, 20);
-            this.hScrollBarVQ.TabIndex = 2;
-            this.hScrollBarVQ.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBarVQ_Scroll);
             // 
             // comboBoxContestant
             // 
@@ -274,6 +241,17 @@
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
+            // textBoxQA
+            // 
+            this.textBoxQA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxQA.BackColor = System.Drawing.Color.White;
+            this.textBoxQA.Location = new System.Drawing.Point(583, 63);
+            this.textBoxQA.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.textBoxQA.Name = "textBoxQA";
+            this.textBoxQA.ReadOnly = true;
+            this.textBoxQA.Size = new System.Drawing.Size(92, 23);
+            this.textBoxQA.TabIndex = 12;
+            // 
             // MrMsSTI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,15 +294,13 @@
         private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox textBoxOrg;
-        private System.Windows.Forms.TextBox textBoxVQ;
-        private System.Windows.Forms.HScrollBar hScrollBarOrg;
+        private System.Windows.Forms.TextBox textBoxCW;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.HScrollBar hScrollBarVQ;
         private System.Windows.Forms.ComboBox comboBoxContestant;
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Button buttonPrev;
         private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.TextBox textBoxQA;
     }
 }

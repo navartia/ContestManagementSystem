@@ -24,45 +24,8 @@ namespace ContestManagementSystem
             contestantList = new ArrayList();
         }
 
-        private void hScrollBarVQ_Scroll(object sender, ScrollEventArgs e)
-        {
-            int value = hScrollBarVQ.Value;
-            float adjustedValue = value / 91f * 50f;
-
-            textBoxVQ.Text = Convert.ToInt32(adjustedValue).ToString();
-        }
-
-        private void hScrollBarOrg_Scroll(object sender, ScrollEventArgs e)
-        {
-            int value = hScrollBarOrg.Value;
-            float adjustedValue = value / 91f * 30f;
-
-            textBoxOrg.Text = Convert.ToInt32(adjustedValue).ToString();
-        }
-
-        private void hScrollBarSQ_Scroll(object sender, ScrollEventArgs e)
-        {
-            int value = hScrollBarSQ.Value;
-            float adjustedValue = value / 91f * 10f;
-
-            textBoxSQ.Text = Convert.ToInt32(adjustedValue).ToString();
-        }
-
-        private void hScrollBarSP_Scroll(object sender, ScrollEventArgs e)
-        {
-            int value = hScrollBarSP.Value;
-            float adjustedValue = value / 91f * 10f;
-
-            textBoxSP.Text = Convert.ToInt32(adjustedValue).ToString();
-        }
-
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            hScrollBarVQ.Value = 0;
-            hScrollBarOrg.Value = 0;
-            hScrollBarSQ.Value = 0;
-            hScrollBarSP.Value = 0;
-
             textBoxVQ.Text = "0";
             textBoxOrg.Text = "0";
             textBoxSQ.Text = "0";
@@ -171,11 +134,6 @@ namespace ContestManagementSystem
             textBoxOrg.Text = Convert.ToString(score[1]);
             textBoxSQ.Text = Convert.ToString(score[2]);
             textBoxSP.Text = Convert.ToString(score[3]);
-
-            hScrollBarVQ.Value = Convert.ToInt32(score[0] / 50f * 91f);
-            hScrollBarOrg.Value = Convert.ToInt32(score[1] / 30f * 91f);
-            hScrollBarSQ.Value = Convert.ToInt32(score[2] / 10f * 91f);
-            hScrollBarSP.Value = Convert.ToInt32(score[3] / 10f * 91f);
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
