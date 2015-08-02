@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MrMsSTI));
-<<<<<<< HEAD
-            this.SuspendLayout();
-            // 
-=======
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.buttonSubmit = new System.Windows.Forms.Button();
@@ -50,7 +46,7 @@
             this.textBoxCW = new System.Windows.Forms.TextBox();
             this.textBoxSW = new System.Windows.Forms.TextBox();
             this.textBoxFW = new System.Windows.Forms.TextBox();
-            this.textQA = new System.Windows.Forms.TextBox();
+            this.textBoxQA = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,7 +60,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Yellow;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.label6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -89,7 +84,6 @@
             // 
             this.buttonSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSubmit.Image = ((System.Drawing.Image)(resources.GetObject("buttonSubmit.Image")));
             this.buttonSubmit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonSubmit.Location = new System.Drawing.Point(609, 560);
             this.buttonSubmit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -105,7 +99,6 @@
             this.buttonClear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClear.Image = ((System.Drawing.Image)(resources.GetObject("buttonClear.Image")));
             this.buttonClear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonClear.Location = new System.Drawing.Point(704, 560);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -235,7 +228,7 @@
             // 
             this.textBoxCW.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxCW.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCW.Location = new System.Drawing.Point(224, 3);
+            this.textBoxCW.Location = new System.Drawing.Point(223, 3);
             this.textBoxCW.Name = "textBoxCW";
             this.textBoxCW.Size = new System.Drawing.Size(285, 31);
             this.textBoxCW.TabIndex = 42;
@@ -244,7 +237,7 @@
             // 
             this.textBoxSW.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxSW.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSW.Location = new System.Drawing.Point(224, 40);
+            this.textBoxSW.Location = new System.Drawing.Point(223, 40);
             this.textBoxSW.Name = "textBoxSW";
             this.textBoxSW.Size = new System.Drawing.Size(285, 31);
             this.textBoxSW.TabIndex = 43;
@@ -253,19 +246,19 @@
             // 
             this.textBoxFW.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFW.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFW.Location = new System.Drawing.Point(224, 77);
+            this.textBoxFW.Location = new System.Drawing.Point(223, 77);
             this.textBoxFW.Name = "textBoxFW";
             this.textBoxFW.Size = new System.Drawing.Size(285, 31);
             this.textBoxFW.TabIndex = 44;
             // 
-            // textQA
+            // textBoxQA
             // 
-            this.textQA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textQA.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textQA.Location = new System.Drawing.Point(224, 117);
-            this.textQA.Name = "textQA";
-            this.textQA.Size = new System.Drawing.Size(285, 31);
-            this.textQA.TabIndex = 45;
+            this.textBoxQA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxQA.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxQA.Location = new System.Drawing.Point(223, 117);
+            this.textBoxQA.Name = "textBoxQA";
+            this.textBoxQA.Size = new System.Drawing.Size(285, 31);
+            this.textBoxQA.TabIndex = 45;
             // 
             // label3
             // 
@@ -274,7 +267,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(50, 7);
+            this.label3.Location = new System.Drawing.Point(49, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 23);
             this.label3.TabIndex = 46;
@@ -335,7 +328,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.textQA, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxQA, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.textBoxFW, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBoxSW, 1, 4);
@@ -365,16 +358,12 @@
             this.label8.TabIndex = 51;
             this.label8.Text = "10%";
             // 
->>>>>>> kimpot
             // MrMsSTI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(884, 561);
-=======
             this.ClientSize = new System.Drawing.Size(884, 629);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -391,27 +380,22 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.buttonClear);
->>>>>>> kimpot
             this.Name = "MrMsSTI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mr. & Ms. STI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-<<<<<<< HEAD
             this.Load += new System.EventHandler(this.MrMsSTI_Load);
-=======
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
->>>>>>> kimpot
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-<<<<<<< HEAD
-=======
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonSubmit;
@@ -429,13 +413,12 @@
         private System.Windows.Forms.TextBox textBoxCW;
         private System.Windows.Forms.TextBox textBoxSW;
         private System.Windows.Forms.TextBox textBoxFW;
-        private System.Windows.Forms.TextBox textQA;
+        private System.Windows.Forms.TextBox textBoxQA;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label8;
->>>>>>> kimpot
     }
 }

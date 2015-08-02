@@ -23,7 +23,6 @@ namespace ContestManagementSystem
             contestantList = new ArrayList();
 
         }
-<<<<<<< HEAD
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
@@ -36,7 +35,7 @@ namespace ContestManagementSystem
             contestant.score = score;
 
             
-            int index = comboBoxContestant.SelectedIndex;
+            int index = comboBoxName.SelectedIndex;
             Contestant selected = contestantList[index] as Contestant;
             selected.score = score;
 
@@ -73,7 +72,7 @@ namespace ContestManagementSystem
 
         private void comboBoxContestant_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = comboBoxContestant.SelectedIndex;
+            int index = comboBoxName.SelectedIndex;
             Contestant selected = contestantList[index] as Contestant;
 
             LoadContestant(selected);
@@ -88,15 +87,15 @@ namespace ContestManagementSystem
             score[0] = Convert.ToInt32(textBoxCW.Text);
             score[1] = Convert.ToInt32(textBoxQA.Text);
 
-            int index = comboBoxContestant.SelectedIndex;
+            int index = comboBoxName.SelectedIndex;
             Contestant selected = contestantList[index] as Contestant;
             selected.score = score;
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            int index = (comboBoxContestant.SelectedIndex + 1) % comboBoxContestant.Items.Count;
-            comboBoxContestant.SelectedIndex = index;
+            int index = (comboBoxName.SelectedIndex + 1) % comboBoxName.Items.Count;
+            comboBoxName.SelectedIndex = index;
         }
 
         private void LoadContestant(Contestant selected)
@@ -111,15 +110,15 @@ namespace ContestManagementSystem
 
         private void buttonPrev_Click(object sender, EventArgs e)
         {
-            if (comboBoxContestant.SelectedIndex != 0)
+            if (comboBoxName.SelectedIndex != 0)
             {
-                int index = (comboBoxContestant.SelectedIndex - 1);
-                comboBoxContestant.SelectedIndex = index;
+                int index = (comboBoxName.SelectedIndex - 1);
+                comboBoxName.SelectedIndex = index;
             }
 
             else
             {
-                comboBoxContestant.SelectedIndex = comboBoxContestant.Items.Count - 1;
+                comboBoxName.SelectedIndex = comboBoxName.Items.Count - 1;
             }
         }
 
@@ -130,7 +129,7 @@ namespace ContestManagementSystem
 
         private void FormLoad()
         {
-            comboBoxContestant.Items.Clear();
+            comboBoxName.Items.Clear();
             contestantList = new ArrayList();
 
             String contestID = "2";
@@ -166,9 +165,8 @@ namespace ContestManagementSystem
                 contestant.score = score;
 
                 contestantList.Add(contestant);
-                comboBoxContestant.Items.Add(contestant.contestant_number + " " + contestant.name);
-
-                comboBoxContestant.SelectedIndex = 0;
+                comboBoxName.Items.Add(contestant.contestant_number + " " + contestant.name);
+                comboBoxName.SelectedIndex = 0;
             }
         }
 
@@ -176,7 +174,5 @@ namespace ContestManagementSystem
         {
 
         }
-=======
->>>>>>> kimpot
     }
 }

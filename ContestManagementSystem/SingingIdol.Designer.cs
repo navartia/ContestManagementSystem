@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SingingIdol));
-<<<<<<< HEAD
             this.SuspendLayout();
-            // 
-=======
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelName = new System.Windows.Forms.Label();
@@ -359,15 +356,11 @@
             this.label3.Text = "Voice Quality";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
->>>>>>> kimpot
             // SingingIdol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(884, 561);
-=======
             this.ClientSize = new System.Drawing.Size(884, 629);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.buttonSubmit);
@@ -383,7 +376,7 @@
             this.Controls.Add(this.labelNumber);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.panel1);
->>>>>>> kimpot
+
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "SingingIdol";
@@ -391,21 +384,16 @@
             this.Text = "STI Global City - Singing Idol Contest";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.SingingIdol_Load);
-<<<<<<< HEAD
-=======
+
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
->>>>>>> kimpot
             this.ResumeLayout(false);
-
         }
 
         #endregion
 
-<<<<<<< HEAD
-=======
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelName;
@@ -429,7 +417,5 @@
         private System.Windows.Forms.TextBox textBoxSP;
         private System.Windows.Forms.TextBox textBoxSQ;
         private System.Windows.Forms.Label label3;
->>>>>>> kimpot
-
     }
 }

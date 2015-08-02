@@ -24,27 +24,24 @@ namespace ContestManagementSystem
             contestantList = new ArrayList();
         }
 
-<<<<<<< HEAD
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textBoxVQ.Text = "0";
-            textBoxOrg.Text = "0";
+            textBoxOrig.Text = "0";
             textBoxSQ.Text = "0";
             textBoxSP.Text = "0";
 
             int[] score = new int[4];
             score[0] = Convert.ToInt32(textBoxVQ.Text);
-            score[1] = Convert.ToInt32(textBoxOrg.Text);
+            score[1] = Convert.ToInt32(textBoxOrig.Text);
             score[2] = Convert.ToInt32(textBoxSQ.Text);
             score[3] = Convert.ToInt32(textBoxSP.Text);
 
-            int index = comboBoxContestant.SelectedIndex;
+            int index = comboBoxName.SelectedIndex;
             Contestant selected = contestantList[index] as Contestant;
             selected.score = score;
         }
 
-=======
->>>>>>> kimpot
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             int[] score = new int[4];
@@ -95,29 +92,14 @@ namespace ContestManagementSystem
             FormLoad();
         }
 
-<<<<<<< HEAD
         private void comboBoxContestant_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = comboBoxContestant.SelectedIndex;
+            int index = comboBoxName.SelectedIndex;
             Contestant selected = contestantList[index] as Contestant;
 
             LoadContestant(selected);
         }
 
-        private void buttonNext_Click(object sender, EventArgs e)
-        {
-            int index = (comboBoxContestant.SelectedIndex + 1) % comboBoxContestant.Items.Count;
-            comboBoxContestant.SelectedIndex = index;
-        }
-
-        private void buttonPrev_Click(object sender, EventArgs e)
-        {
-            if (comboBoxContestant.SelectedIndex != 0)
-            {
-                int index = (comboBoxContestant.SelectedIndex - 1);
-                comboBoxContestant.SelectedIndex = index;
-            }
-=======
         private void buttonNext_Click(object sender, EventArgs e)
         {
             int index = (comboBoxName.SelectedIndex + 1) % comboBoxName.Items.Count;
@@ -126,24 +108,16 @@ namespace ContestManagementSystem
 
         private void buttonPrev_Click(object sender, EventArgs e)
         {
-            if (comboBoxName.SelectedIndex != 0)
+            int index = comboBoxName.SelectedIndex - 1;
+
+            if (index > 0)
             {
-                int index = (comboBoxName.SelectedIndex - 1);
                 comboBoxName.SelectedIndex = index;
             }
-
             else
             {
                 comboBoxName.SelectedIndex = comboBoxName.Items.Count - 1;
             }
-        }
-
-        private void LoadContestant(Contestant selected)
-        {
-            labelName.Text = selected.name;
-            labelNumber.Text = Convert.ToString(selected.contestant_number);
-
-            int[] score = selected.score;
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
@@ -187,12 +161,9 @@ namespace ContestManagementSystem
 
                 contestantList.Add(contestant);
                 comboBoxName.Items.Add(contestant.contestant_number + " " + contestant.name);
->>>>>>> kimpot
-
                 comboBoxName.SelectedIndex = 0;
             }
         }
-<<<<<<< HEAD
 
         private void LoadContestant(Contestant selected)
         {
@@ -201,57 +172,9 @@ namespace ContestManagementSystem
 
             int[] score = selected.score;
             textBoxVQ.Text = Convert.ToString(score[0]);
-            textBoxOrg.Text = Convert.ToString(score[1]);
+            textBoxOrig.Text = Convert.ToString(score[1]);
             textBoxSQ.Text = Convert.ToString(score[2]);
             textBoxSP.Text = Convert.ToString(score[3]);
         }
-
-        private void buttonRefresh_Click(object sender, EventArgs e)
-        {
-            FormLoad();
-        }
-
-        private void FormLoad()
-        {
-            String contestID = "1";
-            String contestantQuery = "SELECT * FROM contestant WHERE contest_id = " + contestID;
-            DataTable contestTable = dm.Select(contestantQuery);
-
-            foreach (DataRow row in contestTable.Rows)
-            {
-                Contestant contestant = new Contestant();
-                contestant.name = row["firstname"] + " " + row["middlename"] + " " + row["lastname"];
-                contestant.gender = row["gender"].ToString();
-                contestant.id_number = row["id_number"].ToString();
-                contestant.course = row["course"].ToString();
-                contestant.contact_number = row["contact_number"].ToString();
-
-                contestant.contest_id = Convert.ToInt32(row["contest_id"]);
-                contestant.contestant_id = Convert.ToInt32(row["contestant_id"]);
-                contestant.contestant_number = Convert.ToInt32(row["contestant_number"]);
-
-                contestant.judge_id = Properties.Settings.Default.JudgeID;
-
-                String scoreQuery = "SELECT * FROM score WHERE score.contestant_id = " + contestant.contestant_id + " AND score.judge_id = " + contestant.judge_id;
-                DataTable scoreTable = dm.Select(scoreQuery);
-
-                int[] score = new int[4];
-                int index = 0;
-                foreach (DataRow scoreRow in scoreTable.Rows)
-                {
-                    score[index] = Convert.ToInt32(scoreRow["score"]);
-                    index++;
-                }
-
-                contestant.score = score;
-
-                contestantList.Add(contestant);
-                comboBoxContestant.Items.Add(contestant.contestant_number + " " + contestant.name);
-
-                comboBoxContestant.SelectedIndex = 0;
-            }
-        }
-=======
->>>>>>> kimpot
     }
 }
