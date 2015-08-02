@@ -23,6 +23,7 @@ namespace ContestManagementSystem
             contestantList = new ArrayList();
 
         }
+<<<<<<< HEAD
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
@@ -175,5 +176,7 @@ namespace ContestManagementSystem
         {
 
         }
+=======
+>>>>>>> kimpot
     }
 }
