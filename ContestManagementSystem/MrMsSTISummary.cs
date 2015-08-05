@@ -21,22 +21,10 @@ namespace ContestManagementSystem
 
         private void MrMsSTISummary_Load(object sender, EventArgs e)
         {
-            try
-            {
-                //Incomplete Database To be Completed Once Mr And Ms STI Database has been given
-                //where clause Missing due to database(Incomplete);
-                string contestantQuery = "select firstName,middleName,lastname,id_number,contestant_number,course from contestant";
-                DataTable contestTable = dm.Select(contestantQuery);
-                dm.Insert(contestantQuery);
-
-
-                dm.Select(contestantQuery);
-                dataGridView1.DataSource = contestTable;
-            }
-            catch (Exception er)
-            {
-                MessageBox.Show("Please choose database. or " + er.Message);
-            }
+            //string contestantQuery = "select firstName,middleName,lastname,id_number,contestant_number,course from contestant";
+            String resultQuery = "SELECT contestant.firstname, contestant.lastname, AVG(judge_score.sum_of_score) AS total_score FROM (SELECT DISTINCT contestant_id, judge_id, SUM(score) AS sum_of_score FROM Score GROUP BY contestant_id, judge_id)  AS judge_score INNER JOIN contestant ON judge_score.contestant_id = contestant.contestant_id WHERE contestant.contest_id =  2 GROUP BY contestant.firstname, contestant.lastname";
+            DataTable contestTable = dm.Select(resultQuery);
+            dataGridView1.DataSource = contestTable;
         }
     }
 }
