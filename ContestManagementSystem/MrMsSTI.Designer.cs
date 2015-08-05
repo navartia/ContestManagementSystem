@@ -75,6 +75,7 @@
             this.buttonRefresh.TabIndex = 28;
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // comboBoxName
             // 
@@ -105,10 +106,14 @@
             this.comboBoxCourse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxCourse.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCourse.FormattingEnabled = true;
+            this.comboBoxCourse.Items.AddRange(new object[] {
+            "BS Information Technology",
+            "BS Computer Science"});
             this.comboBoxCourse.Location = new System.Drawing.Point(216, 3);
             this.comboBoxCourse.Name = "comboBoxCourse";
             this.comboBoxCourse.Size = new System.Drawing.Size(378, 26);
             this.comboBoxCourse.TabIndex = 39;
+            this.comboBoxCourse.SelectedIndexChanged += new System.EventHandler(this.comboBoxCourse_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -128,10 +133,14 @@
             this.comboBoxGender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxGender.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
             this.comboBoxGender.Location = new System.Drawing.Point(216, 35);
             this.comboBoxGender.Name = "comboBoxGender";
             this.comboBoxGender.Size = new System.Drawing.Size(378, 26);
             this.comboBoxGender.TabIndex = 37;
+            this.comboBoxGender.SelectedIndexChanged += new System.EventHandler(this.comboBoxGender_SelectedIndexChanged);
             // 
             // label8
             // 

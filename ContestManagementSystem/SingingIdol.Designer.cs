@@ -121,10 +121,14 @@
             this.comboBoxGender.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBoxGender.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
             this.comboBoxGender.Location = new System.Drawing.Point(215, 35);
             this.comboBoxGender.Name = "comboBoxGender";
             this.comboBoxGender.Size = new System.Drawing.Size(379, 26);
             this.comboBoxGender.TabIndex = 18;
+            this.comboBoxGender.SelectedIndexChanged += new System.EventHandler(this.comboBoxGender_SelectedIndexChanged);
             // 
             // buttonNext
             // 
@@ -181,10 +185,14 @@
             this.comboBoxCourse.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBoxCourse.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCourse.FormattingEnabled = true;
+            this.comboBoxCourse.Items.AddRange(new object[] {
+            "BS Information Technology",
+            "BS Computer Science"});
             this.comboBoxCourse.Location = new System.Drawing.Point(215, 3);
             this.comboBoxCourse.Name = "comboBoxCourse";
             this.comboBoxCourse.Size = new System.Drawing.Size(379, 26);
             this.comboBoxCourse.TabIndex = 32;
+            this.comboBoxCourse.SelectedIndexChanged += new System.EventHandler(this.comboBoxCourse_SelectedIndexChanged);
             // 
             // label2
             // 

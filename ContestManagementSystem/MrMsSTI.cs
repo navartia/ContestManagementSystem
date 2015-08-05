@@ -13,7 +13,7 @@ namespace ContestManagementSystem
 {
     public partial class MrMsSTI : Form
     {
-        ArrayList contestantList;
+        ArrayList[,] contestantList;
         DatabaseManager dm;
 
         public MrMsSTI()
@@ -21,6 +21,7 @@ namespace ContestManagementSystem
             InitializeComponent();
 
             dm = new DatabaseManager();
+            contestantList = new ArrayList[2, 2];
         }
 
         private void MrMsSTI_Load(object sender, EventArgs e)
@@ -30,18 +31,14 @@ namespace ContestManagementSystem
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            Contestant contestant = new Contestant();
 
             int[] score = new int[4];
             score[0] = Convert.ToInt32(textBoxCW.Text);
             score[1] = Convert.ToInt32(textBoxSW.Text);
             score[2] = Convert.ToInt32(textBoxFW.Text);
             score[3] = Convert.ToInt32(textBoxQA.Text);
-            
-            contestant.score = score;
-            
-            int index = comboBoxName.SelectedIndex;
-            Contestant selected = contestantList[index] as Contestant;
+
+            Contestant selected = GetSelectedContestant();
             selected.score = score;
 
             String scoreQuery = "SELECT * FROM score WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id;
@@ -95,21 +92,16 @@ namespace ContestManagementSystem
             score[2] = Convert.ToInt32(textBoxFW.Text);
             score[3] = Convert.ToInt32(textBoxQA.Text);
 
-            int index = comboBoxName.SelectedIndex;
-            Contestant selected = contestantList[index] as Contestant;
+            Contestant selected = GetSelectedContestant();
             selected.score = score;
-        }
-
-        private void buttonRefresh_Click(object sender, EventArgs e)
-        {
-            FormLoad();
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
             int index = (comboBoxName.SelectedIndex + 1) % comboBoxName.Items.Count;
+
             comboBoxName.SelectedIndex = index;
-            LoadContestant(index);
+            SetSelectedContestant(comboBoxCourse.SelectedIndex, comboBoxGender.SelectedIndex, index);
         }
 
         private void buttonPrev_Click(object sender, EventArgs e)
@@ -119,31 +111,65 @@ namespace ContestManagementSystem
             if (index > 0)
             {
                 comboBoxName.SelectedIndex = index;
-                LoadContestant(index);
             }
             else
             {
                 comboBoxName.SelectedIndex = comboBoxName.Items.Count - 1;
-                LoadContestant(comboBoxName.Items.Count - 1);
             }
+
+            SetSelectedContestant(comboBoxCourse.SelectedIndex,
+                                  comboBoxGender.SelectedIndex,
+                                  comboBoxName.SelectedIndex);
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            FormLoad();
         }
 
         private void comboBoxName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = comboBoxName.SelectedIndex;
-            LoadContestant(index);
+            SetSelectedContestant(comboBoxCourse.SelectedIndex,
+                                  comboBoxGender.SelectedIndex,
+                                  comboBoxName.SelectedIndex);
+        }
+
+        private void comboBoxGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxCourse.SelectedIndex != -1)
+                SetSelectedList(comboBoxCourse.SelectedIndex, comboBoxGender.SelectedIndex);
+        }
+
+        private void comboBoxCourse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxGender.SelectedIndex != -1)
+                SetSelectedList(comboBoxCourse.SelectedIndex, comboBoxGender.SelectedIndex);
         }
 
         private void FormLoad()
         {
-            comboBoxName.Items.Clear();
-            contestantList = new ArrayList();
-
             String contestID = "2";
-            String contestantQuery = "SELECT * FROM contestant WHERE contest_id = " + contestID + "";
-            DataTable contestTable = dm.Select(contestantQuery);
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    String course = comboBoxCourse.Items[i].ToString();
+                    String gender = comboBoxGender.Items[j].ToString();
+                    String contestantQuery = "SELECT * FROM contestant WHERE contest_id = " + contestID + " AND gender = '" + gender + "' AND course = '" + course + "'";
+                    DataTable contestTable = dm.Select(contestantQuery);
 
-            foreach (DataRow row in contestTable.Rows)
+                    contestantList[i, j] = LoadDataTableToList(contestTable);
+                }
+            }
+
+            comboBoxCourse.SelectedIndex = 0;
+            comboBoxGender.SelectedIndex = 0;
+        }
+
+        private ArrayList LoadDataTableToList(DataTable table)
+        {
+            ArrayList list = new ArrayList();
+            foreach (DataRow row in table.Rows)
             {
                 Contestant contestant = new Contestant();
                 contestant.name = row["firstname"] + " " + row["middlename"] + " " + row["lastname"];
@@ -168,20 +194,32 @@ namespace ContestManagementSystem
                     score[index] = Convert.ToInt32(scoreRow["score"]);
                     index++;
                 }
-
                 contestant.score = score;
 
-                contestantList.Add(contestant);
-                comboBoxName.Items.Add(contestant.contestant_number + " " + contestant.name);
-                comboBoxName.SelectedIndex = 0;
-
-                LoadContestant(0);
+                list.Add(contestant);
             }
+
+            return list;
         }
 
-        private void LoadContestant(int index)
+        private void SetSelectedList(int course, int gender)
         {
-            Contestant selected = contestantList[index] as Contestant;
+            comboBoxName.Items.Clear();
+            foreach (Contestant contestant in contestantList[course, gender])
+            {
+                comboBoxName.Items.Add(contestant.name);
+
+            }
+
+            comboBoxName.SelectedIndex = 0;
+            SetSelectedContestant(comboBoxCourse.SelectedIndex,
+                                  comboBoxGender.SelectedIndex,
+                                  comboBoxName.SelectedIndex);
+        }
+
+        private void SetSelectedContestant(int course, int gender, int name)
+        {
+            Contestant selected = contestantList[course, gender][name] as Contestant;
 
             labelName.Text = selected.name;
             labelNumber.Text = Convert.ToString(selected.contestant_number);
@@ -191,6 +229,16 @@ namespace ContestManagementSystem
             textBoxSW.Text = Convert.ToString(score[1]);
             textBoxFW.Text = Convert.ToString(score[2]);
             textBoxQA.Text = Convert.ToString(score[3]);
+        }
+
+        private Contestant GetSelectedContestant()
+        {
+            int indexCourse = comboBoxCourse.SelectedIndex;
+            int indexGender = comboBoxGender.SelectedIndex;
+            int indexName = comboBoxName.SelectedIndex;
+            Contestant selected = contestantList[indexCourse, indexGender][indexName] as Contestant;
+
+            return selected;
         }
     }
 }
