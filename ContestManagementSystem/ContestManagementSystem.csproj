@@ -88,12 +88,6 @@
     </Compile>
     <Compile Include="DatabaseManager.cs" />
     <Compile Include="FileManager.cs" />
-    <Compile Include="FirstStage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FirstStage.Designer.cs">
-      <DependentUpon>FirstStage.cs</DependentUpon>
-    </Compile>
     <Compile Include="MrMsSTISummary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,20 +136,8 @@
     <EmbeddedResource Include="ContestControl.resx">
       <DependentUpon>ContestControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FirstStage.resx">
-      <DependentUpon>FirstStage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <Compile Include="JudgingForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="JudgingForm.Designer.cs">
-      <DependentUpon>JudgingForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="JudgingForm.resx">
-      <DependentUpon>JudgingForm.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="RegistrationForm.cs">
       <SubType>Form</SubType>
