@@ -29,6 +29,7 @@ namespace ContestManagementSystem
         {
             try
             {
+                //where clause Missing due to database(Incomplete);
             string contestantQuery  = "select firstName,middleName,lastname,id_number,contestant_number,course from contestant";
             DataTable contestTable = dm.Select(contestantQuery);
             dm.Insert(contestantQuery);
