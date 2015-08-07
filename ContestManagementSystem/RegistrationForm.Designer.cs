@@ -583,8 +583,8 @@
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Mr. and Ms. STI",
-            "STI Singing Idol"});
+            "STI Singing Idol",
+            "Mr. and Ms. STI"});
             this.comboBox1.Location = new System.Drawing.Point(458, 61);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(296, 32);

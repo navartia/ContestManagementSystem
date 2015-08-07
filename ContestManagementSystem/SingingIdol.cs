@@ -13,7 +13,7 @@ namespace ContestManagementSystem
 {
     public partial class SingingIdol : Form
     {
-        ArrayList contestantList;
+        ArrayList[,] contestantList;
         DatabaseManager dm;
 
         public SingingIdol()
@@ -21,74 +21,23 @@ namespace ContestManagementSystem
             InitializeComponent();
 
             dm = new DatabaseManager();
-            contestantList = new ArrayList();
+            contestantList = new ArrayList[2, 2];
         }
 
-        private void hScrollBarVQ_Scroll(object sender, ScrollEventArgs e)
+        private void SingingIdol_Load(object sender, EventArgs e)
         {
-            int value = hScrollBarVQ.Value;
-            float adjustedValue = value / 91f * 50f;
-
-            textBoxVQ.Text = Convert.ToInt32(adjustedValue).ToString();
-        }
-
-        private void hScrollBarOrg_Scroll(object sender, ScrollEventArgs e)
-        {
-            int value = hScrollBarOrg.Value;
-            float adjustedValue = value / 91f * 30f;
-
-            textBoxOrg.Text = Convert.ToInt32(adjustedValue).ToString();
-        }
-
-        private void hScrollBarSQ_Scroll(object sender, ScrollEventArgs e)
-        {
-            int value = hScrollBarSQ.Value;
-            float adjustedValue = value / 91f * 10f;
-
-            textBoxSQ.Text = Convert.ToInt32(adjustedValue).ToString();
-        }
-
-        private void hScrollBarSP_Scroll(object sender, ScrollEventArgs e)
-        {
-            int value = hScrollBarSP.Value;
-            float adjustedValue = value / 91f * 10f;
-
-            textBoxSP.Text = Convert.ToInt32(adjustedValue).ToString();
-        }
-
-        private void buttonClear_Click(object sender, EventArgs e)
-        {
-            hScrollBarVQ.Value = 0;
-            hScrollBarOrg.Value = 0;
-            hScrollBarSQ.Value = 0;
-            hScrollBarSP.Value = 0;
-
-            textBoxVQ.Text = "0";
-            textBoxOrg.Text = "0";
-            textBoxSQ.Text = "0";
-            textBoxSP.Text = "0";
-
-            int[] score = new int[4];
-            score[0] = Convert.ToInt32(textBoxVQ.Text);
-            score[1] = Convert.ToInt32(textBoxOrg.Text);
-            score[2] = Convert.ToInt32(textBoxSQ.Text);
-            score[3] = Convert.ToInt32(textBoxSP.Text);
-
-            int index = comboBoxContestant.SelectedIndex;
-            Contestant selected = contestantList[index] as Contestant;
-            selected.score = score;
+            FormLoad();
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             int[] score = new int[4];
             score[0] = Convert.ToInt32(textBoxVQ.Text);
-            score[1] = Convert.ToInt32(textBoxOrg.Text);
+            score[1] = Convert.ToInt32(textBoxOrig.Text);
             score[2] = Convert.ToInt32(textBoxSQ.Text);
             score[3] = Convert.ToInt32(textBoxSP.Text);
 
-            int index = comboBoxContestant.SelectedIndex;
-            Contestant selected = contestantList[index] as Contestant;
+            Contestant selected = GetSelectedContestant();
             selected.score = score;
 
             String scoreQuery = "SELECT * FROM score WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id;
@@ -128,13 +77,97 @@ namespace ContestManagementSystem
             }
         }
 
-        private void SingingIdol_Load(object sender, EventArgs e)
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxVQ.Text = "0";
+            textBoxOrig.Text = "0";
+            textBoxSQ.Text = "0";
+            textBoxSP.Text = "0";
+
+            int[] score = new int[4];
+            score[0] = Convert.ToInt32(textBoxVQ.Text);
+            score[1] = Convert.ToInt32(textBoxOrig.Text);
+            score[2] = Convert.ToInt32(textBoxSQ.Text);
+            score[3] = Convert.ToInt32(textBoxSP.Text);
+
+            Contestant selected = GetSelectedContestant();
+            selected.score = score;
+        }
+
+        private void buttonNext_Click(object sender, EventArgs e)
+        {
+            int index = (comboBoxName.SelectedIndex + 1) % comboBoxName.Items.Count;
+
+            comboBoxName.SelectedIndex = index;
+            SetSelectedContestant(comboBoxCourse.SelectedIndex, comboBoxGender.SelectedIndex, index);
+        }
+
+        private void buttonPrev_Click(object sender, EventArgs e)
+        {
+            int index = comboBoxName.SelectedIndex - 1;
+
+            if (index > 0)
+            {
+                comboBoxName.SelectedIndex = index;
+            }
+            else
+            {
+                comboBoxName.SelectedIndex = comboBoxName.Items.Count - 1;
+            }
+
+            SetSelectedContestant(comboBoxCourse.SelectedIndex,
+                                  comboBoxGender.SelectedIndex,
+                                  comboBoxName.SelectedIndex);
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            FormLoad();
+        }
+
+        private void comboBoxName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetSelectedContestant(comboBoxCourse.SelectedIndex,
+                                  comboBoxGender.SelectedIndex,
+                                  comboBoxName.SelectedIndex);
+        }
+
+        private void comboBoxGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxCourse.SelectedIndex != -1)
+                    SetSelectedList(comboBoxCourse.SelectedIndex, comboBoxGender.SelectedIndex);
+        }
+
+        private void comboBoxCourse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBoxGender.SelectedIndex != -1)
+                SetSelectedList(comboBoxCourse.SelectedIndex, comboBoxGender.SelectedIndex);
+        }
+        
+        private void FormLoad()
         {
             String contestID = "1";
-            String contestantQuery = "SELECT * FROM contestant WHERE contest_id = " + contestID;
-            DataTable contestTable = dm.Select(contestantQuery);
+            for (int i = 0; i < 2; i++)
+            {
+                for(int j = 0; j < 2; j++)
+                {
+                    String course = comboBoxCourse.Items[i].ToString();
+                    String gender = comboBoxGender.Items[j].ToString();
+                    String contestantQuery = "SELECT * FROM contestant WHERE contest_id = " + contestID + " AND gender = '" + gender + "' AND course = '" + course + "'";
+                    DataTable contestTable = dm.Select(contestantQuery);
 
-            foreach (DataRow row in contestTable.Rows)
+                    contestantList[i, j] = LoadDataTableToList(contestTable);
+                }
+            }
+
+            comboBoxCourse.SelectedIndex = 0;
+            comboBoxGender.SelectedIndex = 0;
+        }
+        
+        private ArrayList LoadDataTableToList(DataTable table)
+        {
+            ArrayList list = new ArrayList();
+            foreach (DataRow row in table.Rows)
             {
                 Contestant contestant = new Contestant();
                 contestant.name = row["firstname"] + " " + row["middlename"] + " " + row["lastname"];
@@ -151,7 +184,7 @@ namespace ContestManagementSystem
 
                 String scoreQuery = "SELECT * FROM score WHERE score.contestant_id = " + contestant.contestant_id + " AND score.judge_id = " + contestant.judge_id;
                 DataTable scoreTable = dm.Select(scoreQuery);
-                
+
                 int[] score = new int[4];
                 int index = 0;
                 foreach (DataRow scoreRow in scoreTable.Rows)
@@ -159,59 +192,50 @@ namespace ContestManagementSystem
                     score[index] = Convert.ToInt32(scoreRow["score"]);
                     index++;
                 }
-
                 contestant.score = score;
 
-                contestantList.Add(contestant);
-                comboBoxContestant.Items.Add(contestant.contestant_number + " " + contestant.name);
-
-                comboBoxContestant.SelectedIndex = 0;
+                list.Add(contestant);
             }
+
+            return list;
         }
-
-        private void comboBoxContestant_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int index = comboBoxContestant.SelectedIndex;
-            Contestant selected = contestantList[index] as Contestant;
-
-            LoadContestant(selected);
-        }
-
-        private void buttonNext_Click(object sender, EventArgs e)
-        {
-            int index = (comboBoxContestant.SelectedIndex + 1) % comboBoxContestant.Items.Count;
-            comboBoxContestant.SelectedIndex = index;
-        }
-
-        private void buttonPrev_Click(object sender, EventArgs e)
-        {
-            if (comboBoxContestant.SelectedIndex != 0)
+        
+        private void SetSelectedList(int course, int gender) {
+            comboBoxName.Items.Clear();
+            foreach(Contestant contestant in contestantList[course, gender])
             {
-                int index = (comboBoxContestant.SelectedIndex - 1);
-                comboBoxContestant.SelectedIndex = index;
+                comboBoxName.Items.Add(contestant.name);
+
             }
 
-            else
-            {
-                comboBoxContestant.SelectedIndex = comboBoxContestant.Items.Count - 1;
-            }
+            comboBoxName.SelectedIndex = 0;
+            SetSelectedContestant(comboBoxCourse.SelectedIndex,
+                                  comboBoxGender.SelectedIndex,
+                                  comboBoxName.SelectedIndex);
         }
 
-        private void LoadContestant(Contestant selected)
+        private void SetSelectedContestant(int course, int gender, int name)
         {
+            Contestant selected = contestantList[course, gender][name] as Contestant;
+
             labelName.Text = selected.name;
             labelNumber.Text = Convert.ToString(selected.contestant_number);
 
             int[] score = selected.score;
             textBoxVQ.Text = Convert.ToString(score[0]);
-            textBoxOrg.Text = Convert.ToString(score[1]);
+            textBoxOrig.Text = Convert.ToString(score[1]);
             textBoxSQ.Text = Convert.ToString(score[2]);
             textBoxSP.Text = Convert.ToString(score[3]);
+        }
 
-            hScrollBarVQ.Value = Convert.ToInt32(score[0] / 50f * 91f);
-            hScrollBarOrg.Value = Convert.ToInt32(score[1] / 30f * 91f);
-            hScrollBarSQ.Value = Convert.ToInt32(score[2] / 10f * 91f);
-            hScrollBarSP.Value = Convert.ToInt32(score[3] / 10f * 91f);
+        private Contestant GetSelectedContestant()
+        {
+            int indexCourse = comboBoxCourse.SelectedIndex;
+            int indexGender = comboBoxGender.SelectedIndex;
+            int indexName = comboBoxName.SelectedIndex;
+            Contestant selected = contestantList[indexCourse, indexGender][indexName] as Contestant;
+
+            return selected;
         }
     }
 }
