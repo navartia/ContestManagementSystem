@@ -29,10 +29,15 @@ namespace ContestManagementSystem
 
         private void buttonMrSTI_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            /*this.Hide();
 
             MrMsSTI mr = new MrMsSTI();
             mr.ShowDialog();
+
+            this.Show();*/
+            this.Hide();
+            FormalWear fw = new FormalWear();
+            fw.ShowDialog();
 
             this.Show();
         }
