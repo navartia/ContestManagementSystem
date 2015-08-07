@@ -31,8 +31,11 @@ namespace ContestManagementSystem
         {
             /*this.Hide();
 
-            MrMsSTI mr = new MrMsSTI();
-            mr.ShowDialog();
+           // MrMsSTI mr = new MrMsSTI();
+          //  mr.ShowDialog();
+
+            CasualWear cw = new CasualWear();
+            cw.ShowDialog();
 
             this.Show();*/
             this.Hide();
@@ -65,6 +68,11 @@ namespace ContestManagementSystem
             cs.ShowDialog();
 
             this.Show();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
