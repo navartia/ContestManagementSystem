@@ -26,7 +26,11 @@ namespace ContestManagementSystem
 
         private void FormalWear_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             String resultQuery = "SELECT contestant.firstname, contestant.lastname, AVG(judge_score.sum_of_score) AS total_score FROM (SELECT DISTINCT contestant_id, judge_id, SUM(score) AS sum_of_score FROM Score GROUP BY contestant_id, judge_id)  AS judge_score INNER JOIN contestant ON judge_score.contestant_id = contestant.contestant_id WHERE contestant.contest_id =  1 AND contestant.gender = Female AND contesant.course = Bachelor of Science in Information Technology GROUP BY contestant.firstname, contestant.lastname";
+=======
+            String resultQuery = "SELECT contestant.firstname, contestant.lastname, contestant.course, contestant.gender AVG(judge_score.sum_of_score) AS total_score FROM (SELECT DISTINCT contestant_id, judge_id, SUM(score) AS sum_of_score FROM Score GROUP BY contestant_id, judge_id)  AS judge_score INNER JOIN contestant ON judge_score.contestant_id = contestant.contestant_id WHERE contestant.contest_id =  1 GROUP BY contestant.firstname, contestant.lastname, contestant.course, contestant.gender";
+>>>>>>> sdsd
             DataTable contestTable = dm.Select(resultQuery);
             dataGridView1.DataSource = contestTable;
             dataGridView2.DataSource = contestTable;
@@ -34,6 +38,16 @@ namespace ContestManagementSystem
             dataGridView4.DataSource = contestTable;
             dataGridView5.DataSource = contestTable;
             dataGridView6.DataSource = contestTable;
+<<<<<<< HEAD
+=======
+
+       //     dataGridView1.Rows[].Cells[].Value.ToString();
+        }
+
+        private void filter(DataGridView dataGridview)
+        {
+            dataGridview.Rows[1].Cells[2].Value.ToString();
+>>>>>>> sdsd
         }
     }
 }
