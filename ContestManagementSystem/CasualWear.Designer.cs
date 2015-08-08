@@ -33,6 +33,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
@@ -41,6 +42,34 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+=======
+            this.CPEF_ContestantNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPEF_ContestantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPEF_ContestantScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.CPEM_ContestantNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPEM_ContestantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPEM_ContestantScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.ITF_ContestantNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITF_ContestantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITF_ContestantScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.ITM_ContestantNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITM_ContestantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITM_ContestantScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.CSF_ContestantNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CSF_ContestantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CSF_ContestantScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CSM_ContestantNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CSM_ContestantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CSM_ContestantScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+>>>>>>> origin/carlo
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
@@ -81,6 +110,10 @@
             this.button2.TabIndex = 25;
             this.button2.Text = "SAVE";
             this.button2.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
+=======
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+>>>>>>> origin/carlo
             // 
             // button1
             // 
@@ -94,6 +127,7 @@
             // 
             // dataGridView6
             // 
+<<<<<<< HEAD
             this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView6.Location = new System.Drawing.Point(487, 540);
@@ -110,6 +144,70 @@
             this.dataGridView5.Size = new System.Drawing.Size(206, 150);
             this.dataGridView5.TabIndex = 22;
             // 
+=======
+            this.dataGridView6.AllowUserToAddRows = false;
+            this.dataGridView6.AllowUserToDeleteRows = false;
+            this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CPEF_ContestantNumber,
+            this.CPEF_ContestantName,
+            this.CPEF_ContestantScore});
+            this.dataGridView6.Location = new System.Drawing.Point(487, 540);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.RowHeadersVisible = false;
+            this.dataGridView6.Size = new System.Drawing.Size(206, 150);
+            this.dataGridView6.TabIndex = 23;
+            // 
+            // CPEF_ContestantNumber
+            // 
+            this.CPEF_ContestantNumber.HeaderText = "Contestant No.";
+            this.CPEF_ContestantNumber.Name = "CPEF_ContestantNumber";
+            // 
+            // CPEF_ContestantName
+            // 
+            this.CPEF_ContestantName.HeaderText = "Name";
+            this.CPEF_ContestantName.Name = "CPEF_ContestantName";
+            // 
+            // CPEF_ContestantScore
+            // 
+            this.CPEF_ContestantScore.HeaderText = "Score";
+            this.CPEF_ContestantScore.Name = "CPEF_ContestantScore";
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AllowUserToAddRows = false;
+            this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CPEM_ContestantNumber,
+            this.CPEM_ContestantName,
+            this.CPEM_ContestantScore});
+            this.dataGridView5.Location = new System.Drawing.Point(189, 540);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersVisible = false;
+            this.dataGridView5.Size = new System.Drawing.Size(206, 150);
+            this.dataGridView5.TabIndex = 22;
+            // 
+            // CPEM_ContestantNumber
+            // 
+            this.CPEM_ContestantNumber.HeaderText = "Contestant No.";
+            this.CPEM_ContestantNumber.Name = "CPEM_ContestantNumber";
+            // 
+            // CPEM_ContestantName
+            // 
+            this.CPEM_ContestantName.HeaderText = "Name";
+            this.CPEM_ContestantName.Name = "CPEM_ContestantName";
+            // 
+            // CPEM_ContestantScore
+            // 
+            this.CPEM_ContestantScore.HeaderText = "Score";
+            this.CPEM_ContestantScore.Name = "CPEM_ContestantScore";
+            // 
+>>>>>>> origin/carlo
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -125,6 +223,7 @@
             // 
             // dataGridView4
             // 
+<<<<<<< HEAD
             this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(487, 333);
@@ -141,6 +240,70 @@
             this.dataGridView3.Size = new System.Drawing.Size(206, 150);
             this.dataGridView3.TabIndex = 19;
             // 
+=======
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ITF_ContestantNumber,
+            this.ITF_ContestantName,
+            this.ITF_ContestantScore});
+            this.dataGridView4.Location = new System.Drawing.Point(487, 333);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersVisible = false;
+            this.dataGridView4.Size = new System.Drawing.Size(206, 150);
+            this.dataGridView4.TabIndex = 20;
+            // 
+            // ITF_ContestantNumber
+            // 
+            this.ITF_ContestantNumber.HeaderText = "Contestant No.";
+            this.ITF_ContestantNumber.Name = "ITF_ContestantNumber";
+            // 
+            // ITF_ContestantName
+            // 
+            this.ITF_ContestantName.HeaderText = "Name";
+            this.ITF_ContestantName.Name = "ITF_ContestantName";
+            // 
+            // ITF_ContestantScore
+            // 
+            this.ITF_ContestantScore.HeaderText = "Score";
+            this.ITF_ContestantScore.Name = "ITF_ContestantScore";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ITM_ContestantNumber,
+            this.ITM_ContestantName,
+            this.ITM_ContestantScore});
+            this.dataGridView3.Location = new System.Drawing.Point(189, 333);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersVisible = false;
+            this.dataGridView3.Size = new System.Drawing.Size(206, 150);
+            this.dataGridView3.TabIndex = 19;
+            // 
+            // ITM_ContestantNumber
+            // 
+            this.ITM_ContestantNumber.HeaderText = "Contestant No.";
+            this.ITM_ContestantNumber.Name = "ITM_ContestantNumber";
+            // 
+            // ITM_ContestantName
+            // 
+            this.ITM_ContestantName.HeaderText = "Name";
+            this.ITM_ContestantName.Name = "ITM_ContestantName";
+            // 
+            // ITM_ContestantScore
+            // 
+            this.ITM_ContestantScore.HeaderText = "Score";
+            this.ITM_ContestantScore.Name = "ITM_ContestantScore";
+            // 
+>>>>>>> origin/carlo
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -169,6 +332,7 @@
             // 
             // dataGridView2
             // 
+<<<<<<< HEAD
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(487, 132);
@@ -185,6 +349,72 @@
             this.dataGridView1.Size = new System.Drawing.Size(206, 150);
             this.dataGridView1.TabIndex = 15;
             // 
+=======
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CSF_ContestantNumber,
+            this.CSF_ContestantName,
+            this.CSF_ContestantScore});
+            this.dataGridView2.Location = new System.Drawing.Point(487, 132);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.Size = new System.Drawing.Size(206, 150);
+            this.dataGridView2.TabIndex = 16;
+            // 
+            // CSF_ContestantNumber
+            // 
+            this.CSF_ContestantNumber.HeaderText = "Contestant No.";
+            this.CSF_ContestantNumber.Name = "CSF_ContestantNumber";
+            // 
+            // CSF_ContestantName
+            // 
+            this.CSF_ContestantName.HeaderText = "Name";
+            this.CSF_ContestantName.Name = "CSF_ContestantName";
+            // 
+            // CSF_ContestantScore
+            // 
+            this.CSF_ContestantScore.HeaderText = "Score";
+            this.CSF_ContestantScore.Name = "CSF_ContestantScore";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeight = 34;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CSM_ContestantNumber,
+            this.CSM_ContestantName,
+            this.CSM_ContestantScore});
+            this.dataGridView1.Location = new System.Drawing.Point(189, 132);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(206, 150);
+            this.dataGridView1.TabIndex = 15;
+            // 
+            // CSM_ContestantNumber
+            // 
+            this.CSM_ContestantNumber.HeaderText = "Contestant No.";
+            this.CSM_ContestantNumber.Name = "CSM_ContestantNumber";
+            // 
+            // CSM_ContestantName
+            // 
+            this.CSM_ContestantName.HeaderText = "Name";
+            this.CSM_ContestantName.Name = "CSM_ContestantName";
+            // 
+            // CSM_ContestantScore
+            // 
+            this.CSM_ContestantScore.HeaderText = "Score";
+            this.CSM_ContestantScore.Name = "CSM_ContestantScore";
+            // 
+>>>>>>> origin/carlo
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -206,6 +436,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "CasualWear";
             this.Text = "CasualWear";
+<<<<<<< HEAD
+=======
+            this.Load += new System.EventHandler(this.CasualWear_Load);
+>>>>>>> origin/carlo
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
@@ -233,5 +467,26 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPEF_ContestantNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPEF_ContestantName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPEF_ContestantScore;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPEM_ContestantNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPEM_ContestantName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPEM_ContestantScore;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ITF_ContestantNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ITF_ContestantName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ITF_ContestantScore;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ITM_ContestantNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ITM_ContestantName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ITM_ContestantScore;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CSF_ContestantNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CSF_ContestantName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CSF_ContestantScore;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CSM_ContestantNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CSM_ContestantName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CSM_ContestantScore;
+>>>>>>> origin/carlo
     }
 }
