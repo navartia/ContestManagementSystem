@@ -410,6 +410,7 @@
             this.buttonUpdate.TabIndex = 53;
             this.buttonUpdate.Text = "UPDATE";
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonClear
             // 
@@ -425,6 +426,7 @@
             this.buttonClear.TabIndex = 52;
             this.buttonClear.Text = "CLEAR";
             this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // panel2
             // 

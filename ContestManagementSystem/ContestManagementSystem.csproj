@@ -79,6 +79,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CasualWear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CasualWear.Designer.cs">
+      <DependentUpon>CasualWear.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contestant.cs" />
     <Compile Include="ContestControl.cs">
       <SubType>Form</SubType>
@@ -88,6 +94,12 @@
     </Compile>
     <Compile Include="DatabaseManager.cs" />
     <Compile Include="FileManager.cs" />
+    <Compile Include="FormalWear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormalWear.Designer.cs">
+      <DependentUpon>FormalWear.cs</DependentUpon>
+    </Compile>
     <Compile Include="MrMsSTISummary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,8 +145,20 @@
     <Compile Include="SingingIdolSummary.Designer.cs">
       <DependentUpon>SingingIdolSummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="SportsWear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SportsWear.Designer.cs">
+      <DependentUpon>SportsWear.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CasualWear.resx">
+      <DependentUpon>CasualWear.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ContestControl.resx">
       <DependentUpon>ContestControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormalWear.resx">
+      <DependentUpon>FormalWear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -175,6 +199,10 @@
     <EmbeddedResource Include="SingingIdolSummary.resx">
       <DependentUpon>SingingIdolSummary.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SportsWear.resx">
+      <DependentUpon>SportsWear.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
