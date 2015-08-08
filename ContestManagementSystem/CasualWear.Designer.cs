@@ -34,6 +34,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
@@ -43,6 +44,8 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
 =======
+=======
+>>>>>>> asd
             this.CPEF_ContestantNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPEF_ContestantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPEF_ContestantScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,7 +72,10 @@
             this.CSM_ContestantNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CSM_ContestantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CSM_ContestantScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+<<<<<<< HEAD
 >>>>>>> origin/carlo
+=======
+>>>>>>> asd
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
@@ -100,6 +106,10 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(867, 714);
             this.panel1.TabIndex = 17;
+<<<<<<< HEAD
+=======
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+>>>>>>> asd
             // 
             // button2
             // 
@@ -111,9 +121,13 @@
             this.button2.Text = "SAVE";
             this.button2.UseVisualStyleBackColor = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             this.button2.Click += new System.EventHandler(this.button2_Click);
 >>>>>>> origin/carlo
+=======
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+>>>>>>> asd
             // 
             // button1
             // 
@@ -127,6 +141,7 @@
             // 
             // dataGridView6
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -145,6 +160,8 @@
             this.dataGridView5.TabIndex = 22;
             // 
 =======
+=======
+>>>>>>> asd
             this.dataGridView6.AllowUserToAddRows = false;
             this.dataGridView6.AllowUserToDeleteRows = false;
             this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -207,7 +224,10 @@
             this.CPEM_ContestantScore.HeaderText = "Score";
             this.CPEM_ContestantScore.Name = "CPEM_ContestantScore";
             // 
+<<<<<<< HEAD
 >>>>>>> origin/carlo
+=======
+>>>>>>> asd
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -223,6 +243,7 @@
             // 
             // dataGridView4
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -241,6 +262,8 @@
             this.dataGridView3.TabIndex = 19;
             // 
 =======
+=======
+>>>>>>> asd
             this.dataGridView4.AllowUserToAddRows = false;
             this.dataGridView4.AllowUserToDeleteRows = false;
             this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -303,7 +326,10 @@
             this.ITM_ContestantScore.HeaderText = "Score";
             this.ITM_ContestantScore.Name = "ITM_ContestantScore";
             // 
+<<<<<<< HEAD
 >>>>>>> origin/carlo
+=======
+>>>>>>> asd
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -333,6 +359,7 @@
             // dataGridView2
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(487, 132);
@@ -350,6 +377,8 @@
             this.dataGridView1.TabIndex = 15;
             // 
 =======
+=======
+>>>>>>> asd
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -414,7 +443,10 @@
             this.CSM_ContestantScore.HeaderText = "Score";
             this.CSM_ContestantScore.Name = "CSM_ContestantScore";
             // 
+<<<<<<< HEAD
 >>>>>>> origin/carlo
+=======
+>>>>>>> asd
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -437,9 +469,13 @@
             this.Name = "CasualWear";
             this.Text = "CasualWear";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             this.Load += new System.EventHandler(this.CasualWear_Load);
 >>>>>>> origin/carlo
+=======
+            this.Load += new System.EventHandler(this.CasualWear_Load);
+>>>>>>> asd
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
@@ -468,7 +504,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> asd
         private System.Windows.Forms.DataGridViewTextBoxColumn CPEF_ContestantNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPEF_ContestantName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPEF_ContestantScore;
@@ -487,6 +526,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CSM_ContestantNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn CSM_ContestantName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CSM_ContestantScore;
+<<<<<<< HEAD
 >>>>>>> origin/carlo
+=======
+>>>>>>> asd
     }
 }
