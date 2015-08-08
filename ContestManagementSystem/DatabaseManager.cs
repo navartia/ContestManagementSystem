@@ -20,8 +20,6 @@ namespace ContestManagementSystem
             connString = Properties.Settings.Default.ConnectionString;
             connection = new OleDbConnection();
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source = " + connString;
-
-            //Console.WriteLine(connString)
         }
 
         public void Insert(String query)
@@ -62,7 +60,6 @@ namespace ContestManagementSystem
                         }
                     }
                 }
-
             }
         }
 
