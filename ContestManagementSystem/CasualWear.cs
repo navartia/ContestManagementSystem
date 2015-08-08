@@ -1,12 +1,5 @@
 ﻿using System;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 using System.Collections;
->>>>>>> origin/carlo
-=======
-using System.Collections;
->>>>>>> asd
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,16 +13,8 @@ namespace ContestManagementSystem
 {
     public partial class CasualWear : Form
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        public CasualWear()
-        {
-            InitializeComponent();
-        }
-=======
-=======
->>>>>>> asd
         DatabaseManager dm;
+
         public CasualWear()
         {
             InitializeComponent();
@@ -53,16 +38,5 @@ namespace ContestManagementSystem
         {
 
         }
-<<<<<<< HEAD
-       
->>>>>>> origin/carlo
-=======
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            //aw
-        }
-       
->>>>>>> asd
     }
 }
