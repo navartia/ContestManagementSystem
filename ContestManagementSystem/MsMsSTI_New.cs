@@ -63,6 +63,20 @@ namespace ContestManagementSystem
                 MessageBox.Show("Data has been Updated!");
         }
 
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < courseCount; i++)
+            {
+                for (int j = 0; j < genderCount; j++)
+                {
+                    foreach (DataRow row in contestantData[criteria_number, i, j].Rows)
+                    {
+                        row["score"] = 0;
+                    }
+                }
+            }
+        }
+
         private void buttonNext_Click(object sender, EventArgs e)
         {
             criteria_number = (criteria_number + 1) % 3;
