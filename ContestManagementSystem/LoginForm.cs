@@ -29,18 +29,10 @@ namespace ContestManagementSystem
 
         private void buttonMrSTI_Click(object sender, EventArgs e)
         {
-            /*this.Hide();
-
-           // MrMsSTI mr = new MrMsSTI();
-          //  mr.ShowDialog();
-
-            CasualWear cw = new CasualWear();
-            cw.ShowDialog();
-
-            this.Show();*/
             this.Hide();
-            FormalWear fw = new FormalWear();
-            fw.ShowDialog();
+
+            MrMsSTI_New mr = new MrMsSTI_New();
+            mr.ShowDialog();
 
             this.Show();
         }
@@ -68,11 +60,6 @@ namespace ContestManagementSystem
             cs.ShowDialog();
 
             this.Show();
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

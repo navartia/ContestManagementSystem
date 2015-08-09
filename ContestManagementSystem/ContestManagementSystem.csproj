@@ -79,11 +79,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CasualWear.cs">
+    <Compile Include="MsMsSTI_New.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CasualWear.Designer.cs">
-      <DependentUpon>CasualWear.cs</DependentUpon>
+    <Compile Include="MsMsSTI_New.Designer.cs">
+      <DependentUpon>MsMsSTI_New.cs</DependentUpon>
     </Compile>
     <Compile Include="Contestant.cs" />
     <Compile Include="ContestControl.cs">
@@ -94,12 +94,6 @@
     </Compile>
     <Compile Include="DatabaseManager.cs" />
     <Compile Include="FileManager.cs" />
-    <Compile Include="FormalWear.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormalWear.Designer.cs">
-      <DependentUpon>FormalWear.cs</DependentUpon>
-    </Compile>
     <Compile Include="MrMsSTISummary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,14 +145,11 @@
     <Compile Include="SportsWear.Designer.cs">
       <DependentUpon>SportsWear.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CasualWear.resx">
-      <DependentUpon>CasualWear.cs</DependentUpon>
+    <EmbeddedResource Include="MsMsSTI_New.resx">
+      <DependentUpon>MsMsSTI_New.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContestControl.resx">
       <DependentUpon>ContestControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormalWear.resx">
-      <DependentUpon>FormalWear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

@@ -62,16 +62,16 @@ namespace ContestManagementSystem
             else
             {
                 String scoreInsertQuery = "UPDATE score SET score = " + score[0] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 1";
-                dm.Insert(scoreInsertQuery);
+                dm.Update(scoreInsertQuery);
 
                 scoreInsertQuery = "UPDATE score SET score = " + score[1] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 2";
-                dm.Insert(scoreInsertQuery);
+                dm.Update(scoreInsertQuery);
 
                 scoreInsertQuery = "UPDATE score SET score = " + score[2] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 3";
-                dm.Insert(scoreInsertQuery);
+                dm.Update(scoreInsertQuery);
 
                 scoreInsertQuery = "UPDATE score SET score = " + score[3] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 4";
-                dm.Insert(scoreInsertQuery);
+                dm.Update(scoreInsertQuery);
 
                 MessageBox.Show("Data has been Updated!");
             }
