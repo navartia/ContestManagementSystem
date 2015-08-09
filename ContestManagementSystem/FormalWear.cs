@@ -30,15 +30,26 @@ namespace ContestManagementSystem
             //dataGridView4.DataSource = contestTable;
             //dataGridView5.DataSource = contestTable;
             //dataGridView6.DataSource = contestTable;
-
+             
             for (int ctr = 0; ctr < dataGridView1.Rows.Count-1; ctr++)
             {
-              // MessageBox.Show(dataGridView1.Rows[ctr].Cells[2].Value.ToString());
-                if (dataGridView1.Rows[ctr].Cells[2].Value.ToString() != "Bachelor of Science in Computer Science")
-                {
-                   dataGridView1.Rows.RemoveAt(ctr);
-                }
+               
+                    if (dataGridView1.Rows[ctr].Cells[2].Value.ToString() != "Bachelor of Science in Information Technology")
+                    {
+
+                        dataGridView1.Rows.RemoveAt(ctr);
+                        ctr--;
+                    }
+                
             }
+
+           /* for (int ctr = 0; ctr < dataGridView1.Rows.Count - 1; ctr++)
+            {
+                if (dataGridView1.Rows[ctr].Cells[2].Value.ToString() == "")
+                {
+                    
+                }
+            }*/
         }
 
        /* private void filter(DataGridView dataGridview, String coursee, String genderr)
