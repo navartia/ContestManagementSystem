@@ -145,5 +145,25 @@ namespace ContestManagementSystem
             dataGridView6.Columns[1].DataPropertyName = "name";
             dataGridView6.Columns[2].DataPropertyName = "score";
         }
+
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows.Count > 1)
+            {
+                for (int c = 0; c < dataGridView1.Rows.Count; c++)
+                {
+                    int rank = 3;
+                    for (int c1 = 0; c1 < dataGridView1.Rows.Count; c1++)
+                    {
+                        if (Convert.ToInt32(dataGridView1.Rows[c].Cells[2].ToString()) < Convert.ToInt32(dataGridView1.Rows[c1].Cells[2].ToString()))
+                        {
+                            rank--;
+                        }
+                        dataGridView1.Rows[c].Cells[2].Value = Convert.ToString(rank);
+                    }
+
+                }
+            }
+        }
     }
 }
