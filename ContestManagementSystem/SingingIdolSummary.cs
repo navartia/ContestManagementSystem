@@ -29,9 +29,6 @@ namespace ContestManagementSystem
         {
             String resultQuery = "SELECT contestant.firstname, contestant.lastname, AVG(judge_score.sum_of_score) AS total_score FROM (SELECT DISTINCT contestant_id, judge_id, SUM(score) AS sum_of_score FROM Score GROUP BY contestant_id, judge_id)  AS judge_score INNER JOIN contestant ON judge_score.contestant_id = contestant.contestant_id WHERE contestant.contest_id =  1 GROUP BY contestant.firstname, contestant.lastname";
             DataTable contestTable = dm.Select(resultQuery);
-      
-            String resultQuery1 = "SELECT contestant.contestant_number, contestant.firstname,contestant.lastname,score.score FROM contestant INNER JOIN score ON contestant.contestant_id = score.contestant_id WHERE score.criteria_id = 4 AND contestant.course = BS IT AND contestant.gender = Male";
-            DataTable contestTable1 = dm.Select(resultQuery1);
 
             dataGridView1.DataSource = contestTable;
         }
