@@ -48,7 +48,8 @@ namespace ContestManagementSystem
                 for (int j = 0; j < genderCount; j++)
                 {
                     foreach (DataRow row in contestantData[criteria_number, i, j].Rows)
-                    {
+         
+           {
                         int score_id = Convert.ToInt32(row["score_id"]);
                         int score = Convert.ToInt32(row["score"]);
                         String query = "UPDATE score SET score = " + score + " WHERE score_id = " + score_id;
