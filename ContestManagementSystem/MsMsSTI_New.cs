@@ -160,25 +160,12 @@ namespace ContestManagementSystem
                     {
                         if (dataGridView1.Rows[c].Cells[2].Value.ToString().Length > 0)
                         {
-                            if (Convert.ToInt32(dataGridView1.Rows[c].Cells[2].Value.ToString()) > Convert.ToInt32(dataGridView1.Rows[c1].Cells[2].Value.ToString()))
-                            {
                                 rank--;
-                                rak = "";
-                            }
-                            else if (Convert.ToInt32(dataGridView1.Rows[c].Cells[2].Value.ToString()) == Convert.ToInt32(dataGridView1.Rows[c1].Cells[2].Value.ToString()))
-                            {
-                                rak = " - Tie";
-                                thigh = true; 
-                            }
-                            MessageBox.Show(Convert.ToString(rank)); ;
                         }
                     }
-                    if (thigh)
-                    { this.dataGridView1.Rows[c].Cells[3].Value = Convert.ToString(rank) + rak; }
-                    else 
-                    { 
-                        this.dataGridView1.Rows[c].Cells[3].Value = (Convert.ToString(rank) + rak); 
-                    }
+                   
+                     this.dataGridView1.Rows[c].Cells[3].Value = Convert.ToString(rank);
+                    
                 }
             }
         }
@@ -187,7 +174,7 @@ namespace ContestManagementSystem
         {
             if (dataGridView2.Rows.Count > 1)
             {
-                for (int c = 0; c < dataGridView2.Rows.Count - 1; c++)
+                for (int c = 0; c < dataGridView2.Rows.Count; c++)
                 {
                     Boolean thigh = false;
                     int rank = 3;
@@ -225,7 +212,7 @@ namespace ContestManagementSystem
             
                 if (dataGridView3.Rows.Count > 1)
                 {
-                    for (int c = 0; c < dataGridView3.Rows.Count - 1; c++)
+                    for (int c = 0; c < dataGridView3.Rows.Count; c++)
                     {
                         Boolean thigh = false;
                         int rank = 3;
@@ -261,7 +248,7 @@ namespace ContestManagementSystem
         {
             if (dataGridView4.Rows.Count > 1)
             {
-                for (int c = 0; c < dataGridView4.Rows.Count - 1; c++)
+                for (int c = 0; c < dataGridView4.Rows.Count; c++)
                 {
                     Boolean thigh = false;
                     int rank = 3;
@@ -297,7 +284,7 @@ namespace ContestManagementSystem
         {
             if (dataGridView4.Rows.Count > 1)
             {
-                for (int c = 0; c < dataGridView4.Rows.Count - 1; c++)
+                for (int c = 0; c < dataGridView4.Rows.Count; c++)
                 {
                     Boolean thigh = false;
                     int rank = 3;
@@ -331,64 +318,26 @@ namespace ContestManagementSystem
 
         private void dataGridView5_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView5.Rows.Count > 1)
-            {
-                for (int c = 0; c < dataGridView5.Rows.Count - 1; c++)
-                {
-                    Boolean thigh = false;
-                    int rank = 3;
-                    String rak = "";
-                    for (int c1 = 0; c1 < dataGridView5.Rows.Count - 1; c1++)
-                    {
-                        if (dataGridView5.Rows[c].Cells[2].Value.ToString().Length > 0)
-                        {
-                            if (Convert.ToInt32(dataGridView5.Rows[c].Cells[2].Value.ToString()) > Convert.ToInt32(dataGridView5.Rows[c1].Cells[2].Value.ToString()))
-                            {
-                                rank--;
-                                rak = "";
-                            }
-                            else if (Convert.ToInt32(dataGridView5.Rows[c].Cells[2].Value.ToString()) == Convert.ToInt32(dataGridView5.Rows[c1].Cells[2].Value.ToString()))
-                            {
-                                rak = " - Tie";
-                                thigh = true;
-                            }
-                            MessageBox.Show(Convert.ToString(rank)); ;
-                        }
-                    }
-                    if (thigh)
-                    { this.dataGridView5.Rows[c].Cells[3].Value = Convert.ToString(rank) + rak; }
-                    else
-                    {
-                        this.dataGridView5.Rows[c].Cells[3].Value = (Convert.ToString(rank) + rak);
-                    }
-                }
-            }
+            DataTableRanking(dataGridView5);
         }
 
         private void dataGridView6_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView6.Rows.Count > 1)
             {
-                for (int c = 0; c < dataGridView6.Rows.Count - 1; c++)
+                for (int c = 0; c < dataGridView6.Rows.Count; c++)
                 {
                     Boolean thigh = false;
                     int rank = 3;
                     String rak = "";
-                    for (int c1 = 0; c1 < dataGridView6.Rows.Count - 1; c1++)
+                    for (int c1 = 0; c1 < dataGridView6.Rows.Count; c1++)
                     {
                         if (dataGridView6.Rows[c].Cells[2].Value.ToString().Length > 0)
                         {
                             if (Convert.ToInt32(dataGridView6.Rows[c].Cells[2].Value.ToString()) > Convert.ToInt32(dataGridView6.Rows[c1].Cells[2].Value.ToString()))
                             {
                                 rank--;
-                                rak = "";
                             }
-                            else if (Convert.ToInt32(dataGridView6.Rows[c].Cells[2].Value.ToString()) == Convert.ToInt32(dataGridView6.Rows[c1].Cells[2].Value.ToString()))
-                            {
-                                rak = " - Tie";
-                                thigh = true;
-                            }
-                            MessageBox.Show(Convert.ToString(rank)); ;
                         }
                     }
                     if (thigh)
@@ -397,6 +346,41 @@ namespace ContestManagementSystem
                     {
                         this.dataGridView6.Rows[c].Cells[3].Value = (Convert.ToString(rank) + rak);
                     }
+                }
+            }
+        }
+
+        private void DataTableRanking(DataGridView dgv)
+        {
+            int count = dgv.Rows.Count;
+            if (count > 1)
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    Boolean tie = false;
+                    int rank = 3;
+                    String rankString = "";
+
+                    String scoreValueI = dgv.Rows[i].Cells[2].Value.ToString();
+                    for (int j = 0; j < count; j++)
+                    {
+                        String scoreValueJ = dgv.Rows[j].Cells[2].Value.ToString();
+                            if (Convert.ToInt32(scoreValueI) > Convert.ToInt32(scoreValueJ))
+                            {
+                                rank--;
+                                rankString = "";
+                            }
+                            
+                            else   if (Convert.ToInt32(scoreValueI) == Convert.ToInt32(scoreValueJ) && j != i)
+                            {
+                                rankString = " - Tie";
+                                tie = true;
+                            }
+                           // MessageBox.Show(Convert.ToString(rank)); ;
+                    }
+
+                        dgv.Rows[i].Cells[3].Value = Convert.ToString(rank) + rankString;   
+                     
                 }
             }
         }
