@@ -36,6 +36,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelFemale = new System.Windows.Forms.Label();
+            this.labelMale = new System.Windows.Forms.Label();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,8 +86,6 @@
             this.CSF_ContestantNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CSF_ContestantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CSF_ContestantScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labelMale = new System.Windows.Forms.Label();
-            this.labelFemale = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
@@ -121,6 +121,32 @@
             this.panel1.Size = new System.Drawing.Size(984, 714);
             this.panel1.TabIndex = 17;
             // 
+            // labelFemale
+            // 
+            this.labelFemale.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelFemale.AutoSize = true;
+            this.labelFemale.BackColor = System.Drawing.Color.Transparent;
+            this.labelFemale.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFemale.Location = new System.Drawing.Point(666, 200);
+            this.labelFemale.Name = "labelFemale";
+            this.labelFemale.Size = new System.Drawing.Size(57, 17);
+            this.labelFemale.TabIndex = 40;
+            this.labelFemale.Text = "Female";
+            this.labelFemale.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // labelMale
+            // 
+            this.labelMale.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelMale.AutoSize = true;
+            this.labelMale.BackColor = System.Drawing.Color.Transparent;
+            this.labelMale.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMale.Location = new System.Drawing.Point(256, 200);
+            this.labelMale.Name = "labelMale";
+            this.labelMale.Size = new System.Drawing.Size(42, 17);
+            this.labelMale.TabIndex = 39;
+            this.labelMale.Text = "Male";
+            this.labelMale.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // dataGridView6
             // 
             this.dataGridView6.AllowUserToAddRows = false;
@@ -150,6 +176,7 @@
             this.dataGridView6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView6.Size = new System.Drawing.Size(360, 83);
             this.dataGridView6.TabIndex = 38;
+            this.dataGridView6.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn17
             // 
@@ -208,6 +235,7 @@
             this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView5.Size = new System.Drawing.Size(360, 83);
             this.dataGridView5.TabIndex = 37;
+            this.dataGridView5.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn13
             // 
@@ -266,6 +294,8 @@
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView4.Size = new System.Drawing.Size(360, 83);
             this.dataGridView4.TabIndex = 36;
+            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
+            this.dataGridView4.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -324,6 +354,7 @@
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView3.Size = new System.Drawing.Size(360, 83);
             this.dataGridView3.TabIndex = 35;
+            this.dataGridView3.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -382,6 +413,7 @@
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView2.Size = new System.Drawing.Size(360, 83);
             this.dataGridView2.TabIndex = 34;
+            this.dataGridView2.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -626,32 +658,6 @@
             // 
             this.CSF_ContestantScore.HeaderText = "Score";
             this.CSF_ContestantScore.Name = "CSF_ContestantScore";
-            // 
-            // labelMale
-            // 
-            this.labelMale.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelMale.AutoSize = true;
-            this.labelMale.BackColor = System.Drawing.Color.Transparent;
-            this.labelMale.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMale.Location = new System.Drawing.Point(256, 200);
-            this.labelMale.Name = "labelMale";
-            this.labelMale.Size = new System.Drawing.Size(42, 17);
-            this.labelMale.TabIndex = 39;
-            this.labelMale.Text = "Male";
-            this.labelMale.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // labelFemale
-            // 
-            this.labelFemale.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelFemale.AutoSize = true;
-            this.labelFemale.BackColor = System.Drawing.Color.Transparent;
-            this.labelFemale.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFemale.Location = new System.Drawing.Point(666, 200);
-            this.labelFemale.Name = "labelFemale";
-            this.labelFemale.Size = new System.Drawing.Size(57, 17);
-            this.labelFemale.TabIndex = 40;
-            this.labelFemale.Text = "Female";
-            this.labelFemale.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // MrMsSTI_New
             // 

@@ -150,22 +150,253 @@ namespace ContestManagementSystem
         {
             if (dataGridView1.Rows.Count > 1)
             {
-                MessageBox.Show(dataGridView1.Rows[0].Cells[2].ToString());
-               /* for (int c = 0; c < dataGridView1.Rows.Count; c++)
+                for (int c = 0; c < dataGridView1.Rows.Count-1; c++)
                 {
+                    Boolean thigh = false;
                     int rank = 3;
-                    for (int c1 = 0; c1 < dataGridView1.Rows.Count; c1++)
+                    String rak = "";
+                    for (int c1 = 0; c1 < dataGridView1.Rows.Count-1; c1++)
                     {
-                        if (dataGridView1.Rows[c].Cells[2].ToString().Length > 1)
+                        if (dataGridView1.Rows[c].Cells[2].Value.ToString().Length > 0)
                         {
-                            if (Convert.ToInt32(dataGridView1.Rows[c].Cells[2].ToString()) < Convert.ToInt32(dataGridView1.Rows[c1].Cells[2].ToString()))
+                            if (Convert.ToInt32(dataGridView1.Rows[c].Cells[2].Value.ToString()) > Convert.ToInt32(dataGridView1.Rows[c1].Cells[2].Value.ToString()))
                             {
                                 rank--;
+                                rak = "";
                             }
-                            dataGridView1.Rows[c].Cells[2].Value = Convert.ToString(rank);
+                            else if (Convert.ToInt32(dataGridView1.Rows[c].Cells[2].Value.ToString()) == Convert.ToInt32(dataGridView1.Rows[c1].Cells[2].Value.ToString()))
+                            {
+                                rak = " - Tie";
+                                thigh = true; 
+                            }
+                            MessageBox.Show(Convert.ToString(rank)); ;
                         }
                     }
-                }*/
+                    if (thigh)
+                    { this.dataGridView1.Rows[c].Cells[3].Value = Convert.ToString(rank) + rak; }
+                    else 
+                    { 
+                        this.dataGridView1.Rows[c].Cells[3].Value = (Convert.ToString(rank) + rak); 
+                    }
+                }
+            }
+        }
+
+        private void dataGridView2_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView2.Rows.Count > 1)
+            {
+                for (int c = 0; c < dataGridView2.Rows.Count - 1; c++)
+                {
+                    Boolean thigh = false;
+                    int rank = 3;
+                    String rak = "";
+                    for (int c1 = 0; c1 < dataGridView2.Rows.Count - 1; c1++)
+                    {
+                        if (dataGridView2.Rows[c].Cells[2].Value.ToString().Length > 0)
+                        {
+                            if (Convert.ToInt32(dataGridView2.Rows[c].Cells[2].Value.ToString()) > Convert.ToInt32(dataGridView2.Rows[c1].Cells[2].Value.ToString()))
+                            {
+                                rank--;
+                                rak = "";
+                            }
+                            else if (Convert.ToInt32(dataGridView2.Rows[c].Cells[2].Value.ToString()) == Convert.ToInt32(dataGridView2.Rows[c1].Cells[2].Value.ToString()))
+                            {
+                                rak = " - Tie";
+                                thigh = true;
+                            }
+                            MessageBox.Show(Convert.ToString(rank)); ;
+                
+                        }
+                    }
+                    if (thigh)
+                    { this.dataGridView2.Rows[c].Cells[3].Value = Convert.ToString(rank) + rak; }
+                    else
+                    {
+                        this.dataGridView2.Rows[c].Cells[3].Value = (Convert.ToString(rank) + rak);
+                    }
+                }
+            }
+        }
+
+        private void dataGridView3_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            
+                if (dataGridView3.Rows.Count > 1)
+                {
+                    for (int c = 0; c < dataGridView3.Rows.Count - 1; c++)
+                    {
+                        Boolean thigh = false;
+                        int rank = 3;
+                        String rak = "";
+                        for (int c1 = 0; c1 < dataGridView3.Rows.Count - 1; c1++)
+                        {
+                            if (dataGridView3.Rows[c].Cells[2].Value.ToString().Length > 0)
+                            {
+                                if (Convert.ToInt32(dataGridView3.Rows[c].Cells[2].Value.ToString()) > Convert.ToInt32(dataGridView3.Rows[c1].Cells[2].Value.ToString()))
+                                {
+                                    rank--;
+                                    rak = "";
+                                }
+                                else if (Convert.ToInt32(dataGridView3.Rows[c].Cells[2].Value.ToString()) == Convert.ToInt32(dataGridView3.Rows[c1].Cells[2].Value.ToString()))
+                                {
+                                    rak = " - Tie";
+                                    thigh = true;
+                                }
+                                MessageBox.Show(Convert.ToString(rank)); ;
+                            }
+                        }
+                        if (thigh)
+                        { this.dataGridView3.Rows[c].Cells[3].Value = Convert.ToString(rank) + rak; }
+                        else
+                        {
+                            this.dataGridView3.Rows[c].Cells[3].Value = (Convert.ToString(rank) + rak);
+                        }
+                    }
+            }
+        }
+
+        private void dataGridView4_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView4.Rows.Count > 1)
+            {
+                for (int c = 0; c < dataGridView4.Rows.Count - 1; c++)
+                {
+                    Boolean thigh = false;
+                    int rank = 3;
+                    String rak = "";
+                    for (int c1 = 0; c1 < dataGridView4.Rows.Count - 1; c1++)
+                    {
+                        if (dataGridView4.Rows[c].Cells[2].Value.ToString().Length > 0)
+                        {
+                            if (Convert.ToInt32(dataGridView4.Rows[c].Cells[2].Value.ToString()) > Convert.ToInt32(dataGridView4.Rows[c1].Cells[2].Value.ToString()))
+                            {
+                                rank--;
+                                rak = "";
+                            }
+                            else if (Convert.ToInt32(dataGridView4.Rows[c].Cells[2].Value.ToString()) == Convert.ToInt32(dataGridView4.Rows[c1].Cells[2].Value.ToString()))
+                            {
+                                rak = " - Tie";
+                                thigh = true;
+                            }
+                            MessageBox.Show(Convert.ToString(rank)); ;
+                        }
+                    }
+                    if (thigh)
+                    { this.dataGridView4.Rows[c].Cells[3].Value = Convert.ToString(rank) + rak; }
+                    else
+                    {
+                        this.dataGridView4.Rows[c].Cells[3].Value = (Convert.ToString(rank) + rak);
+                    }
+                }
+            }
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView4.Rows.Count > 1)
+            {
+                for (int c = 0; c < dataGridView4.Rows.Count - 1; c++)
+                {
+                    Boolean thigh = false;
+                    int rank = 3;
+                    String rak = "";
+                    for (int c1 = 0; c1 < dataGridView4.Rows.Count - 1; c1++)
+                    {
+                        if (dataGridView4.Rows[c].Cells[2].Value.ToString().Length > 0)
+                        {
+                            if (Convert.ToInt32(dataGridView4.Rows[c].Cells[2].Value.ToString()) > Convert.ToInt32(dataGridView4.Rows[c1].Cells[2].Value.ToString()))
+                            {
+                                rank--;
+                                rak = "";
+                            }
+                            else if (Convert.ToInt32(dataGridView4.Rows[c].Cells[2].Value.ToString()) == Convert.ToInt32(dataGridView4.Rows[c1].Cells[2].Value.ToString()))
+                            {
+                                rak = " - Tie";
+                                thigh = true;
+                            }
+                            MessageBox.Show(Convert.ToString(rank)); ;
+                        }
+                    }
+                    if (thigh)
+                    { this.dataGridView4.Rows[c].Cells[3].Value = Convert.ToString(rank) + rak; }
+                    else
+                    {
+                        this.dataGridView4.Rows[c].Cells[3].Value = (Convert.ToString(rank) + rak);
+                    }
+                }
+            }
+        }
+
+        private void dataGridView5_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView5.Rows.Count > 1)
+            {
+                for (int c = 0; c < dataGridView5.Rows.Count - 1; c++)
+                {
+                    Boolean thigh = false;
+                    int rank = 3;
+                    String rak = "";
+                    for (int c1 = 0; c1 < dataGridView5.Rows.Count - 1; c1++)
+                    {
+                        if (dataGridView5.Rows[c].Cells[2].Value.ToString().Length > 0)
+                        {
+                            if (Convert.ToInt32(dataGridView5.Rows[c].Cells[2].Value.ToString()) > Convert.ToInt32(dataGridView5.Rows[c1].Cells[2].Value.ToString()))
+                            {
+                                rank--;
+                                rak = "";
+                            }
+                            else if (Convert.ToInt32(dataGridView5.Rows[c].Cells[2].Value.ToString()) == Convert.ToInt32(dataGridView5.Rows[c1].Cells[2].Value.ToString()))
+                            {
+                                rak = " - Tie";
+                                thigh = true;
+                            }
+                            MessageBox.Show(Convert.ToString(rank)); ;
+                        }
+                    }
+                    if (thigh)
+                    { this.dataGridView5.Rows[c].Cells[3].Value = Convert.ToString(rank) + rak; }
+                    else
+                    {
+                        this.dataGridView5.Rows[c].Cells[3].Value = (Convert.ToString(rank) + rak);
+                    }
+                }
+            }
+        }
+
+        private void dataGridView6_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView6.Rows.Count > 1)
+            {
+                for (int c = 0; c < dataGridView6.Rows.Count - 1; c++)
+                {
+                    Boolean thigh = false;
+                    int rank = 3;
+                    String rak = "";
+                    for (int c1 = 0; c1 < dataGridView6.Rows.Count - 1; c1++)
+                    {
+                        if (dataGridView6.Rows[c].Cells[2].Value.ToString().Length > 0)
+                        {
+                            if (Convert.ToInt32(dataGridView6.Rows[c].Cells[2].Value.ToString()) > Convert.ToInt32(dataGridView6.Rows[c1].Cells[2].Value.ToString()))
+                            {
+                                rank--;
+                                rak = "";
+                            }
+                            else if (Convert.ToInt32(dataGridView6.Rows[c].Cells[2].Value.ToString()) == Convert.ToInt32(dataGridView6.Rows[c1].Cells[2].Value.ToString()))
+                            {
+                                rak = " - Tie";
+                                thigh = true;
+                            }
+                            MessageBox.Show(Convert.ToString(rank)); ;
+                        }
+                    }
+                    if (thigh)
+                    { this.dataGridView6.Rows[c].Cells[3].Value = Convert.ToString(rank) + rak; }
+                    else
+                    {
+                        this.dataGridView6.Rows[c].Cells[3].Value = (Convert.ToString(rank) + rak);
+                    }
+                }
             }
         }
     }
