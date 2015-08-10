@@ -30,21 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MrMsSTISummary));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.contestant_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Last_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Course_comboBox = new System.Windows.Forms.ComboBox();
             this.Gender_comboBox = new System.Windows.Forms.ComboBox();
             this.Criteria_comboBox = new System.Windows.Forms.ComboBox();
+            this.contestant_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.first_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Last_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
@@ -53,37 +54,13 @@
             this.first_name,
             this.Last_Name,
             this.Score});
-            this.dataGridView1.Location = new System.Drawing.Point(127, 188);
+            this.dataGridView1.Location = new System.Drawing.Point(128, 191);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView1.Size = new System.Drawing.Size(660, 287);
+            this.dataGridView1.Size = new System.Drawing.Size(600, 250);
             this.dataGridView1.TabIndex = 15;
-            // 
-            // contestant_Number
-            // 
-            this.contestant_Number.HeaderText = "Contestant Number";
-            this.contestant_Number.Name = "contestant_Number";
-            this.contestant_Number.ReadOnly = true;
-            // 
-            // first_name
-            // 
-            this.first_name.HeaderText = "First Name";
-            this.first_name.Name = "first_name";
-            this.first_name.ReadOnly = true;
-            // 
-            // Last_Name
-            // 
-            this.Last_Name.HeaderText = "Last Name";
-            this.Last_Name.Name = "Last_Name";
-            this.Last_Name.ReadOnly = true;
-            // 
-            // Score
-            // 
-            this.Score.HeaderText = "Score";
-            this.Score.Name = "Score";
-            this.Score.ReadOnly = true;
             // 
             // label1
             // 
@@ -156,6 +133,36 @@
             this.Criteria_comboBox.Text = "Casual Wear";
             this.Criteria_comboBox.SelectedIndexChanged += new System.EventHandler(this.Criteria_comboBox_SelectedIndexChanged);
             // 
+            // contestant_Number
+            // 
+            this.contestant_Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.contestant_Number.HeaderText = "Contestant Number";
+            this.contestant_Number.Name = "contestant_Number";
+            this.contestant_Number.ReadOnly = true;
+            this.contestant_Number.Width = 123;
+            // 
+            // first_name
+            // 
+            this.first_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.first_name.HeaderText = "First Name";
+            this.first_name.Name = "first_name";
+            this.first_name.ReadOnly = true;
+            // 
+            // Last_Name
+            // 
+            this.Last_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Last_Name.HeaderText = "Last Name";
+            this.Last_Name.Name = "Last_Name";
+            this.Last_Name.ReadOnly = true;
+            // 
+            // Score
+            // 
+            this.Score.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Score.HeaderText = "Score";
+            this.Score.Name = "Score";
+            this.Score.ReadOnly = true;
+            this.Score.Width = 60;
+            // 
             // MrMsSTISummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,12 +184,12 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox Course_comboBox;
+        private System.Windows.Forms.ComboBox Gender_comboBox;
+        private System.Windows.Forms.ComboBox Criteria_comboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn contestant_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn first_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Last_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Score;
-        private System.Windows.Forms.ComboBox Course_comboBox;
-        private System.Windows.Forms.ComboBox Gender_comboBox;
-        private System.Windows.Forms.ComboBox Criteria_comboBox;
     }
 }

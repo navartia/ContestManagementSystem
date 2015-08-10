@@ -20,11 +20,6 @@ namespace ContestManagementSystem
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            //Wrong Click :DD
-        }
-
         private void SingingIdolSummary_Load(object sender, EventArgs e)
         {
             String resultQuery = "SELECT contestant.firstname, contestant.lastname, AVG(judge_score.sum_of_score) AS total_score FROM (SELECT DISTINCT contestant_id, judge_id, SUM(score) AS sum_of_score FROM Score GROUP BY contestant_id, judge_id)  AS judge_score INNER JOIN contestant ON judge_score.contestant_id = contestant.contestant_id WHERE contestant.contest_id =  1 GROUP BY contestant.firstname, contestant.lastname";
