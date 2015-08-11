@@ -29,7 +29,7 @@ namespace ContestManagementSystem
             FormLoad();
         }
 
-        private void buttonSubmit_Click(object sender, EventArgs e)
+        private void buttonUpdate_Click(object sender, EventArgs e)
         {
 
             int[] score = new int[4];
@@ -208,7 +208,6 @@ namespace ContestManagementSystem
             foreach (Contestant contestant in contestantList[course, gender])
             {
                 comboBoxName.Items.Add(contestant.name);
-
             }
 
             comboBoxName.SelectedIndex = 0;

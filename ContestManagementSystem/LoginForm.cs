@@ -31,7 +31,7 @@ namespace ContestManagementSystem
         {
             this.Hide();
 
-            MrMsSTI mr = new MrMsSTI();
+            MrMsSTI_New mr = new MrMsSTI_New();
             mr.ShowDialog();
 
             this.Show();
