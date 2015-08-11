@@ -18,16 +18,16 @@ namespace ContestManagementSystem
 
         private int criteria_number;
         private int courseCount, genderCount, criteriaCount;
-        private String[] CATEGORY = { "CASUAL WEAR", "SPORTS WEAR", "FORMAL WEAR" };
+        private String[] CATEGORY = { "CASUAL WEAR", "SPORTS WEAR", "FORMAL WEAR", "QUESTION AND ANSWER", "OVERALL APPREARANCE" };
 
         public MrMsSTI_New()
         {
             InitializeComponent();
 
             dm = new DatabaseManager();
-            contestantData =new DataTable[3,3,2];
+            contestantData =new DataTable[5,3,2];
             courseCount = 3;
-            criteriaCount = 3;
+            criteriaCount = 5;
             genderCount = 2;
         }
 
@@ -80,14 +80,14 @@ namespace ContestManagementSystem
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            criteria_number = (criteria_number + 1) % 3;
+            criteria_number = (criteria_number + 1) % criteriaCount;
             labelCategory.Text = CATEGORY[criteria_number];
             LoadToDataGridView();
         }
 
         private void buttonPrev_Click(object sender, EventArgs e)
         {
-            criteria_number = (criteria_number + 2) % 3;
+            criteria_number = (criteria_number + 2) % criteriaCount;
             labelCategory.Text = CATEGORY[criteria_number];
             LoadToDataGridView();
         }
@@ -207,7 +207,6 @@ namespace ContestManagementSystem
                     }
 
                         dgv.Rows[i].Cells[3].Value = Convert.ToString(rank) + rankString;   
-                     
                 }
             }
         }
