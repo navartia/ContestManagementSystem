@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MrMsSTISummary2));
             this.comboBoxCourse = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.buttonPrint = new System.Windows.Forms.Button();
             this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contestant_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,13 +62,24 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.category,
+            this.contestant_number,
             this.name,
             this.score});
-            this.dataGridView1.Location = new System.Drawing.Point(155, 90);
+            this.dataGridView1.Location = new System.Drawing.Point(116, 90);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(313, 157);
+            this.dataGridView1.Size = new System.Drawing.Size(403, 157);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // buttonPrint
+            // 
+            this.buttonPrint.Location = new System.Drawing.Point(271, 253);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrint.TabIndex = 3;
+            this.buttonPrint.Text = "Print";
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // category
             // 
@@ -74,6 +87,13 @@
             this.category.HeaderText = "Category";
             this.category.Name = "category";
             this.category.Width = 74;
+            // 
+            // contestant_number
+            // 
+            this.contestant_number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.contestant_number.HeaderText = "No.";
+            this.contestant_number.Name = "contestant_number";
+            this.contestant_number.Width = 49;
             // 
             // name
             // 
@@ -95,6 +115,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(630, 295);
+            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBoxCourse);
             this.Name = "MrMsSTISummary2";
@@ -108,7 +129,9 @@
 
         private System.Windows.Forms.ComboBox comboBoxCourse;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonPrint;
         private System.Windows.Forms.DataGridViewTextBoxColumn category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contestant_number;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn score;
 

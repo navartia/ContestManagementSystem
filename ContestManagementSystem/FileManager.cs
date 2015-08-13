@@ -28,5 +28,27 @@ namespace ContestManagementSystem
 
             return filename;
         }
+
+        public String SaveFile()
+        {
+            String filename = "";
+            String filter = "All files (*.*)|*.*";
+            try
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = filter;
+                if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    filename = sfd.FileName;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+
+            return filename;
+        }
     }
 }
