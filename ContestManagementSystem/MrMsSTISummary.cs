@@ -13,7 +13,7 @@ namespace ContestManagementSystem
     public partial class MrMsSTISummary : Form
     {
         DatabaseManager dm;
-        DataTable[,,] summaryData = new DataTable[3, 3, 2];
+        DataTable[,,] summaryData = new DataTable[4, 3, 2];
 
         public MrMsSTISummary()
         {
@@ -22,24 +22,8 @@ namespace ContestManagementSystem
         }
 
         private void MrMsSTISummary_Load(object sender, EventArgs e)
-        {/*
-            try
-            {
-                //Incomplete Database To be Completed Once Mr And Ms STI Database has been given
-                //where clause Missing due to database(Incomplete);
-                string contestantQuery = "select firstName,middleName,lastname,id_number,contestant_number,course from contestant";
-                DataTable contestTable = dm.Select(contestantQuery);
-                dm.Insert(contestantQuery);
-
-                dm.Select(contestantQuery);
-                dataGridView1.DataSource = contestTable;
-            }
-            catch (Exception er)
-            {
-                MessageBox.Show("Please choose database. or " + er.Message);
-            } */
+        {
             LoadToDataTable();
-            LoadToDataGridView();
         }
 
         private void LoadToDataTable()
@@ -50,10 +34,18 @@ namespace ContestManagementSystem
                 {
                     for (int k = 0; k < 2; k++)
                     {
-                        String query = "SELECT contestant.contestant_number, contestant.firstname, contestant.lastname, AVG(score.score) AS score FROM contestant INNER JOIN score ON contestant.contestant_id = score.contestant_id WHERE score.criteria_id = " + (i + 5) + " AND contestant.course_id = " + (j + 1) + " AND contestant.gender_id = " + (k + 1) + " GROUP BY contestant.contestant_number, contestant.firstname, contestant.lastname, score";
-                        String query1 = "SELECT contestant.contestant_number, contestant.firstname, contestant.lastname, summary.average FROM (SELECT DISTINCT contestant_id, criteria_id    , ROUND(AVG(score), 2) AS average FROM score GROUP BY contestant_id, criteria_id)  AS summary INNER JOIN contestant ON summary.contestant_id = contestant.contestant_id WHERE summary.criteria_id = " + (i + 5) + " AND contestant.course_id  = " + (j + 1) + " AND contestant.gender_id = " + (k + 1) + " GROUP BY contestant.contestant_number, contestant.firstname, contestant.lastname, average";
-                        summaryData[i, j, k] = dm.Select(query1);
+                        String query = "SELECT contestant.contestant_number, contestant.firstname & \" \" & contestant.lastname AS name, summary.average FROM (SELECT DISTINCT contestant_id, criteria_id, ROUND(AVG(score), 2) AS average FROM score GROUP BY contestant_id, criteria_id)  AS summary INNER JOIN contestant ON summary.contestant_id = contestant.contestant_id WHERE summary.criteria_id = " + (i + 5) + " AND contestant.course_id  = " + (j + 1) + " AND contestant.gender_id = " + (k + 1) + " GROUP BY contestant.contestant_number, contestant.firstname, contestant.lastname, average ORDER BY average DESC";
+                        summaryData[i, j, k] = dm.Select(query);
                     }
+                }
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    String query = "SELECT contestant.contestant_number, contestant.firstname & \" \" & contestant.lastname AS name, finalScore.average FROM (SELECT summary1.contestant_id, summary1.score1 + summary2.score2 AS average FROM (SELECT contestant_id, SUM(score) / 9 AS score1 FROM score WHERE criteria_id BETWEEN 5 AND 7 GROUP BY contestant_id)  AS summary1 INNER JOIN (SELECT contestant_id, SUM(score) / 6 AS score2 FROM score WHERE criteria_id BETWEEN 8 AND 9 GROUP BY contestant_id)  AS summary2 ON summary1.contestant_id = summary2.contestant_id)  AS finalScore INNER JOIN contestant ON finalScore.contestant_id = contestant.contestant_id WHERE contestant.course_id = " + (i + 1) + " AND contestant.gender_id = " + (j + 1) + " ORDER BY average DESC";
+                    summaryData[3, i, j] = dm.Select(query);
                 }
             }
         }
@@ -67,24 +59,57 @@ namespace ContestManagementSystem
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = summaryData[criteria, course, gender];
             dataGridView1.Columns[0].DataPropertyName = "contestant_number";
-            dataGridView1.Columns[1].DataPropertyName = "firstname";
-            dataGridView1.Columns[2].DataPropertyName = "lastname";
-            dataGridView1.Columns[3].DataPropertyName = "average";
+            dataGridView1.Columns[1].DataPropertyName = "name";
+            dataGridView1.Columns[2].DataPropertyName = "average";
         }
 
         private void Course_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadToDataGridView();
+            if (Criteria_comboBox.SelectedIndex != -1 && Gender_comboBox.SelectedIndex != -1)
+                LoadToDataGridView();
         }
 
         private void Criteria_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadToDataGridView();
+            if (Gender_comboBox.SelectedIndex != -1 && Course_comboBox.SelectedIndex != -1)
+                LoadToDataGridView();
         }
 
         private void Gender_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadToDataGridView();
+            if(Criteria_comboBox.SelectedIndex != -1 && Course_comboBox.SelectedIndex != -1)
+                LoadToDataGridView();
+        }
+
+        private DataTable[] GetSummaryResult()
+        {
+            DataTable[] result = new DataTable[4];
+            for (int i = 0; i < 4; i++)
+            {
+                result[i] = new DataTable();
+                result[i].Columns.Add("contestant_number");
+                result[i].Columns.Add("name");
+                result[i].Columns.Add("average");
+                for (int j = 0; j < 3; j++)
+                {
+                    for (int k = 0; k < 2; k++)
+                    {
+                        result[i].Rows.Add(summaryData[i, j, k].Rows[0].ItemArray);
+                    }
+                }
+            }
+            
+            return result;
+        }
+
+        private void buttonSummary_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            MrMsSTISummary2 ms = new MrMsSTISummary2(GetSummaryResult());
+            ms.ShowDialog();
+
+            this.Show();
         }
     }
 }

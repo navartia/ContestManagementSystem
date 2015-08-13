@@ -172,7 +172,7 @@ namespace ContestManagementSystem
             foreach (DataRow row in table.Rows)
             {
                 Contestant contestant = new Contestant();
-                contestant.name = row["firstname"] + " " + row["middlename"] + " " + row["lastname"];
+                contestant.name = row["firstname"] + " " + row["lastname"];
                 contestant.gender = row["gender"].ToString();
                 contestant.id_number = row["id_number"].ToString();
                 contestant.course = row["course"].ToString();
