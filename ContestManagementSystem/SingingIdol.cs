@@ -13,7 +13,7 @@ namespace ContestManagementSystem
 {
     public partial class SingingIdol : Form
     {
-        ArrayList[,] contestantList;
+        ArrayList[] contestantList;
         DatabaseManager dm;
 
         public SingingIdol()
@@ -21,77 +21,87 @@ namespace ContestManagementSystem
             InitializeComponent();
 
             dm = new DatabaseManager();
-            contestantList = new ArrayList[2, 2];
         }
 
         private void SingingIdol_Load(object sender, EventArgs e)
         {
+            contestantList = new ArrayList[3];
             FormLoad();
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            int[] score = new int[4];
-            score[0] = Convert.ToInt32(textBoxVQ.Text);
-            score[1] = Convert.ToInt32(textBoxOrig.Text);
-            score[2] = Convert.ToInt32(textBoxSQ.Text);
-            score[3] = Convert.ToInt32(textBoxSP.Text);
+            DialogResult dialogResult = MessageBox.Show("Are you sure?", "Save all data.", MessageBoxButtons.YesNo);
 
-            Contestant selected = GetSelectedContestant();
-            selected.score = score;
-
-            String scoreQuery = "SELECT * FROM score WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id;
-            DataTable dt = dm.Select(scoreQuery);
-
-            if (dt.Rows.Count == 0)
+            if (dialogResult == DialogResult.Yes)
             {
-                String scoreInsertQuery = "INSERT INTO score (criteria_id, contestant_id, judge_id, score) VALUES (1, " + selected.contestant_id + ", " + selected.judge_id + ", " + score[0] + ")";
-                dm.Insert(scoreInsertQuery);
+                int[] score = new int[4];
+                score[0] = Convert.ToInt32(textBoxVQ.Text);
+                score[1] = Convert.ToInt32(textBoxOrig.Text);
+                score[2] = Convert.ToInt32(textBoxSQ.Text);
+                score[3] = Convert.ToInt32(textBoxSP.Text);
 
-                scoreInsertQuery = "INSERT INTO score (criteria_id, contestant_id, judge_id, score) VALUES (2, " + selected.contestant_id + ", " + selected.judge_id + ", " + score[1] + ")";
-                dm.Insert(scoreInsertQuery);
+                Contestant selected = GetSelectedContestant();
+                selected.score = score;
 
-                scoreInsertQuery = "INSERT INTO score (criteria_id, contestant_id, judge_id, score) VALUES (3, " + selected.contestant_id + ", " + selected.judge_id + ", " + score[2] + ")";
-                dm.Insert(scoreInsertQuery);
+                String scoreQuery = "SELECT * FROM score WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id;
+                DataTable dt = dm.Select(scoreQuery);
 
-                scoreInsertQuery = "INSERT INTO score (criteria_id, contestant_id, judge_id, score) VALUES (4, " + selected.contestant_id + ", " + selected.judge_id + ", " + score[3] + ")";
-                dm.Insert(scoreInsertQuery);
+                if (dt.Rows.Count == 0)
+                {
+                    String scoreInsertQuery = "INSERT INTO score (criteria_id, contestant_id, judge_id, score) VALUES (1, " + selected.contestant_id + ", " + selected.judge_id + ", " + score[0] + ")";
+                    dm.Insert(scoreInsertQuery);
 
-                MessageBox.Show("Data has been Saved!");
-            }
-            else
-            {
-                String scoreInsertQuery = "UPDATE score SET score = " + score[0] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 1";
-                dm.Update(scoreInsertQuery);
+                    scoreInsertQuery = "INSERT INTO score (criteria_id, contestant_id, judge_id, score) VALUES (2, " + selected.contestant_id + ", " + selected.judge_id + ", " + score[1] + ")";
+                    dm.Insert(scoreInsertQuery);
 
-                scoreInsertQuery = "UPDATE score SET score = " + score[1] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 2";
-                dm.Update(scoreInsertQuery);
+                    scoreInsertQuery = "INSERT INTO score (criteria_id, contestant_id, judge_id, score) VALUES (3, " + selected.contestant_id + ", " + selected.judge_id + ", " + score[2] + ")";
+                    dm.Insert(scoreInsertQuery);
 
-                scoreInsertQuery = "UPDATE score SET score = " + score[2] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 3";
-                dm.Update(scoreInsertQuery);
+                    scoreInsertQuery = "INSERT INTO score (criteria_id, contestant_id, judge_id, score) VALUES (4, " + selected.contestant_id + ", " + selected.judge_id + ", " + score[3] + ")";
+                    dm.Insert(scoreInsertQuery);
 
-                scoreInsertQuery = "UPDATE score SET score = " + score[3] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 4";
-                dm.Update(scoreInsertQuery);
+                    MessageBox.Show("Data has been Saved!");
+                }
+                else
+                {
+                    String scoreInsertQuery = "UPDATE score SET score = " + score[0] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 1";
+                    dm.Update(scoreInsertQuery);
 
-                MessageBox.Show("Data has been Updated!");
+                    scoreInsertQuery = "UPDATE score SET score = " + score[1] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 2";
+                    dm.Update(scoreInsertQuery);
+
+                    scoreInsertQuery = "UPDATE score SET score = " + score[2] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 3";
+                    dm.Update(scoreInsertQuery);
+
+                    scoreInsertQuery = "UPDATE score SET score = " + score[3] + " WHERE score.contestant_id = " + selected.contestant_id + " AND score.judge_id = " + selected.judge_id + " AND score.criteria_id = 4";
+                    dm.Update(scoreInsertQuery);
+
+                    MessageBox.Show("Data has been Updated!");
+                }
             }
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            textBoxVQ.Text = "0";
-            textBoxOrig.Text = "0";
-            textBoxSQ.Text = "0";
-            textBoxSP.Text = "0";
+            DialogResult dialogResult = MessageBox.Show("Are you sure?", "Clear all data.", MessageBoxButtons.YesNo);
 
-            int[] score = new int[4];
-            score[0] = Convert.ToInt32(textBoxVQ.Text);
-            score[1] = Convert.ToInt32(textBoxOrig.Text);
-            score[2] = Convert.ToInt32(textBoxSQ.Text);
-            score[3] = Convert.ToInt32(textBoxSP.Text);
+            if (dialogResult == DialogResult.Yes)
+            {
+                textBoxVQ.Text = "0";
+                textBoxOrig.Text = "0";
+                textBoxSQ.Text = "0";
+                textBoxSP.Text = "0";
 
-            Contestant selected = GetSelectedContestant();
-            selected.score = score;
+                int[] score = new int[4];
+                score[0] = Convert.ToInt32(textBoxVQ.Text);
+                score[1] = Convert.ToInt32(textBoxOrig.Text);
+                score[2] = Convert.ToInt32(textBoxSQ.Text);
+                score[3] = Convert.ToInt32(textBoxSP.Text);
+
+                Contestant selected = GetSelectedContestant();
+                selected.score = score;
+            }
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
@@ -99,7 +109,7 @@ namespace ContestManagementSystem
             int index = (comboBoxName.SelectedIndex + 1) % comboBoxName.Items.Count;
 
             comboBoxName.SelectedIndex = index;
-            SetSelectedContestant(comboBoxCourse.SelectedIndex, comboBoxGender.SelectedIndex, index);
+            SetSelectedContestant(comboBoxCourse.SelectedIndex, index);
         }
 
         private void buttonPrev_Click(object sender, EventArgs e)
@@ -116,7 +126,6 @@ namespace ContestManagementSystem
             }
 
             SetSelectedContestant(comboBoxCourse.SelectedIndex,
-                                  comboBoxGender.SelectedIndex,
                                   comboBoxName.SelectedIndex);
         }
 
@@ -128,40 +137,27 @@ namespace ContestManagementSystem
         private void comboBoxName_SelectedIndexChanged(object sender, EventArgs e)
         {
             SetSelectedContestant(comboBoxCourse.SelectedIndex,
-                                  comboBoxGender.SelectedIndex,
                                   comboBoxName.SelectedIndex);
-        }
-
-        private void comboBoxGender_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBoxCourse.SelectedIndex != -1)
-                    SetSelectedList(comboBoxCourse.SelectedIndex, comboBoxGender.SelectedIndex);
         }
 
         private void comboBoxCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBoxGender.SelectedIndex != -1)
-                SetSelectedList(comboBoxCourse.SelectedIndex, comboBoxGender.SelectedIndex);
+            SetSelectedList(comboBoxCourse.SelectedIndex);
         }
         
         private void FormLoad()
         {
             String contestID = "1";
-            for (int i = 0; i < 2; i++)
-            {
-                for(int j = 0; j < 2; j++)
-                {
-                    String course = comboBoxCourse.Items[i].ToString();
-                    String gender = comboBoxGender.Items[j].ToString();
-                    String contestantQuery = "SELECT * FROM contestant WHERE contest_id = " + contestID + " AND gender = '" + gender + "' AND course = '" + course + "'";
-                    DataTable contestTable = dm.Select(contestantQuery);
 
-                    contestantList[i, j] = LoadDataTableToList(contestTable);
-                }
+            for (int i = 0; i < 3; i++)
+            {
+                String contestantQuery = "SELECT * FROM contestant WHERE contest_id = " + contestID + "AND course_id = " + (i + 1);
+                DataTable contestTable = dm.Select(contestantQuery);
+
+                contestantList[i] = LoadDataTableToList(contestTable);
             }
 
             comboBoxCourse.SelectedIndex = 0;
-            comboBoxGender.SelectedIndex = 0;
         }
         
         private ArrayList LoadDataTableToList(DataTable table)
@@ -171,9 +167,7 @@ namespace ContestManagementSystem
             {
                 Contestant contestant = new Contestant();
                 contestant.name = row["firstname"] + " " + row["middlename"] + " " + row["lastname"];
-                contestant.gender = row["gender"].ToString();
                 contestant.id_number = row["id_number"].ToString();
-                contestant.course = row["course"].ToString();
                 contestant.contact_number = row["contact_number"].ToString();
 
                 contestant.contest_id = Convert.ToInt32(row["contest_id"]);
@@ -200,9 +194,9 @@ namespace ContestManagementSystem
             return list;
         }
         
-        private void SetSelectedList(int course, int gender) {
+        private void SetSelectedList(int course) {
             comboBoxName.Items.Clear();
-            foreach(Contestant contestant in contestantList[course, gender])
+            foreach(Contestant contestant in contestantList[course])
             {
                 comboBoxName.Items.Add(contestant.name);
 
@@ -210,16 +204,15 @@ namespace ContestManagementSystem
 
             comboBoxName.SelectedIndex = 0;
             SetSelectedContestant(comboBoxCourse.SelectedIndex,
-                                  comboBoxGender.SelectedIndex,
                                   comboBoxName.SelectedIndex);
         }
 
-        private void SetSelectedContestant(int course, int gender, int name)
+        private void SetSelectedContestant(int course, int name)
         {
-            Contestant selected = contestantList[course, gender][name] as Contestant;
+            Contestant selected = contestantList[course][name] as Contestant;
 
             labelName.Text = selected.name;
-            labelNumber.Text = Convert.ToString(selected.contestant_number);
+            labelNumber.Text = "Contestant # " + Convert.ToString(selected.contestant_number);
 
             int[] score = selected.score;
             textBoxVQ.Text = Convert.ToString(score[0]);
@@ -231,11 +224,216 @@ namespace ContestManagementSystem
         private Contestant GetSelectedContestant()
         {
             int indexCourse = comboBoxCourse.SelectedIndex;
-            int indexGender = comboBoxGender.SelectedIndex;
             int indexName = comboBoxName.SelectedIndex;
-            Contestant selected = contestantList[indexCourse, indexGender][indexName] as Contestant;
+            Contestant selected = contestantList[indexCourse][indexName] as Contestant;
 
             return selected;
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure?", "Close program.", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Dispose();
+            }
+        }
+
+        private void textBoxVQ_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == '.')
+            {
+                int verify = 0;
+
+                if (e.KeyChar == '.')
+                {
+
+                    for (int ctr = 0; ctr < textBoxVQ.Text.Length; ctr++)
+                    {
+                        if (textBoxVQ.Text[ctr] == '.')
+                        {
+                            verify++;
+                        }
+                    }
+                    //  MessageBox.Show(Convert.ToString(verify));
+                    if (verify >= 1)
+                    {
+                        e.Handled = true;
+                    }
+                }
+                else
+                {
+                    e.Handled = false;
+                }
+
+            }
+            else if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxOrig_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == '.')
+            {
+                int verify = 0;
+
+                if (e.KeyChar == '.')
+                {
+
+                    for (int ctr = 0; ctr < textBoxOrig.Text.Length; ctr++)
+                    {
+                        if (textBoxOrig.Text[ctr] == '.')
+                        {
+                            verify++;
+                        }
+                    }
+                    //  MessageBox.Show(Convert.ToString(verify));
+                    if (verify >= 1)
+                    {
+                        e.Handled = true;
+                    }
+                }
+                else
+                {
+                    e.Handled = false;
+                }
+
+            }
+            else if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxSQ_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == '.')
+            {
+                int verify = 0;
+
+                if (e.KeyChar == '.')
+                {
+
+                    for (int ctr = 0; ctr < textBoxSQ.Text.Length; ctr++)
+                    {
+                        if (textBoxSQ.Text[ctr] == '.')
+                        {
+                            verify++;
+                        }
+                    }
+                    //  MessageBox.Show(Convert.ToString(verify));
+                    if (verify >= 1)
+                    {
+                        e.Handled = true;
+                    }
+                }
+                else
+                {
+                    e.Handled = false;
+                }
+
+            }
+            else if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxSP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == '.')
+            {
+                int verify = 0;
+
+                if (e.KeyChar == '.')
+                {
+
+                    for (int ctr = 0; ctr < textBoxSP.Text.Length; ctr++)
+                    {
+                        if (textBoxSP.Text[ctr] == '.')
+                        {
+                            verify++;
+                        }
+                    }
+                    //  MessageBox.Show(Convert.ToString(verify));
+                    if (verify >= 1)
+                    {
+                        e.Handled = true;
+                    }
+                }
+                else
+                {
+                    e.Handled = false;
+                }
+
+            }
+            else if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxSP_TextChanged(object sender, EventArgs e)
+        {
+            int hello = textBoxSP.Text.Length;
+            if (textBoxSP.Text.Length > 0)
+            {
+                if (Char.IsNumber(textBoxSP.Text[hello - 1]))
+                {
+                    if (Convert.ToDouble(textBoxSP.Text) > 10)
+                    {
+                        textBoxSP.Text = "10";
+                    }
+                }
+            }
+        }
+
+        private void textBoxVQ_TextChanged(object sender, EventArgs e)
+        {
+            int hello = textBoxVQ.Text.Length;
+            if (textBoxVQ.Text.Length > 0)
+            {
+                if (Char.IsNumber(textBoxVQ.Text[hello - 1]))
+                {
+                    if (Convert.ToDouble(textBoxVQ.Text) > 50)
+                    {
+                        textBoxVQ.Text = "50";
+                    }
+                }
+            }
+        }
+
+        private void textBoxOrig_TextChanged(object sender, EventArgs e)
+        {
+            int hello = textBoxOrig.Text.Length;
+            if (textBoxOrig.Text.Length > 0)
+            {
+                if (Char.IsNumber(textBoxOrig.Text[hello - 1]))
+                {
+                    if (Convert.ToDouble(textBoxOrig.Text) > 30)
+                    {
+                        textBoxOrig.Text = "30";
+                    }
+                }
+            }
+        }
+
+        private void textBoxSQ_TextChanged(object sender, EventArgs e)
+        {
+            int hello = textBoxSQ.Text.Length;
+            if (textBoxSQ.Text.Length > 0)
+            {
+                if (Char.IsNumber(textBoxSQ.Text[hello - 1]))
+                {
+                    if (Convert.ToDouble(textBoxSQ.Text) > 10)
+                    {
+                        textBoxSQ.Text = "10";
+                    }
+                }
+            }
         }
     }
 }
