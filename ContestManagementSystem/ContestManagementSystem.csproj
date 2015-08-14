@@ -92,17 +92,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MrMsSTISummary2.cs">
+    <Compile Include="MrMsSTIPrintReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MrMsSTISummary2.Designer.cs">
-      <DependentUpon>MrMsSTISummary2.cs</DependentUpon>
+    <Compile Include="MrMsSTIPrintReport.Designer.cs">
+      <DependentUpon>MrMsSTIPrintReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="MsMsSTI_New.cs">
+    <Compile Include="MsMsSTI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MsMsSTI_New.Designer.cs">
-      <DependentUpon>MsMsSTI_New.cs</DependentUpon>
+    <Compile Include="MsMsSTI.Designer.cs">
+      <DependentUpon>MsMsSTI.cs</DependentUpon>
     </Compile>
     <Compile Include="Contestant.cs" />
     <Compile Include="ContestControl.cs">
@@ -118,12 +118,6 @@
     </Compile>
     <Compile Include="MrMsSTISummary.Designer.cs">
       <DependentUpon>MrMsSTISummary.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MrMsSTI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MrMsSTI.Designer.cs">
-      <DependentUpon>MrMsSTI.cs</DependentUpon>
     </Compile>
     <Compile Include="NetworkManager.cs" />
     <Compile Include="Program.cs" />
@@ -164,11 +158,11 @@
     <Compile Include="SportsWear.Designer.cs">
       <DependentUpon>SportsWear.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="MrMsSTISummary2.resx">
-      <DependentUpon>MrMsSTISummary2.cs</DependentUpon>
+    <EmbeddedResource Include="MrMsSTIPrintReport.resx">
+      <DependentUpon>MrMsSTIPrintReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MsMsSTI_New.resx">
-      <DependentUpon>MsMsSTI_New.cs</DependentUpon>
+    <EmbeddedResource Include="MsMsSTI.resx">
+      <DependentUpon>MsMsSTI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContestControl.resx">
       <DependentUpon>ContestControl.cs</DependentUpon>
@@ -184,9 +178,6 @@
     </Compile>
     <EmbeddedResource Include="MrMsSTISummary.resx">
       <DependentUpon>MrMsSTISummary.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MrMsSTI.resx">
-      <DependentUpon>MrMsSTI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

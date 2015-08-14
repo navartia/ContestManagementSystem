@@ -1,6 +1,6 @@
 ﻿namespace ContestManagementSystem
 {
-    partial class MrMsSTISummary2
+    partial class MrMsSTIPrintReport
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MrMsSTISummary2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MrMsSTIPrintReport));
             this.comboBoxCourse = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonPrint = new System.Windows.Forms.Button();
             this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contestant_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.score = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +49,7 @@
             "Sports Wear",
             "Formal Wear",
             "Final Round"});
-            this.comboBoxCourse.Location = new System.Drawing.Point(215, 37);
+            this.comboBoxCourse.Location = new System.Drawing.Point(208, 40);
             this.comboBoxCourse.Name = "comboBoxCourse";
             this.comboBoxCourse.Size = new System.Drawing.Size(200, 24);
             this.comboBoxCourse.TabIndex = 0;
@@ -70,16 +70,6 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(403, 157);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // buttonPrint
-            // 
-            this.buttonPrint.Location = new System.Drawing.Point(271, 253);
-            this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(75, 23);
-            this.buttonPrint.TabIndex = 3;
-            this.buttonPrint.Text = "Print";
-            this.buttonPrint.UseVisualStyleBackColor = true;
-            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // category
             // 
@@ -108,7 +98,17 @@
             this.score.Name = "score";
             this.score.Width = 60;
             // 
-            // MrMsSTISummary2
+            // buttonPrint
+            // 
+            this.buttonPrint.Location = new System.Drawing.Point(271, 253);
+            this.buttonPrint.Name = "buttonPrint";
+            this.buttonPrint.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrint.TabIndex = 3;
+            this.buttonPrint.Text = "Print";
+            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
+            // MrMsSTIPrintReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,8 +118,9 @@
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBoxCourse);
-            this.Name = "MrMsSTISummary2";
-            this.Text = "MrMsSTISummary2";
+            this.Name = "MrMsSTIPrintReport";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Print Report";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

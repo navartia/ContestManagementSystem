@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ContestManagementSystem
 {
-    public partial class MrMsSTI_New : Form
+    public partial class MrMsSTI : Form
     {
         private DatabaseManager dm;
         private DataTable[, ,] contestantData;
@@ -22,7 +22,7 @@ namespace ContestManagementSystem
         private int[] criteria_limit = { 10, 10, 10, 15, 5 };
         private int rowIndex;
 
-        public MrMsSTI_New()
+        public MrMsSTI()
         {
             InitializeComponent();
 

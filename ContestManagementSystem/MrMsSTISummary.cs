@@ -102,11 +102,11 @@ namespace ContestManagementSystem
             return result;
         }
 
-        private void buttonSummary_Click(object sender, EventArgs e)
+        private void buttonPrintReport_Click(object sender, EventArgs e)
         {
             this.Hide();
 
-            MrMsSTISummary2 ms = new MrMsSTISummary2(GetSummaryResult());
+            MrMsSTIPrintReport ms = new MrMsSTIPrintReport(GetSummaryResult());
             ms.ShowDialog();
 
             this.Show();

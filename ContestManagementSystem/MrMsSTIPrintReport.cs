@@ -12,12 +12,12 @@ using iTextSharp.text.pdf;
 
 namespace ContestManagementSystem
 {
-    public partial class MrMsSTISummary2 : Form
+    public partial class MrMsSTIPrintReport : Form
     {
         private DataTable[] summaryResult;
         private FileManager fm;
 
-        public MrMsSTISummary2(DataTable[] summaryResult)
+        public MrMsSTIPrintReport(DataTable[] summaryResult)
         {
             this.summaryResult = summaryResult;
             fm = new FileManager();
@@ -104,7 +104,6 @@ namespace ContestManagementSystem
 
                         doc.Close();
                     }
-
                 }
             }
         }

@@ -35,10 +35,10 @@
             this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonPrintReport = new System.Windows.Forms.Button();
             this.Course_comboBox = new System.Windows.Forms.ComboBox();
             this.Gender_comboBox = new System.Windows.Forms.ComboBox();
             this.Criteria_comboBox = new System.Windows.Forms.ComboBox();
-            this.buttonSummary = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -103,7 +103,7 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.buttonSummary);
+            this.panel1.Controls.Add(this.buttonPrintReport);
             this.panel1.Controls.Add(this.Course_comboBox);
             this.panel1.Controls.Add(this.Gender_comboBox);
             this.panel1.Controls.Add(this.Criteria_comboBox);
@@ -114,6 +114,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(910, 494);
             this.panel1.TabIndex = 17;
+            // 
+            // buttonPrintReport
+            // 
+            this.buttonPrintReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrintReport.Location = new System.Drawing.Point(391, 355);
+            this.buttonPrintReport.Name = "buttonPrintReport";
+            this.buttonPrintReport.Size = new System.Drawing.Size(120, 30);
+            this.buttonPrintReport.TabIndex = 19;
+            this.buttonPrintReport.Text = "Print Report";
+            this.buttonPrintReport.UseVisualStyleBackColor = true;
+            this.buttonPrintReport.Click += new System.EventHandler(this.buttonPrintReport_Click);
             // 
             // Course_comboBox
             // 
@@ -159,17 +170,6 @@
             this.Criteria_comboBox.TabIndex = 16;
             this.Criteria_comboBox.SelectedIndexChanged += new System.EventHandler(this.Criteria_comboBox_SelectedIndexChanged);
             // 
-            // buttonSummary
-            // 
-            this.buttonSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSummary.Location = new System.Drawing.Point(419, 340);
-            this.buttonSummary.Name = "buttonSummary";
-            this.buttonSummary.Size = new System.Drawing.Size(86, 30);
-            this.buttonSummary.TabIndex = 19;
-            this.buttonSummary.Text = "Summary";
-            this.buttonSummary.UseVisualStyleBackColor = true;
-            this.buttonSummary.Click += new System.EventHandler(this.buttonSummary_Click);
-            // 
             // MrMsSTISummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,7 +177,8 @@
             this.ClientSize = new System.Drawing.Size(910, 487);
             this.Controls.Add(this.panel1);
             this.Name = "MrMsSTISummary";
-            this.Text = "MrandMsSTISummary";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Summary";
             this.Load += new System.EventHandler(this.MrMsSTISummary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -197,6 +198,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn contestant_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Score;
-        private System.Windows.Forms.Button buttonSummary;
+        private System.Windows.Forms.Button buttonPrintReport;
     }
 }

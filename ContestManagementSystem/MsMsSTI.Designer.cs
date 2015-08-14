@@ -1,6 +1,6 @@
 ﻿namespace ContestManagementSystem
 {
-    partial class MrMsSTI_New
+    partial class MrMsSTI
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MrMsSTI_New));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MrMsSTI));
             this.CPEF_ContestantNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPEF_ContestantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPEF_ContestantScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
