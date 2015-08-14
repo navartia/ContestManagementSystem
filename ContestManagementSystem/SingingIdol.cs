@@ -438,7 +438,7 @@ namespace ContestManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SingingIdol si = new SingingIdol();
+            SingingIdolSummary si = new SingingIdolSummary();
             si.ShowDialog();
         }
     }
