@@ -56,12 +56,15 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -71,12 +74,12 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Cambria", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(4)))), ((int)(((byte)(9)))));
-            this.label6.Location = new System.Drawing.Point(273, 97);
+            this.label6.Location = new System.Drawing.Point(326, 100);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(803, 47);
+            this.label6.Size = new System.Drawing.Size(621, 47);
             this.label6.TabIndex = 14;
-            this.label6.Text = "STI GLOBAL CITY - SINGING IDOL CONTEST";
+            this.label6.Text = "STI GLOBAL CITY - SINGING IDOL";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel1
@@ -159,7 +162,7 @@
             this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRefresh.ForeColor = System.Drawing.Color.Black;
-            this.buttonRefresh.Location = new System.Drawing.Point(497, 77);
+            this.buttonRefresh.Location = new System.Drawing.Point(175, 7);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(100, 31);
             this.buttonRefresh.TabIndex = 30;
@@ -419,11 +422,11 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.comboBoxName, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBoxCourse, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label8, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.buttonRefresh, 1, 3);
             this.tableLayoutPanel2.ForeColor = System.Drawing.Color.White;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(334, 66);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -446,6 +449,29 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(600, 200);
             this.panel3.TabIndex = 54;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(281, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 31);
+            this.button1.TabIndex = 53;
+            this.button1.Text = "SUMMARY";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.buttonRefresh);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(213, 69);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(384, 100);
+            this.panel5.TabIndex = 56;
             // 
             // SingingIdol
             // 
@@ -474,6 +500,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -507,5 +534,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button1;
     }
 }

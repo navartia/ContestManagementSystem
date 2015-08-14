@@ -96,6 +96,7 @@ namespace ContestManagementSystem
 
             }
         }
+
         private void buttonNext_Click(object sender, EventArgs e)
         {
             criteria_number = (criteria_number + 1) % criteriaCount;
@@ -128,6 +129,7 @@ namespace ContestManagementSystem
 
         private void LoadToDataGridView()
         {
+            labelInstructions.Text = "GENERAL INSTRUCTIONS\nFinal Score will be computed as follows:\n(Casual Wear + Formal Wear + Sports Wear) / 3 +\n(Question and Answer + Overall Appearance) / 2\n\n" + CATEGORY[criteria_number] + "\nScore ranges from 0 to " + criteria_limit[criteria_number] + ".";
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = contestantData[criteria_number, 0, 0];
             dataGridView1.Columns[0].DataPropertyName = "contestant_number";
@@ -178,38 +180,37 @@ namespace ContestManagementSystem
             {
                 for (int i = 0; i < count; i++)
                 {
-                    int rank = 1;
-                    String rankString = "";
+                        int rank = 1;
+                        String rankString = "";
 
-                    String scoreValueI = dgv.Rows[i].Cells[2].Value.ToString();
-                    for (int j = 0; j < count; j++)
-                    {
-                        String scoreValueJ = dgv.Rows[j].Cells[2].Value.ToString();
-                        if (scoreValueI.Length > 0 && scoreValueJ.Length > 0)
+                        String scoreValueI = dgv.Rows[i].Cells[2].Value.ToString();
+                        for (int j = 0; j < count; j++)
                         {
-                            double scoreI = Convert.ToDouble(scoreValueI);
-                            double scoreJ = Convert.ToDouble(scoreValueJ);
-                            if (scoreI < scoreJ)
+                            String scoreValueJ = dgv.Rows[j].Cells[2].Value.ToString();
+                            if (scoreValueI.Length > 0 && scoreValueJ.Length > 0)
                             {
-                                rank++;
+                                    double scoreI = Convert.ToDouble(scoreValueI);
+                                    double scoreJ = Convert.ToDouble(scoreValueJ);
+                                    if (scoreI < scoreJ)
+                                    {
+                                        rank++;
+                                    }
+                                    else if (scoreI == scoreJ && i != j)
+                                    {
+                                        rankString = " - Tie";
+                                    }
                             }
-                            else if (scoreI == scoreJ && i != j)
+                            else
                             {
-                                rankString = " - Tie";
+                                MessageBox.Show("Please don't leave the score blank.");
+                                return;
                             }
                         }
-                        else
-                        {
-                            MessageBox.Show("Leaving a cell blank is not allowed. Input at least 1. (maawa ka naman sa contestant)");
-                            return;
-                        }
+                        dgv.Rows[i].Cells[3].Value = Convert.ToString(rank) + rankString;
                     }
 
-                    dgv.Rows[i].Cells[3].Value = Convert.ToString(rank) + rankString;
-                }
             }
         }
-
         TextBox tb;
         private void CheckFormatInput(DataGridView dgv, DataGridViewEditingControlShowingEventArgs e)
         {
@@ -228,46 +229,47 @@ namespace ContestManagementSystem
         {
             if (tb.Text.Length > 0)
             {
-                Boolean disimal = false;
-                textBox1.Text = tb.Text;
-                for (int ctr = 0; ctr < tb.Text.Length; ctr++)
-                {
-                    if (tb.Text[ctr] == '.')
+                
+                    Boolean disimal = false;
+                    textBox1.Text = tb.Text;
+                    for (int ctr = 0; ctr < tb.Text.Length; ctr++)
                     {
-                        if (ctr + 1 < tb.Text.Length)
+                        if (tb.Text[ctr] == '.')
                         {
-                            if (Char.IsNumber(tb.Text[ctr + 1]))
+                            if (ctr + 1 < tb.Text.Length)
                             {
-                                disimal = true;
-                            }
-                            else
-                            {
-                                MessageBox.Show("Invalid format");
-                                disimal = false;
-                                tb.Text = "";
+                                if (Char.IsNumber(tb.Text[ctr + 1]))
+                                {
+                                    disimal = true;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("The input format is not valid.");
+                                    disimal = false;
+                                    tb.Text = "";
+                                }
                             }
                         }
+                        else if (!Char.IsNumber(tb.Text[ctr]))
+                        {
+                            disimal = false;
+                            tb.Text = "";
+                        }
+                        else
+                        {
+                            disimal = true;
+                        }
                     }
-                    else if (!Char.IsNumber(tb.Text[ctr]))
+                    if (disimal)
                     {
-                        disimal = false;
-                        tb.Text = "";
-                    }
-                    else
-                    {
-                        disimal = true;
+                        if (Convert.ToDouble(tb.Text) > criteria_limit[criteria_number])
+                        {
+                            MessageBox.Show("Please input the score within 0 to " + criteria_limit[criteria_number] + " only.");//Convert.ToString(tb.Text.Length));
+                            tb.Text = criteria_limit[criteria_number].ToString();
+                            dataGridView1.Rows[rowIndex].Cells[2].Value = criteria_limit[criteria_number].ToString();
+                        }
                     }
                 }
-                if (disimal)
-                {
-                    if (Convert.ToDouble(tb.Text) > criteria_limit[criteria_number])
-                    {
-                        MessageBox.Show("0 to " + criteria_limit[criteria_number] + " is the only allowed input.");//Convert.ToString(tb.Text.Length));
-                        tb.Text = criteria_limit[criteria_number].ToString();
-                        dataGridView1.Rows[rowIndex].Cells[2].Value = criteria_limit[criteria_number].ToString();
-                    }
-                }
-            }
         }
 
         private void Control_KeyPress(object sender, KeyPressEventArgs e)
@@ -380,7 +382,12 @@ namespace ContestManagementSystem
             CheckFormatInput(dataGridView2, e);
         }
 
-        
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            MrMsSTISummary ms = new MrMsSTISummary();
+            ms.ShowDialog();
+           
+        }
     }
 }

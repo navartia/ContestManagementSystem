@@ -66,5 +66,25 @@ namespace ContestManagementSystem
         {
             this.Dispose();
         }
+
+        private void ContestControl_Load(object sender, EventArgs e)
+        {
+              string Judge;
+            Judge = Properties.Settings.Default.JudgeID.ToString();
+            char checker;
+            checker = Convert.ToChar(Judge);
+            if (checker == '1' || checker == '2' || checker == '3')
+            {
+                buttonRegistration.Enabled = false;
+                buttonMasterList.Enabled = false;
+                buttonMrSTI.Enabled = false;
+            }
+            else if (checker == '4' || checker == '5' || checker == '6')
+            {
+                buttonRegistration.Enabled = false;
+                buttonMasterList.Enabled = false;
+                buttonSingingIdol.Enabled = false;
+            }
+        }
     }
 }

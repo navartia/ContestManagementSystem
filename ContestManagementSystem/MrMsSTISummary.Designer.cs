@@ -39,6 +39,7 @@
             this.Course_comboBox = new System.Windows.Forms.ComboBox();
             this.Gender_comboBox = new System.Windows.Forms.ComboBox();
             this.Criteria_comboBox = new System.Windows.Forms.ComboBox();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +104,7 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.buttonRefresh);
             this.panel1.Controls.Add(this.buttonPrintReport);
             this.panel1.Controls.Add(this.Course_comboBox);
             this.panel1.Controls.Add(this.Gender_comboBox);
@@ -118,7 +120,7 @@
             // buttonPrintReport
             // 
             this.buttonPrintReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrintReport.Location = new System.Drawing.Point(391, 355);
+            this.buttonPrintReport.Location = new System.Drawing.Point(463, 342);
             this.buttonPrintReport.Name = "buttonPrintReport";
             this.buttonPrintReport.Size = new System.Drawing.Size(120, 30);
             this.buttonPrintReport.TabIndex = 19;
@@ -170,6 +172,17 @@
             this.Criteria_comboBox.TabIndex = 16;
             this.Criteria_comboBox.SelectedIndexChanged += new System.EventHandler(this.Criteria_comboBox_SelectedIndexChanged);
             // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(330, 342);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(120, 30);
+            this.buttonRefresh.TabIndex = 22;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
             // MrMsSTISummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,5 +212,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Score;
         private System.Windows.Forms.Button buttonPrintReport;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

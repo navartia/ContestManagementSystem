@@ -49,7 +49,7 @@ namespace ContestManagementSystem
             ServerSettings ss = new ServerSettings();
             ss.ShowDialog();
 
-            this.Show();
+           // this.Show();
         }
 
         private void buttonContestControl_Click(object sender, EventArgs e)
@@ -60,6 +60,24 @@ namespace ContestManagementSystem
             cs.ShowDialog();
 
             this.Show();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+            string Judge;
+            Judge = Properties.Settings.Default.JudgeID.ToString();
+            
+            char checker;
+            checker = Convert.ToChar(Judge);
+            if (checker == '1' || checker == '2' || checker == '3')
+            {
+                buttonMrSTI.Enabled = false;
+            }
+            else if (checker == '4' || checker == '5' || checker == '6')
+            {
+                buttonSingingIdol.Enabled = false;
+            }
         }
     }
 }

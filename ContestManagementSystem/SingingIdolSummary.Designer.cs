@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SingingIdolSummary));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonPrintReport = new System.Windows.Forms.Button();
             this.comboBoxCourse = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contestant_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +46,8 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.buttonRefresh);
+            this.panel1.Controls.Add(this.buttonPrintReport);
             this.panel1.Controls.Add(this.comboBoxCourse);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
@@ -52,6 +56,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(944, 498);
             this.panel1.TabIndex = 16;
+            // 
+            // buttonPrintReport
+            // 
+            this.buttonPrintReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrintReport.Location = new System.Drawing.Point(488, 313);
+            this.buttonPrintReport.Name = "buttonPrintReport";
+            this.buttonPrintReport.Size = new System.Drawing.Size(120, 30);
+            this.buttonPrintReport.TabIndex = 20;
+            this.buttonPrintReport.Text = "Print Report";
+            this.buttonPrintReport.UseVisualStyleBackColor = true;
+            this.buttonPrintReport.Click += new System.EventHandler(this.buttonPrintReport_Click);
             // 
             // comboBoxCourse
             // 
@@ -119,6 +134,17 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "STI GLOBAL CITY - SINGING IDOL CONTEST";
             // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(358, 313);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(120, 30);
+            this.buttonRefresh.TabIndex = 21;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
             // SingingIdolSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,7 +152,7 @@
             this.ClientSize = new System.Drawing.Size(944, 501);
             this.Controls.Add(this.panel1);
             this.Name = "SingingIdolSummary";
-            this.Text = "SingingIdolSummary";
+            this.Text = "Singing Idol Summary";
             this.Load += new System.EventHandler(this.SingingIdolSummary_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -144,5 +170,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn contestant_number;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn score;
+        private System.Windows.Forms.Button buttonPrintReport;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

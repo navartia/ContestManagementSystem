@@ -268,7 +268,7 @@ namespace ContestManagementSystem
                 }
 
             }
-            else if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar))
+            else if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar) || e.KeyChar == ' ')
             {
                 e.Handled = true;
             }
@@ -302,7 +302,7 @@ namespace ContestManagementSystem
                 }
 
             }
-            else if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar))
+            else if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar) || e.KeyChar == ' ')
             {
                 e.Handled = true;
             }
@@ -336,7 +336,7 @@ namespace ContestManagementSystem
                 }
 
             }
-            else if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar))
+            else if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar) || e.KeyChar == ' ')
             {
                 e.Handled = true;
             }
@@ -370,7 +370,7 @@ namespace ContestManagementSystem
                 }
 
             }
-            else if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar))
+            else if (char.IsLetter(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSymbol(e.KeyChar) || e.KeyChar == ' ')
             {
                 e.Handled = true;
             }
@@ -434,6 +434,12 @@ namespace ContestManagementSystem
                     }
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SingingIdol si = new SingingIdol();
+            si.ShowDialog();
         }
     }
 }

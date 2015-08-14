@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.buttonSingingIdol = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.linkLabelServer = new System.Windows.Forms.LinkLabel();
             this.buttonMrSTI = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonContestControl = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonSingingIdol
@@ -54,18 +54,6 @@
             this.buttonSingingIdol.Text = "STI Singing Idol";
             this.buttonSingingIdol.UseVisualStyleBackColor = true;
             this.buttonSingingIdol.Click += new System.EventHandler(this.buttonSingingIdol_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LavenderBlush;
-            this.label1.Location = new System.Drawing.Point(21, 157);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 18);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Contest Management System";
             // 
             // buttonExit
             // 
@@ -100,19 +88,9 @@
             this.buttonMrSTI.Name = "buttonMrSTI";
             this.buttonMrSTI.Size = new System.Drawing.Size(134, 30);
             this.buttonMrSTI.TabIndex = 11;
-            this.buttonMrSTI.Text = "Mr. and Ms. STI";
+            this.buttonMrSTI.Text = "Mr. and Ms. ICT";
             this.buttonMrSTI.UseVisualStyleBackColor = true;
             this.buttonMrSTI.Click += new System.EventHandler(this.buttonMrSTI_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 180);
-            this.panel1.TabIndex = 12;
             // 
             // panel2
             // 
@@ -149,6 +127,28 @@
             this.panel3.Size = new System.Drawing.Size(300, 50);
             this.panel3.TabIndex = 14;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.label1.Location = new System.Drawing.Point(21, 157);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(265, 18);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Contest Management System";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 180);
+            this.panel1.TabIndex = 12;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,11 +163,12 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -175,14 +176,14 @@
         #endregion
 
         private System.Windows.Forms.Button buttonSingingIdol;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.LinkLabel linkLabelServer;
         private System.Windows.Forms.Button buttonMrSTI;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button buttonContestControl;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

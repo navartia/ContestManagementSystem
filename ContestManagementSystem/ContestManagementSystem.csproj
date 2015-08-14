@@ -26,8 +26,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>Contest Management System</ProductName>
     <PublisherName>Navartia, Inc.</PublisherName>
-    <ApplicationRevision>19</ApplicationRevision>
-    <ApplicationVersion>0.3.0.%2a</ApplicationVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.4.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -92,12 +92,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MrMsSTIPrintReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MrMsSTIPrintReport.Designer.cs">
-      <DependentUpon>MrMsSTIPrintReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="MsMsSTI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,9 +152,6 @@
     <Compile Include="SportsWear.Designer.cs">
       <DependentUpon>SportsWear.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="MrMsSTIPrintReport.resx">
-      <DependentUpon>MrMsSTIPrintReport.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MsMsSTI.resx">
       <DependentUpon>MsMsSTI.cs</DependentUpon>
     </EmbeddedResource>

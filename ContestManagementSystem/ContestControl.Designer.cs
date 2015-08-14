@@ -80,8 +80,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 150);
             this.panel1.TabIndex = 15;
@@ -89,6 +88,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.buttonMrSTI);
             this.panel2.Controls.Add(this.buttonBack);
@@ -109,7 +109,7 @@
             this.buttonMrSTI.Name = "buttonMrSTI";
             this.buttonMrSTI.Size = new System.Drawing.Size(120, 30);
             this.buttonMrSTI.TabIndex = 14;
-            this.buttonMrSTI.Text = "Mr and Ms STI";
+            this.buttonMrSTI.Text = "Mr. and Ms. ICT";
             this.buttonMrSTI.UseVisualStyleBackColor = true;
             this.buttonMrSTI.Click += new System.EventHandler(this.buttonMrSTI_Click);
             // 
@@ -152,13 +152,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(300, 400);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ContestControl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContestControl";
+            this.Load += new System.EventHandler(this.ContestControl_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

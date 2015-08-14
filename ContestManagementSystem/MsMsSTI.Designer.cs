@@ -84,11 +84,13 @@
             this.labelMale = new System.Windows.Forms.Label();
             this.labelFemale = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelInstructions = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.labelCategory = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -153,9 +155,9 @@
             this.label1.Location = new System.Drawing.Point(333, 91);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(660, 47);
+            this.label1.Size = new System.Drawing.Size(678, 47);
             this.label1.TabIndex = 14;
-            this.label1.Text = "STI GLOBAL CITY - MR AND MS ICT ";
+            this.label1.Text = "STI GLOBAL CITY - MR. AND MS. ICT ";
             // 
             // label3
             // 
@@ -630,6 +632,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.labelInstructions);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.buttonExit);
             this.panel1.Controls.Add(this.labelFemale);
@@ -655,9 +659,20 @@
             this.panel1.Size = new System.Drawing.Size(1280, 583);
             this.panel1.TabIndex = 17;
             // 
+            // labelInstructions
+            // 
+            this.labelInstructions.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelInstructions.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInstructions.ForeColor = System.Drawing.Color.White;
+            this.labelInstructions.Location = new System.Drawing.Point(12, 3);
+            this.labelInstructions.Name = "labelInstructions";
+            this.labelInstructions.Size = new System.Drawing.Size(246, 200);
+            this.labelInstructions.TabIndex = 56;
+            this.labelInstructions.Text = "GENERAL INSTRUCTIONS";
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(82, 51);
+            this.textBox1.Location = new System.Drawing.Point(264, 49);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 55;
@@ -714,7 +729,20 @@
             this.panel2.Size = new System.Drawing.Size(1280, 150);
             this.panel2.TabIndex = 56;
             // 
-            // MrMsSTI_New
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(1059, 191);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 37);
+            this.button1.TabIndex = 57;
+            this.button1.Text = "Summary";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // MrMsSTI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -724,7 +752,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MrMsSTI_New";
+            this.Name = "MrMsSTI";
             this.Text = "Mr. and Ms. ICT";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CasualWear_Load);
@@ -798,5 +826,7 @@
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label labelInstructions;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -37,6 +37,9 @@ namespace ContestManagementSystem
             Properties.Settings.Default.ConnectionString = filepath;
             Properties.Settings.Default.JudgeID = Convert.ToInt32(textBoxJudge.Text);
             this.Dispose();
+            LoginForm lf = new LoginForm();
+            lf.ShowDialog();
+           
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
