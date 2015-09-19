@@ -84,13 +84,13 @@
             this.labelMale = new System.Windows.Forms.Label();
             this.labelFemale = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.labelInstructions = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.labelCategory = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -192,9 +192,9 @@
             this.buttonNext.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonNext.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNext.ForeColor = System.Drawing.Color.Black;
-            this.buttonNext.Location = new System.Drawing.Point(1051, 385);
+            this.buttonNext.Location = new System.Drawing.Point(1051, 377);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(75, 33);
+            this.buttonNext.Size = new System.Drawing.Size(100, 31);
             this.buttonNext.TabIndex = 24;
             this.buttonNext.Text = "NEXT";
             this.buttonNext.UseVisualStyleBackColor = true;
@@ -205,9 +205,9 @@
             this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonSave.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSave.ForeColor = System.Drawing.Color.Black;
-            this.buttonSave.Location = new System.Drawing.Point(1051, 555);
+            this.buttonSave.Location = new System.Drawing.Point(1051, 548);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 33);
+            this.buttonSave.Size = new System.Drawing.Size(100, 31);
             this.buttonSave.TabIndex = 25;
             this.buttonSave.Text = "SAVE";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -218,9 +218,9 @@
             this.buttonPrev.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonPrev.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrev.ForeColor = System.Drawing.Color.Black;
-            this.buttonPrev.Location = new System.Drawing.Point(1051, 346);
+            this.buttonPrev.Location = new System.Drawing.Point(1051, 340);
             this.buttonPrev.Name = "buttonPrev";
-            this.buttonPrev.Size = new System.Drawing.Size(75, 33);
+            this.buttonPrev.Size = new System.Drawing.Size(100, 31);
             this.buttonPrev.TabIndex = 26;
             this.buttonPrev.Text = "PREV";
             this.buttonPrev.UseVisualStyleBackColor = true;
@@ -291,9 +291,9 @@
             this.buttonClear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonClear.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClear.ForeColor = System.Drawing.Color.Black;
-            this.buttonClear.Location = new System.Drawing.Point(1051, 516);
+            this.buttonClear.Location = new System.Drawing.Point(1051, 511);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(75, 33);
+            this.buttonClear.Size = new System.Drawing.Size(100, 31);
             this.buttonClear.TabIndex = 33;
             this.buttonClear.Text = "CLEAR";
             this.buttonClear.UseVisualStyleBackColor = true;
@@ -659,6 +659,19 @@
             this.panel1.Size = new System.Drawing.Size(1280, 583);
             this.panel1.TabIndex = 17;
             // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(1051, 191);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 31);
+            this.button1.TabIndex = 57;
+            this.button1.Text = "SUMMARY";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // labelInstructions
             // 
             this.labelInstructions.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -683,9 +696,9 @@
             this.buttonExit.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.Color.Black;
-            this.buttonExit.Location = new System.Drawing.Point(1059, 154);
+            this.buttonExit.Location = new System.Drawing.Point(1051, 154);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(75, 31);
+            this.buttonExit.Size = new System.Drawing.Size(100, 31);
             this.buttonExit.TabIndex = 54;
             this.buttonExit.Text = "EXIT";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -728,19 +741,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1280, 150);
             this.panel2.TabIndex = 56;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1059, 191);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 37);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "Summary";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MrMsSTI
             // 

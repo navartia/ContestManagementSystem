@@ -35,7 +35,20 @@ namespace ContestManagementSystem
             Criteria_comboBox.SelectedIndex = 0;
             LoadToDataTable();
             GetSummaryResult();
-            
+            string Judge;
+            Judge = Properties.Settings.Default.JudgeID.ToString();
+
+            char checker;
+
+            checker = Convert.ToChar(Judge);
+            if (checker != '0')
+            {
+                buttonPrintReport.Enabled = false;
+            }
+            else
+            {
+                buttonPrintReport.Enabled = true;
+            }
         }
 
         private void LoadToDataTable()

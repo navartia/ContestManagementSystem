@@ -49,7 +49,7 @@ namespace ContestManagementSystem
             ServerSettings ss = new ServerSettings();
             ss.ShowDialog();
 
-           // this.Show();
+            this.Show();
         }
 
         private void buttonContestControl_Click(object sender, EventArgs e)
