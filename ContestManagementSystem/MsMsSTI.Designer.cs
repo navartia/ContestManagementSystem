@@ -148,6 +148,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cambria", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -166,7 +167,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(431, 286);
+            this.label3.Location = new System.Drawing.Point(431, 280);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(421, 20);
             this.label3.TabIndex = 18;
@@ -180,7 +181,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(417, 472);
+            this.label4.Location = new System.Drawing.Point(417, 466);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(444, 20);
             this.label4.TabIndex = 21;
@@ -192,7 +193,7 @@
             this.buttonNext.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonNext.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNext.ForeColor = System.Drawing.Color.Black;
-            this.buttonNext.Location = new System.Drawing.Point(1051, 377);
+            this.buttonNext.Location = new System.Drawing.Point(1051, 371);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(100, 31);
             this.buttonNext.TabIndex = 24;
@@ -205,7 +206,7 @@
             this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonSave.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSave.ForeColor = System.Drawing.Color.Black;
-            this.buttonSave.Location = new System.Drawing.Point(1051, 548);
+            this.buttonSave.Location = new System.Drawing.Point(1051, 542);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(100, 31);
             this.buttonSave.TabIndex = 25;
@@ -218,7 +219,7 @@
             this.buttonPrev.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonPrev.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrev.ForeColor = System.Drawing.Color.Black;
-            this.buttonPrev.Location = new System.Drawing.Point(1051, 340);
+            this.buttonPrev.Location = new System.Drawing.Point(1051, 334);
             this.buttonPrev.Name = "buttonPrev";
             this.buttonPrev.Size = new System.Drawing.Size(100, 31);
             this.buttonPrev.TabIndex = 26;
@@ -249,7 +250,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(264, 154);
+            this.dataGridView1.Location = new System.Drawing.Point(264, 148);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -291,7 +292,7 @@
             this.buttonClear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonClear.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClear.ForeColor = System.Drawing.Color.Black;
-            this.buttonClear.Location = new System.Drawing.Point(1051, 511);
+            this.buttonClear.Location = new System.Drawing.Point(1051, 505);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(100, 31);
             this.buttonClear.TabIndex = 33;
@@ -322,7 +323,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView2.Location = new System.Drawing.Point(659, 154);
+            this.dataGridView2.Location = new System.Drawing.Point(659, 148);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -382,7 +383,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView3.Location = new System.Drawing.Point(264, 340);
+            this.dataGridView3.Location = new System.Drawing.Point(264, 334);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersVisible = false;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -442,7 +443,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView4.Location = new System.Drawing.Point(659, 340);
+            this.dataGridView4.Location = new System.Drawing.Point(659, 334);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersVisible = false;
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -502,7 +503,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView5.Location = new System.Drawing.Point(264, 511);
+            this.dataGridView5.Location = new System.Drawing.Point(264, 505);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.RowHeadersVisible = false;
             this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -563,7 +564,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView6.Location = new System.Drawing.Point(659, 511);
+            this.dataGridView6.Location = new System.Drawing.Point(659, 505);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.RowHeadersVisible = false;
             this.dataGridView6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -607,7 +608,7 @@
             this.labelMale.BackColor = System.Drawing.Color.Transparent;
             this.labelMale.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMale.ForeColor = System.Drawing.Color.White;
-            this.labelMale.Location = new System.Drawing.Point(407, 127);
+            this.labelMale.Location = new System.Drawing.Point(407, 121);
             this.labelMale.Name = "labelMale";
             this.labelMale.Size = new System.Drawing.Size(46, 20);
             this.labelMale.TabIndex = 39;
@@ -621,7 +622,7 @@
             this.labelFemale.BackColor = System.Drawing.Color.Transparent;
             this.labelFemale.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFemale.ForeColor = System.Drawing.Color.White;
-            this.labelFemale.Location = new System.Drawing.Point(814, 127);
+            this.labelFemale.Location = new System.Drawing.Point(814, 121);
             this.labelFemale.Name = "labelFemale";
             this.labelFemale.Size = new System.Drawing.Size(64, 20);
             this.labelFemale.TabIndex = 40;
@@ -656,15 +657,15 @@
             this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(0, 150);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1280, 583);
+            this.panel1.Size = new System.Drawing.Size(1280, 600);
             this.panel1.TabIndex = 17;
             // 
             // button1
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1051, 191);
+            this.button1.Location = new System.Drawing.Point(1051, 185);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 31);
             this.button1.TabIndex = 57;
@@ -677,7 +678,7 @@
             this.labelInstructions.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelInstructions.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelInstructions.ForeColor = System.Drawing.Color.White;
-            this.labelInstructions.Location = new System.Drawing.Point(12, 3);
+            this.labelInstructions.Location = new System.Drawing.Point(12, 31);
             this.labelInstructions.Name = "labelInstructions";
             this.labelInstructions.Size = new System.Drawing.Size(246, 200);
             this.labelInstructions.TabIndex = 56;
@@ -685,7 +686,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(264, 49);
+            this.textBox1.Location = new System.Drawing.Point(264, 36);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 55;
@@ -693,10 +694,10 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonExit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.Color.Black;
-            this.buttonExit.Location = new System.Drawing.Point(1051, 154);
+            this.buttonExit.Location = new System.Drawing.Point(1051, 148);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(100, 31);
             this.buttonExit.TabIndex = 54;
@@ -711,7 +712,7 @@
             this.labelCategory.BackColor = System.Drawing.Color.Transparent;
             this.labelCategory.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategory.ForeColor = System.Drawing.Color.White;
-            this.labelCategory.Location = new System.Drawing.Point(580, 42);
+            this.labelCategory.Location = new System.Drawing.Point(580, 36);
             this.labelCategory.Name = "labelCategory";
             this.labelCategory.Size = new System.Drawing.Size(120, 26);
             this.labelCategory.TabIndex = 27;
@@ -725,7 +726,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(445, 87);
+            this.label2.Location = new System.Drawing.Point(445, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(377, 20);
             this.label2.TabIndex = 17;
@@ -748,7 +749,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1280, 733);
+            this.ClientSize = new System.Drawing.Size(1280, 750);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
