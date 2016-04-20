@@ -18,3 +18,7 @@ Carlo James Bernal
 Louize Peña
 
 System Programmer
+
+Copyright © 2015 
+
+All rights reserved.
